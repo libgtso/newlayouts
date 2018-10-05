@@ -1,12 +1,14 @@
 {% set rating_text="Независимая оценка" %}
 {% set blind_text="Версия для слабовидящих" %}
 
-<div class="blocks" >
+<div class="blocks sh-block sh-hidden" >
+    <div class="sh-btn"></div>
+    <div class="cls-btn"></div>
     <a class="borders button blind" href="/">
         {{blind_text}}
     </a>
     <form onsubmit="alert('Запрос');return false"  class="borders searchpanel">
-        <input type="search" placeholder="Напишите что потеряли">
+        <input type="search" placeholder="Поиск">
     </form>
     <div class="ratings borders button">{{rating_text}}</div>
 </div>

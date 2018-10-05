@@ -108,14 +108,83 @@
 
   .header {
     .content {
-      margin: 0 8%;
+      margin: 0 4%;
       width: auto;
       .blocks {
+        justify-content: center;
+      }
+      .blocks.sh-block.sh-hidden {
+        .searchpanel {
+          width: 0;
+          flex: 0 0 0;
+          padding: 0;
+          border: 0;
+          input {
+            width: 0;
+          }
+        }
+        .cls-btn {
+          display: none;
+        }
+        .ratings {
+          display: flex;
+          padding: 10px 32px;
+        }
+        .sh-btn {
+          display: block;
+          position: relative;
+          &:before {
+            position: absolute;
+            content: "";
+            background: url("../images/lupa.png");
+            width: 16px;
+            height: 16px;
+            top: 20px;
+            left: 20px;
+          }
+        }
+      }
+      .blocks.sh-block {
+        transition: all 1s ease 0s;
         .button.blind {
+          display: none;
+        }
+        .searchpanel {
+          display: flex;
+          margin-right: 0;
+          flex: 1 1 auto;
+        }
+        .sh-btn {
           display: none;
         }
         .ratings {
           display: none;
+        }
+        .cls-btn {
+          display: flex;
+          position: relative;
+          &:before,
+          &:after {
+            position: absolute;
+            width: 28px;
+            height: 1px;
+            content: "";
+            background: $gray;
+            top: 28px;
+            left: 13px;
+          }
+          &:after {
+            transform: rotate(45deg);
+          }
+          &:before {
+            transform: rotate(-45deg);
+          }
+          &:hover:before {
+            background: $arrow-hover;
+          }
+          &:hover:after {
+            background: $arrow-hover;
+          }
         }
       }
       nav.side-menu,
