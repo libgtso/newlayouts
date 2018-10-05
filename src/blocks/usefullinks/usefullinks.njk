@@ -1,0 +1,46 @@
+{% set links_header = "Полезные ссылки" %}
+{%
+    set links = [
+        {
+            "title": "Официальный сайт минобрнауки России",
+            "link": "/",
+            "img": "./images/black.jpg"
+        },
+        {
+            "title": "Центр \"Одаренность и технологии\"",
+            "link": "/",
+            "img": "./images/black.jpg"
+        },
+        {
+            "title": "ОРГАНЫ ВЛАСТИ СУБЪЕКТОВ РОССИЙСКОЙ ФЕДЕРАЦИИ - НАВСТРЕЧУ ЛЮДЯМ",
+            "link": "/",
+            "img": "./images/black.jpg"
+        },
+        {
+            "title": "Официальный сайт Министерства образования",
+            "link": "/",
+            "img": "./images/black.jpg"
+        },
+        {
+            "title": "Официальный интернет-портал государственных услуг",
+            "link": "/",
+            "img": "./images/black.jpg"
+        },
+        {
+            "title": "Екатеринбургский центр психолого-педагогической поддержки \"Диалог\"",
+            "link": "/",
+            "img": "./images/black.jpg"
+        },
+        {
+            "title": "Екатеринбургский центр психолого-педагогической поддержки \"Диалог\"",
+            "link": "/",
+            "img": "./images/black.jpg"
+        }
+    ]
+%}
+
+<section class="center usefullinks">
+<div class="content">
+  {% include 'links/links.njk' %}
+  </div>
+</section>

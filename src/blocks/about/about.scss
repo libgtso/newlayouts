@@ -1,0 +1,116 @@
+.about {
+  display: flex;
+  justify-content: center;
+
+  .about-header {
+    display: flex;
+    justify-content: center;
+  }
+  .about-desc {
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      margin-left: 48px;
+    }
+    .counter {
+      position: absolute;
+      top: 122px;
+      left: 96px;
+      &:before {
+        position: absolute;
+        content: "";
+        left: -32px;
+        width: 24px;
+        height: 15px;
+        background: url(../images/eye.png);
+      }
+    }
+
+    p {
+      padding: 0 160px 0 206px;
+      text-align: justify;
+    }
+  }
+  .about-desc.sh-block.sh-hidden {
+    .cls-btn {
+      display: none;
+    }
+    .sh-btn {
+      display: block;
+      top: -104px;
+      right: 0;
+      &:before {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        border-top: 2px solid $gray;
+        border-left: 2px solid $gray;
+        content: "";
+        top: 32%;
+        left: 38%;
+        transform: rotate(225deg);
+      }
+      &:hover:before {
+        border-left: 2px solid $arrow-hover;
+        border-top: 2px solid $arrow-hover;
+      }
+      &:active:before {
+        border-left: 2px solid $button-text-color-click;
+        border-top: 2px solid $button-text-color-click;
+      }
+      &:active {
+        background: $white;
+      }
+    }
+    .line {
+      display: none;
+    }
+    p {
+      max-height: 136px;
+      overflow: hidden;
+    }
+  }
+  .about-desc.sh-block {
+    .sh-btn {
+      display: none;
+    }
+    .cls-btn {
+      z-index: 100;
+      display: block;
+      right: 0;
+      bottom: 0;
+      &:before,
+      &:after {
+        position: absolute;
+        width: 28px;
+        height: 1px;
+        content: "";
+        background: $gray;
+        top: 28px;
+        left: 13px;
+      }
+      &:after {
+        transform: rotate(45deg);
+      }
+      &:before {
+        transform: rotate(-45deg);
+      }
+      &:hover:before {
+        background: $arrow-hover;
+      }
+      &:hover:after {
+        background: $arrow-hover;
+      }
+    }
+    .cls-btn-top {
+      right: 0;
+      top: -104px;
+    }
+  }
+}

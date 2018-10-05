@@ -1,0 +1,59 @@
+{% set header = "Полезное"%}
+
+{% set carousel = [
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/black.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Министерство транспорта, энергетики и связи республики дагестан",
+            "img": "./images/cats1.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/cats.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/black.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/cats.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/black.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/cats.jpg",
+            "link": "/"
+        },
+        {
+            "text": "Кокой-то текст",
+            "img": "./images/black.jpg",
+            "link": "/"
+        }
+    ]
+%}
+
+<section class="usefullslider-container center">
+    <div class="content">
+        <h2 class="usefullslider-header">{{header}}</h2>
+        <ul class="usefullslider carousel">
+            {% for item in carousel %}
+            <li class="usefullslider-item">
+                <a href="{{item.link}}">{{item.text}}</a>
+                <img src="{{item.img}}" alt="">
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,73 @@
+{% set links_header = "Ссылки" %}
+{% set survey_header = "Опрос" %}
+{% set surver_question = "Резонный вопрос  - на самом ли деле Печкин почтальон?" %}
+{%
+    set links = [
+        {
+            "title": "Официальный сайт Министерства образования",
+            "link": "/"
+        },
+        {
+            "title": "Центр \"Одаренность и технологии\"",
+            "link": "/"
+        },
+        {
+            "title": "Официальный сайт Министерства образования",
+            "link": "/"
+        },
+        {
+            "title": "Официальный сайт Министерства образования",
+            "link": "/"
+        },
+        {
+            "title": "Официальный интернет-портал государственных услуг",
+            "link": "/"
+        },
+        {
+            "title": "Екатеринбургский центр психолого-педагогической поддержки \"Диалог\"",
+            "link": "/"
+        },
+        {
+            "title": "Екатеринбургский центр психолого-педагогической поддержки \"Диалог\"",
+            "link": "/"
+        }
+    ]
+%}
+
+{% set questions = [
+        {
+            "answer": "Конечно",
+            "value": "1",
+            "checked": "checked"
+        },
+        {
+            "answer": "Нет, это же Адольф ГИТЛЕР (╮°-°)╮, посмотри на его усы",
+            "value": "2"
+        },
+        {
+            "answer": "Не разбираюсь я в этом, да и не надо оно мне",
+            "value": "3"
+        }
+    ] 
+%}
+
+{% set vote = "проголосовать" %}
+
+<div class="footer-top">
+
+        {% include 'links/links.njk' %}
+        <div class="survey">
+            <h3 class="survey-header">{{survey_header}}</h3>           
+                <p class="survey-text">{{surver_question}}</p>
+            <div class="survey-item">
+            {% for item in questions %}
+                <label class="answers">{{item.answer}}
+                    <input name="answer" type="radio" value="{{item.value}}" {% if item.checked %}{{item.checked}}{% endif %}>
+                    <span class="checkmark"></span>
+                </label>
+            {% endfor %}
+            </div> 
+            <button class="button send_answer" type="submit">{{vote}}</button>
+        </div>
+
+</div>

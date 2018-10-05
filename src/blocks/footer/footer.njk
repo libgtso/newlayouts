@@ -1,0 +1,16 @@
+{% set copyrights="Все права защищены" %} {% set sitecreate = "Сайт создан на портале сайтыобразованию.рф" %}
+
+<footer>
+    <div class="content">
+        {% include '../footer-top/footer-top.njk' %}
+    </div>
+    <div class="footer-bottom">
+        <div class="content">
+            {% include '../panel/panel.njk' %}
+            <div class="copyrights">
+                <span class="rights">{{copyrights}}</span>
+                <a href="/" class="sitecreate">{{sitecreate}}</a>
+            </div>
+        </div>
+    </div>
+</footer>

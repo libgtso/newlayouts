@@ -1,0 +1,21 @@
+.main-menu {
+  ul {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 24px;
+    li {
+      a {
+        border-bottom: 2px dotted $gray;
+        &:hover {
+          color: $button-text-hover;
+        }
+        &:active {
+          color: $button-text-color-click;
+        }
+      }
+      a.active {
+        color: $button-text-color-click;
+      }
+    }
+  }
+}

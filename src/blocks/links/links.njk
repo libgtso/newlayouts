@@ -1,0 +1,15 @@
+<div class="links">
+    <h3 class="links-header">{{links_header}}</h3>
+    <ul>
+    {% for item in links %}
+        <li>
+          <a href="{{item.link}}">
+          {% if item.img %}
+            <img src="{{item.img}}">
+          {% endif %}
+            <span>{{item.title}}</span>
+          </a>
+        </li>
+    {% endfor %}
+    </ul>
+</div>

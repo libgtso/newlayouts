@@ -1,0 +1,22 @@
+{% set menu = [ 
+        { "name": "Обращения граждан", "link": "/", "active": "active" }, 
+        { "name": "Советы специалистов",
+        "link": "/" }, 
+        { "name": "Азбука", "link": "/" }, 
+        { "name": "Проекты", "link": "/" }, 
+        { "name": "Фотоальбомы", "link": "/" }, 
+        { "name": "Контакты", "link": "/" }
+
+    ] 
+%}
+
+<nav class="side-menu sh-block sh-hidden">
+    <ul>
+        {% for item in menu %}
+        <li>
+            <a href="item.link" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <button class="sh-btn"></button>
+</nav>

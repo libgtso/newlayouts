@@ -1,0 +1,13 @@
+{% set menu = [ { "name": "Сведения об образовательной организации", "link": "/", "active": "active" }, { "name": "Новости",
+"link": "/" }, { "name": "Информация", "link": "/" }, { "name": "Проекты", "link": "/" }, { "name": "Фотоальбомы", "link":
+"/" }, { "name": "Контакты", "link": "/" } ] %}
+
+<nav class="main-menu sh-block">
+    <ul>
+        {% for item in menu %}
+        <li>
+            <a href="item.link" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

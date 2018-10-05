@@ -1,0 +1,107 @@
+.contacts {
+  display: flex;
+  justify-content: center;
+  background: $page-bg;
+  border-top: 2px solid $white;
+  padding-bottom: 80px;
+  flex-direction: column;
+
+  .contacts-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content {
+    display: flex;
+    max-width: 896px;
+    flex-direction: row;
+
+    #map {
+      display: flex;
+      width: 454px;
+      height: 454px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 2px solid $second-border;
+    }
+
+    .contacts-info {
+      margin-top: 112px;
+      margin-left: 138px;
+      display: flex;
+      flex: 0 0 30%;
+      flex-direction: column;
+
+      .address,
+      .tel,
+      .email {
+        margin-bottom: 24px;
+        font-family: "OpenSans Semibold";
+      }
+      .tel,
+      .email {
+        span {
+          border-bottom: 2px dotted $gray;
+        }
+      }
+      .icons {
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+          position: relative;
+          display: flex;
+          flex: 0 0 16%;
+          height: 48px;
+          margin-right: 16px;
+          &:before {
+            position: absolute;
+            content: "";
+            width: 48px;
+            height: 48px;
+            top: 0;
+            left: 0;
+            border-radius: 50%;
+            box-shadow: 1px 2px 5px -2px;
+          }
+        }
+        .fb:before {
+          background: url(../images/icons.png) no-repeat 33% 35%;
+        }
+        .fb:hover:before {
+          background: url(../images/icons_hover.png) no-repeat 33% 35%;
+        }
+        .fb:active:before {
+          background: url(../images/icons_active.png) no-repeat 33% 35%;
+        }
+        .vk:before {
+          background: url(../images/icons.png) no-repeat 0% 35%;
+        }
+        .vk:hover:before {
+          background: url(../images/icons_hover.png) no-repeat 0% 35%;
+        }
+        .vk:active:before {
+          background: url(../images/icons_active.png) no-repeat 0% 35%;
+        }
+        .tw:before {
+          background: url(../images/icons.png) no-repeat 66% 35%;
+        }
+        .tw:hover:before {
+          background: url(../images/icons_hover.png) no-repeat 66% 35%;
+        }
+        .tw:active:before {
+          background: url(../images/icons_active.png) no-repeat 66% 35%;
+        }
+        .ok:before {
+          background: url(../images/icons.png) no-repeat 100% 35%;
+        }
+        .ok:hover:before {
+          background: url(../images/icons_hover.png) no-repeat 100% 35%;
+        }
+        .ok:active:before {
+          background: url(../images/icons_active.png) no-repeat 100% 35%;
+        }
+      }
+    }
+  }
+}

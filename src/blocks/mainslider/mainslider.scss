@@ -1,0 +1,43 @@
+.slider-container {
+  position: relative;
+  .open-img {
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    z-index: 998;
+    margin-left: 125px;
+    top: 11%;
+    cursor: pointer;
+  }
+  .popup {
+    top: -20%;
+  }
+  .mainslider {
+    margin: 32px auto;
+    height: 464px;
+    width: 464px;
+    border: 2px solid $gray;
+    border-radius: 50%;
+
+    &-item {
+      height: 464px;
+      width: 464px;
+      display: flex;
+      img {
+        width: auto;
+        max-width: 600px;
+        max-height: 600px;
+        height: auto;
+        min-width: 464px;
+        min-height: 464px;
+        object-fit: cover;
+      }
+    }
+    .owl-nav {
+      top: 35%;
+    }
+    .owl-dots {
+      display: none;
+    }
+  }
+}

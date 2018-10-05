@@ -1,0 +1,113 @@
+{% set days = [
+    {
+        "day": "Пн."
+    },
+    {
+        "day": "Вт."
+    },
+    {
+        "day": "Ср."
+    },
+    {
+        "day": "Чт."
+    },
+    {
+        "day": "Пт."
+    },
+    {
+        "day": "Сб."
+    },
+    {
+        "day": "Вс."
+    }
+] %}
+
+{%
+    set  calendarDate = {
+        numberOfCalendar : 31,
+        today: 12,
+        emptyCell: 6,
+        active: 26
+    }
+%}
+
+{%
+    set data = [
+        {
+            "type":"Добавлено мероприятие",
+            "header": "Это превью заголовка",
+            "counter": "99",
+            "src": "./images/black.jpg",
+            "link": "Подробнее"
+        },
+        {
+            "type":"Добавлено мероприятие",
+            "header": "Это превью заголовка",
+            "counter": "99",
+            "src": "./images/black.jpg",
+            "link": "Подробнее"
+        },
+        {
+            "type":"Добавлено мероприятие",
+            "header": "Это превью заголовка",
+            "counter": "99",
+            "src": "./images/black.jpg",
+            "link": "Подробнее"
+        }
+    ]
+%}
+
+<section class="events center">
+    <h2 class="events-header">События</h2>
+    <div class="content">
+        <div class="events-calendar">
+            <div class="calendar-container">
+                <span class="year">2017</span>
+                <span class="month">Сентябрь</span>
+                <div class="days">
+                    {% for item in days %}
+                        <span class="day">{{item.day}}</span>
+                    {% endfor %}
+                </div>
+                <div class="list">
+                    {% for i in range(0, calendarDate.emptyCell) %}
+                        <div class="cell emptycell"></div>
+                    {% endfor %}
+                    {% for i in range(1, calendarDate.numberOfCalendar) %}
+                        <div class="cell">
+                            {% if i == calendarDate.today %}
+                                <a href="/" class="numb event">{{calendarDate.today}}</a>
+                            {% elif i == calendarDate.active %}
+                                <a href="/" class="numb active">{{calendarDate.active}}</a>
+                            {% else %}
+                                <p class="numb">{{i}}</p>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="events-info">
+            <h3 class="events-date">26 сентября</h3>
+            <div class="events-blocks">
+            {% for item in data %}
+                <div class="events-block">
+                    <img src="{{item.src}}">
+                    {% if item.counter %}
+                        <div class="counter">x {{item.counter}}</div>
+                    {% endif %}
+                    <div class="events-caption">
+                        <span class="events-type">
+                            {{item.type}}
+                        </span>
+                        <h3>{{item.header}}</h3>
+                        <span>
+                            <a href="/">{{item.link}}</a>
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

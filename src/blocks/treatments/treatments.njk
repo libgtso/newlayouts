@@ -1,0 +1,22 @@
+{% set treatments_header = "Обращения граждан" %}
+{% set treatments_text = "С помощью этой формы вы можете направить обращение в МАОУ СОШ 5. Сотрудники МАОУ СОШ 5
+подготовят ответ
+и вышлют его на электронный адрес, оставленный вами при обращении. Уважаемые пользователи, просим вас внимательно
+ознакомиться с порядком приема и рассмотрения обращений в электронном виде." %}
+{% set rules = "Порядок приема и правила рассмотрения обращений граждан." %}
+
+<section class="treatments">
+    <div class="content">
+        <h2>{{treatments_header}}</h2>
+        <p>{{treatments_text}}</p>
+        <a class="rules" href="/"><span>{{rules}}</span></a>
+        <form class="treatments-form" action="post">
+            <div class="treatments-fields">
+                <input class="borders" type="text">
+                <input class="borders" type="text">
+            </div>
+            <textarea class="borders" cols="30" rows="10"></textarea>
+            <button class="button borders" type="submit">отправить</button>
+        </form>
+    </div>
+</section>

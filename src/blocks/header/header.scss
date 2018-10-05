@@ -1,0 +1,43 @@
+@import "../base/var";
+
+.header {
+  background: $page-bg;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid $border-line;
+  flex-direction: column;
+
+  .content {
+    width: 100%;
+    .blocks {
+      .searchpanel,
+      .ratings,
+      .blind {
+        border: 2px solid $white;
+        color: $links-color;
+      }
+      .ratings {
+        line-height: 32px;
+      }
+      .blind:hover,
+      .ratings:hover {
+        background: #fcfcfc;
+        border: 2px solid $white;
+        color: $button-text-hover;
+      }
+      .blind:active,
+      .ratings:active {
+        background: $white;
+        color: $button-text-color-click;
+      }
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      padding-top: 0;
+    }
+  }
+  .burger-time {
+    display: none;
+  }
+}

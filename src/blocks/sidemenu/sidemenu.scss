@@ -1,0 +1,41 @@
+.side-menu {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex: 0 0 60%;
+    justify-content: space-around;
+    margin-bottom: 56px;
+    flex-flow: row wrap;
+    li {
+      a {
+        border-bottom: 2px dotted $gray;
+        &:hover {
+          color: $button-text-hover;
+        }
+        &:active {
+          color: $button-text-color-click;
+        }
+      }
+      a.active {
+        color: $button-text-color-click;
+      }
+    }
+  }
+  .sh-btn {
+    z-index: 70;
+    display: flex;
+    bottom: -30px;
+    justify-content: center;
+    margin-right: 0;
+    &:before {
+      position: absolute;
+      content: "...";
+      font-size: 32px;
+      top: -1px;
+      color: $links-color;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+.burger-time {
+  position: relative;
+}
+
+.burger-time.sh-block.sh-hidden {
+  .menu-container {
+    display: none;
+  }
+  .cls-btn {
+    display: none;
+  }
+  .sh-btn {
+    display: block;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -28px;
+    z-index: 100;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 3px;
+      background: $links-color;
+      top: 19px;
+      left: 33%;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 3px;
+      background: $links-color;
+      bottom: 16px;
+      left: 33%;
+    }
+    .burger-line {
+      position: absolute;
+      display: block;
+      width: 16px;
+      height: 3px;
+      background: $links-color;
+      left: 33%;
+    }
+  }
+}
+
+.burger-time.sh-block {
+  .sh-btn {
+    display: none;
+  }
+  .cls-btn {
+    display: block;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -28px;
+    z-index: 100;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: $links-color;
+      top: 26px;
+      left: 26%;
+      transform: rotate(-45deg);
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 2px;
+      background: $links-color;
+      bottom: 24px;
+      left: 27%;
+      transform: rotate(45deg);
+    }
+  }
+
+  .menu-container {
+    flex: 0 0 100%;
+    padding-top: 24px;
+    background: #eceaea;
+    background: -moz-radial-gradient(
+      top,
+      ellipse cover,
+      #eceaea 0%,
+      #edebeb 10%,
+      #f4f4f4 60%
+    );
+    background: -webkit-radial-gradient(
+      top,
+      ellipse cover,
+      #eceaea 0%,
+      #edebeb 10%,
+      #f4f4f4 60%
+    );
+    background: radial-gradient(
+      ellipse at top,
+      #eceaea 0%,
+      #edebeb 10%,
+      #f4f4f4 60%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
+    border-top: 2px solid $border-line;
+    nav.side-menu {
+      display: flex;
+      margin: 0 4%;
+      ul {
+        flex-direction: column;
+        justify-content: center;
+        flex: 0 0 100%;
+        li {
+          margin-bottom: 14px;
+          align-self: center;
+          text-align: center;
+          letter-spacing: 2px;
+        }
+      }
+    }
+    nav.main-menu {
+      display: flex;
+      margin: 0 4%;
+      justify-content: center;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li {
+          margin-bottom: 14px;
+          align-self: center;
+          text-align: center;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}

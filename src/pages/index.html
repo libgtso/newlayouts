@@ -1,0 +1,19 @@
+{% extends 'base/base.njk' %}
+
+{% set title = "Главная страница" %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+<section class="container">
+    {% include 'about/about.njk' %}
+    {% include 'announce/announce.njk' %}
+    {% include 'news/news.njk' %}
+    {% include 'events/events.njk' %}
+	{% include 'usefullinks/usefullinks.njk' %}
+    {% include 'usefullslider/usefullslider.njk' %}
+    {% include 'groups/groups.njk' %}
+    {% include 'contacts/contacts.njk' %}
+</section>
+	{% include 'treatments/treatments.njk' %}
+{% endblock %}

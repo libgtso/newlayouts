@@ -1,0 +1,12 @@
+{% set header_name = "МОУ СОШ 121 им. М. Ж. КНЯЗЯ РУКОЖОПСКОГО" %}
+
+<header class="header">
+    <div class="content">
+        {% include '../panel/panel.njk' %}
+        <h1>{{header_name}}</h1>
+        {% include '../mainmenu/mainmenu.njk' %}
+        {% include '../mainslider/mainslider.njk' %}
+        {% include '../sidemenu/sidemenu.njk'%}
+    </div>
+    {% include '../mobile_menu/mobile_menu.njk' %}
+</header>

@@ -1,0 +1,130 @@
+.announce {
+  display: flex;
+  justify-content: center;
+
+  .content {
+    .announce-header {
+      display: flex;
+      justify-content: center;
+    }
+    .announce-desc {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      .announce-caption {
+        padding: 0 160px 24px 206px;
+      }
+
+      img {
+        width: 224px;
+        height: 224px;
+        border-radius: 50%;
+        align-self: center;
+        margin-bottom: 40px;
+      }
+      p {
+        padding: 0 160px 0 206px;
+        text-align: justify;
+      }
+      .open-img {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        left: 50%;
+        margin-left: 40px;
+        top: 0;
+        cursor: pointer;
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+      .announce-container {
+        position: relative;
+      }
+    }
+    .announce-desc.sh-block.sh-hidden {
+      .cls-btn {
+        display: none;
+      }
+      .sh-btn {
+        display: block;
+        top: 0;
+        right: 0;
+        &:before {
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          border-top: 2px solid $gray;
+          border-left: 2px solid $gray;
+          content: "";
+          top: 32%;
+          left: 38%;
+          transform: rotate(225deg);
+        }
+        &:hover:before {
+          border-left: 2px solid $arrow-hover;
+          border-top: 2px solid $arrow-hover;
+        }
+        &:active:before {
+          border-left: 2px solid $button-text-color-click;
+          border-top: 2px solid $button-text-color-click;
+        }
+        &:active {
+          background: $white;
+        }
+      }
+      .line {
+        display: none;
+      }
+      p {
+        max-height: 136px;
+        overflow: hidden;
+      }
+    }
+    .announce-desc.sh-block {
+      .sh-btn {
+        display: none;
+      }
+      .cls-btn {
+        z-index: 100;
+        display: block;
+        right: 0;
+        bottom: 0;
+        &:before,
+        &:after {
+          position: absolute;
+          width: 28px;
+          height: 1px;
+          content: "";
+          background: $gray;
+          top: 28px;
+          left: 13px;
+        }
+        &:after {
+          transform: rotate(45deg);
+        }
+        &:before {
+          transform: rotate(-45deg);
+        }
+        &:hover:before {
+          background: $arrow-hover;
+        }
+        &:hover:after {
+          background: $arrow-hover;
+        }
+      }
+      .cls-btn-top {
+        overflow: hidden;
+        right: 0;
+        top: 0;
+      }
+      .line {
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+}

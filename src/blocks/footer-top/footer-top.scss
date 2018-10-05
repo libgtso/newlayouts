@@ -1,0 +1,128 @@
+@import "../base/var";
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  margin: 0 180px;
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    .links-header {
+      color: #3d96c6;
+    }
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+      li {
+        display: flex;
+        position: relative;
+        flex: 0 0 50%;
+        color: $gray;
+        line-height: 24px;
+        margin-bottom: 40px;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          width: 6px;
+          height: 6px;
+          background: $white;
+          border-radius: 50%;
+          top: 8px;
+          left: -16px;
+        }
+        a {
+          flex: 0 0 80%;
+          color: $links-color-footer;
+        }
+      }
+    }
+  }
+  .survey {
+    margin-bottom: 96px;
+    .survey-header {
+      margin-top: 32px;
+      color: #3d96c6;
+    }
+    .survey-text {
+      margin-bottom: 24px;
+      color: $white;
+    }
+    .survey-item {
+      display: flex;
+      margin-bottom: 48px;
+      cursor: pointer;
+      user-select: none;
+      .button:hover {
+        background: $button-hover;
+      }
+    }
+    .answers {
+      position: relative;
+      padding-left: 48px;
+      color: $gray;
+      cursor: pointer;
+    }
+    .answers:first-child {
+      margin-left: -24px;
+    }
+
+    .answers input {
+      position: absolute;
+      opacity: 0;
+    }
+
+    .answers:hover input ~ .checkmark {
+      background-color: #ccc;
+    }
+
+    .answers input:checked ~ .checkmark {
+      background-color: #a7aeb1;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 24px;
+      height: 16px;
+      width: 16px;
+      background-color: #eee;
+      border-radius: 50%;
+      &:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+    }
+
+    .answers input:checked ~ .checkmark:after {
+      display: block;
+    }
+
+    .answers .checkmark:after {
+      top: 4px;
+      left: 4px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .send_answer {
+      border: 2px solid $white;
+      padding: 16px 64px;
+      border-radius: 40px;
+      background: $footerbg;
+      color: $gray;
+      &:hover {
+        background: $button-hover;
+        color: $button-text-hover;
+      }
+      &:active {
+        background: $white;
+        color: $button-text-color-click;
+      }
+    }
+  }
+}

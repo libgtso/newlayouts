@@ -1,0 +1,66 @@
+{% set address = "623530, Свердловская область, Богданович, ул.Школьная, 5д" %}
+
+{% set header = "Контакты" %}
+
+{% set tel = "+7(12345)123-12-12" %}
+
+{% set email = "etoemail@yandex.ru" %}
+
+{%
+    set contacts = [
+        
+        {
+            "address": "623530, Свердловская область, Богданович, ул.Школьная, 5д",
+            "class": "address"
+        },
+        {
+            "tel": "+7(12345)123-12-12",
+            "class": "tel"
+        },
+        {
+            "email": "etoemail@yandex.ru",
+            "class": "email"
+        }
+    ]
+%}
+
+{% set icons = [
+        {
+        "link": "https://vk.com",
+        "class": "vk"
+        },
+        {
+        "link": "https://facebook.com",
+        "class": "fb"
+        },
+        {
+        "link": "https://twitter.com",
+        "class": "tw"
+        },
+        {
+        "link": "https://ok.ru",
+        "class": "ok"
+        }
+    ]
+%}
+
+<section class="contacts">
+    <h2 class="contacts-header">{{header}}</h2>
+    <div class="content">
+            <div id="map"></div>
+        <div class="contacts-info">
+        {% for item in contacts %}
+            <p class="{% if item.class %}{{item.class}}{% endif %}">
+                {% if item.address %}{{address}}{% endif %}
+                {% if item.tel %}<span>{{tel}}</span>{% endif %}
+                {% if item.email %}<span>{{email}}</span>{% endif %}
+            </p>
+        {% endfor %}
+            <div class="icons">
+                {% for item in icons %}
+                    <a class="icon {{item.class}}" href="{{item.link}}"></a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

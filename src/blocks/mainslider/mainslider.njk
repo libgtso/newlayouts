@@ -1,0 +1,32 @@
+{% set carousel = [
+	{
+		"img": "./images/cats.jpg",
+		"alt": "Дети"
+	},
+	{
+		"img": "./images/cats1.jpg",
+		"alt": "Дети"
+	},
+    {
+        "img": "./images/black.jpg",
+		"alt": "Дети"
+    },
+    {
+        "img": "./images/inter.jpg",
+		"alt": "Дети"
+    }
+]%}
+
+<div class="slider-container block">
+    <div class="popup"></div>
+    <div class="open-img">
+        <img src="./images/expand.png">
+    </div>
+    <ul class="mainslider carousel">
+        {% for item in carousel %}
+            <li class="mainslider-item">
+                <img src="{{item.img}}" alt="">
+            </li>
+        {% endfor %}
+    </ul>
+</div>

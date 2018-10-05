@@ -1,0 +1,56 @@
+footer {
+  background: #333c40;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .footer-bottom {
+    display: flex;
+    width: 100%;
+    border-top: 2px solid #2a3337;
+    flex-direction: column;
+    .content {
+      width: 100%;
+      .blocks {
+        align-items: flex-start;
+        .ratings,
+        .blind {
+          border: 2px solid $white;
+          line-height: 32px;
+        }
+        .searchpanel {
+          background: $footerbg;
+          color: $white;
+          &:hover {
+            border: 2px solid #546167;
+          }
+          &:focus {
+            border: 2px solid $white;
+          }
+          input {
+            color: $footertextcolor;
+            &:focus {
+              color: $white;
+            }
+          }
+        }
+      }
+      .copyrights {
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        margin-bottom: 56px;
+        color: $footertextcolor;
+
+        .rights {
+          margin-left: 24px;
+        }
+        .sitecreate {
+          margin-right: 24px;
+          color: $footertextcolor;
+          font-family: "OpenSans Semibold";
+        }
+      }
+    }
+  }
+}

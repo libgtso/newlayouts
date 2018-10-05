@@ -1,0 +1,46 @@
+@import "../blocks/base/var";
+
+.blocks {
+  display: flex;
+  margin: 48px 0 32px;
+  .searchpanel {
+    border: 2px solid $bordercolor;
+    flex: 1 1 auto;
+    padding: 13px 24px;
+    input {
+      width: 100%;
+      background: none;
+      border: none;
+      color: $links-color;
+      font-family: "OpenSans Semibold";
+    }
+  }
+
+  .ratings,
+  .blind {
+    color: $gray;
+    &:hover {
+      background: $button-hover;
+      color: $button-text-hover;
+    }
+    &:active {
+      background: $white;
+      color: $button-text-color-click;
+    }
+  }
+  .ratings {
+    margin-right: 0;
+  }
+  .blind {
+    padding-left: 50px;
+    &:before {
+      position: absolute;
+      content: "";
+      width: 22px;
+      height: 17px;
+      left: 20px;
+      top: 16px;
+      background: url(../images/blind.png);
+    }
+  }
+}

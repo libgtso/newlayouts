@@ -1,0 +1,92 @@
+.treatments {
+  display: flex;
+  justify-content: center;
+  background: #eceaea;
+  background: -moz-radial-gradient(
+    top,
+    ellipse cover,
+    #eceaea 0%,
+    #edebeb 10%,
+    #f4f4f4 60%
+  );
+  background: -webkit-radial-gradient(
+    top,
+    ellipse cover,
+    #eceaea 0%,
+    #edebeb 10%,
+    #f4f4f4 60%
+  );
+  background: radial-gradient(
+    ellipse at top,
+    #eceaea 0%,
+    #edebeb 10%,
+    #f4f4f4 60%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
+  padding-bottom: 48px;
+  border-top: 2px solid $border-line;
+  .content {
+    max-width: 896px;
+    .rules {
+      line-height: 32px;
+      display: inline-block;
+      margin-bottom: 48px;
+      color: $links-color;
+      &:hover {
+        color: $links-hover-color;
+      }
+      span {
+        border-bottom: 2px dotted $gray;
+      }
+    }
+    .treatments-form {
+      display: flex;
+      max-width: 896px;
+      margin: 0 auto;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .treatments-fields {
+        flex: 0 0 45%;
+        flex-direction: row;
+        margin-right: 24px;
+        margin-bottom: 24px;
+        .borders {
+          margin-right: 0;
+          border: 2px solid $border-line;
+          &:focus {
+            border: 2px solid $border-line-focus;
+          }
+        }
+        input {
+          width: 100%;
+          margin-bottom: 24px;
+          padding: 20px 16px;
+          border: 2px solid $gray;
+          background: none;
+        }
+      }
+      textarea {
+        flex: 0 0 40%;
+        margin-left: 24px;
+        margin-bottom: 24px;
+        height: 88px;
+        padding: 24px 24px;
+        resize: none;
+        border: 2px solid $border-line;
+        background: none;
+        &:focus {
+          border: 2px solid $border-line-focus;
+        }
+      }
+      .button {
+        border: 2px solid $white;
+        padding: 16px 88px;
+        background: #f4f4f4;
+        margin: 0 auto;
+        &:hover {
+          background: $button-bg-hover !important;
+        }
+      }
+    }
+  }
+}
