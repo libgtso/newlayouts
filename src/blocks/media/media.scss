@@ -145,11 +145,11 @@
         }
       }
       .blocks.sh-block {
-        transition: all 1s ease 0s;
         .button.blind {
           display: none;
         }
         .searchpanel {
+          transition: flex 1s linear;
           display: flex;
           margin-right: 0;
           flex: 1 1 auto;
