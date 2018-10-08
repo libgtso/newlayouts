@@ -4,7 +4,11 @@
 
 .burger-time.sh-block.sh-hidden {
   .menu-container {
-    display: none;
+    transition: max-height 1s ease-in-out, padding-top 0.5s;
+    max-height: 0;
+    overflow: auto;
+    padding-top: 0;
+    border-top: 0;
   }
   .cls-btn {
     display: none;
@@ -77,12 +81,32 @@
   }
 
   .menu-container {
+    transition: max-height 1s ease-in-out;
+    overflow: auto;
+    max-height: 2000px;
     flex: 0 0 100%;
     padding-top: 24px;
     background: #eceaea;
-    background: -moz-radial-gradient(top, ellipse cover, #eceaea 0%, #edebeb 10%, #f4f4f4 60%);
-    background: -webkit-radial-gradient(top, ellipse cover, #eceaea 0%, #edebeb 10%, #f4f4f4 60%);
-    background: radial-gradient(ellipse at top, #eceaea 0%, #edebeb 10%, #f4f4f4 60%);
+    background: -moz-radial-gradient(
+      top,
+      ellipse cover,
+      #eceaea 0%,
+      #edebeb 10%,
+      #f4f4f4 60%
+    );
+    background: -webkit-radial-gradient(
+      top,
+      ellipse cover,
+      #eceaea 0%,
+      #edebeb 10%,
+      #f4f4f4 60%
+    );
+    background: radial-gradient(
+      ellipse at top,
+      #eceaea 0%,
+      #edebeb 10%,
+      #f4f4f4 60%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
     border-top: 2px solid $border-line;
     nav.side-menu {

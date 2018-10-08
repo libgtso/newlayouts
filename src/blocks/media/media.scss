@@ -149,7 +149,7 @@
           display: none;
         }
         .searchpanel {
-          transition: flex 1s linear;
+          transition: flex 0.5s linear;
           display: flex;
           margin-right: 0;
           flex: 1 1 auto;
@@ -492,13 +492,18 @@
   .treatments {
     .content {
       .treatments-form {
+        justify-content: center;
         margin: 0;
         .treatments-fields {
-          flex: 0 0 86%;
+          flex: 0 0 88%;
+          margin: 0;
+          input {
+            box-sizing: border-box;
+          }
         }
         textarea.borders {
-          margin-left: 0;
-          flex: 0 0 80%;
+          margin: 0 0 24px 0;
+          flex: 0 0 82%;
         }
       }
     }

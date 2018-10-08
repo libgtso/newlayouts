@@ -1,4 +1,4 @@
 node_modules/
 text.txt
-style/main.css
+style/*.css
 js/main.js
