@@ -40,7 +40,7 @@ function usefullslider() {
     nav: true,
     dots: true,
     navText: false,
-    slideBy: 1
+    slideBy: 2
   });
 }
 

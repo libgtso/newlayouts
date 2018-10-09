@@ -94,7 +94,109 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
+@media (min-width: 801px) and (max-width: 1023px) {
+  .content {
+    max-width: 1020px;
+    margin: 0 8%;
+    min-width: 640px;
+  }
+
+  .header {
+    .content {
+      margin: 0 4%;
+      width: 93%;
+      .slider-container {
+        margin-bottom: 56px;
+        .mainslider {
+          width: 180px;
+          height: 180px;
+          &-item {
+            height: 464px;
+            width: 464px;
+            display: flex;
+            img {
+              width: auto;
+              max-width: 200px;
+              max-height: 200px;
+              height: auto;
+              min-width: 180px;
+              min-height: 180px;
+              object-fit: cover;
+            }
+          }
+        }
+        .open-img {
+          margin-left: 32px;
+        }
+      }
+      .blocks.sh-block.sh-hidden {
+        justify-content: space-between;
+        .searchpanel {
+          width: 0;
+          flex: 0 0 0;
+          padding: 0;
+          border: 0;
+          input {
+            width: 0;
+          }
+        }
+        .sh-btn {
+          display: block;
+          position: relative;
+        }
+        .cls-btn {
+          display: none;
+        }
+
+        .button.blind,
+        .button.ratings {
+          display: flex;
+          padding: 10px 32px 0;
+          width: 244px;
+          text-align: center;
+          margin-right: 0;
+          justify-content: center;
+          margin-right: 24px;
+        }
+      }
+      .blocks.sh-block {
+        .button.ratings,
+        .button.blind {
+          display: none;
+        }
+        .searchpanel {
+          transition: flex 0.5s linear;
+          display: flex;
+          margin-right: 0;
+          flex: 1 1 auto;
+        }
+        .sh-btn {
+          display: none;
+          &:before {
+            position: absolute;
+            content: "";
+            background: url("../images/lupa.png");
+            width: 16px;
+            height: 16px;
+            top: 20px;
+            left: 20px;
+          }
+        }
+        .cls-btn {
+          display: block;
+          position: relative;
+        }
+      }
+      .side-menu {
+        ul {
+          flex: 0 0 90%;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
   .content {
     max-width: 640px;
     margin: 0 4%;
