@@ -1,5 +1,3 @@
-@import "../blocks/base/var";
-
 .blocks {
   display: flex;
   margin: 48px 0 32px;
@@ -41,6 +39,19 @@
       left: 20px;
       top: 16px;
       background: url(../images/blind.png);
+    }
+  }
+  .sh-btn {
+    display: block;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      background: url("../images/lupa.png");
+      width: 16px;
+      height: 16px;
+      top: 20px;
+      left: 20px;
     }
   }
 }

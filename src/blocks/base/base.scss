@@ -291,8 +291,9 @@ img {
 .sh-btn,
 .cls-btn,
 .cls-btn-top {
+  display: none;
   width: 54px;
-  height: 56px;
+  height: 54px;
   border: 2px solid $white;
   border-radius: 50%;
   position: absolute;

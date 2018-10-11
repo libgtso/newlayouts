@@ -140,12 +140,12 @@
             width: 0;
           }
         }
-        .sh-btn {
-          display: block;
-          position: relative;
-        }
+
         .cls-btn {
           display: none;
+        }
+        .sh-btn {
+          display: block;
         }
 
         .button.blind,
@@ -172,15 +172,6 @@
         }
         .sh-btn {
           display: none;
-          &:before {
-            position: absolute;
-            content: "";
-            background: url("../images/lupa.png");
-            width: 16px;
-            height: 16px;
-            top: 20px;
-            left: 20px;
-          }
         }
         .cls-btn {
           display: block;
@@ -192,6 +183,101 @@
           flex: 0 0 90%;
         }
       }
+    }
+  }
+  .about {
+    .about-desc {
+      img {
+        margin-left: 0;
+      }
+      .counter {
+        left: 56px;
+      }
+      p {
+        padding: 0 112px 0 160px;
+      }
+    }
+  }
+  .announce {
+    .announce-desc {
+      .announce-container {
+        .announce-caption {
+          padding: 0 140px 24px 56px;
+        }
+        p {
+          padding: 0 140px 0 56px;
+        }
+      }
+    }
+  }
+  .news.center {
+    .news-block {
+      flex-direction: column;
+    }
+  }
+  .events.center {
+    .events-calendar {
+      flex: 0 0 50%;
+      border: none;
+      .calendar-container {
+        .year {
+          margin: 82px 0 0 80px;
+        }
+        .month,
+        .days,
+        .list {
+          margin: 24px 0 0 80px;
+        }
+      }
+    }
+    .events-info {
+      margin-left: -64px;
+    }
+  }
+  .usefullinks {
+    .links {
+      ul {
+        margin-left: 0;
+        li {
+          margin-right: 32px;
+          a {
+            flex: 0 0 100%;
+            span {
+              padding-left: 122px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .groups {
+    .groups-block {
+      flex-direction: column;
+      .groups-item {
+        flex: 0 0 50%;
+        margin-right: 0;
+      }
+    }
+  }
+  .treatments {
+    .treatments-form {
+      flex-direction: column !important;
+      .treatments-fields {
+        flex: 0 0 80%;
+        margin: 0;
+        input {
+          box-sizing: border-box;
+        }
+      }
+      textarea.borders {
+        margin: 0 0 24px 0;
+        flex: 0 0 73%;
+      }
+    }
+  }
+  .footer {
+    .footer-top {
+      margin: 0;
     }
   }
 }
@@ -326,22 +412,22 @@
     }
   }
 
-  .about {
+  .about.center {
     padding-bottom: 136px;
-    &-desc {
+    .about-desc {
       display: flex;
       flex-direction: column;
       align-items: center;
       img {
-        position: relative !important;
+        position: relative;
         display: flex;
-        margin-left: 0 !important;
+        margin-left: 0;
       }
       .counter {
-        left: 50% !important;
+        left: 50%;
       }
     }
-    &-desc.sh-block.sh-hidden {
+    .about-desc.sh-block.sh-hidden {
       .sh-btn {
         display: flex;
         position: relative;
@@ -351,11 +437,12 @@
         margin-bottom: -120px;
       }
       p {
-        padding: 0 !important;
+        transition: margin-top 0.5s ease-in;
+        padding: 0;
         margin-top: 56px;
       }
     }
-    &-desc.sh-block {
+    .about-desc.sh-block {
       .cls-btn-top {
         top: 166px !important;
         left: 50%;
@@ -370,6 +457,7 @@
         display: none;
       }
       p {
+        transition: margin-top 0.5s ease-in;
         margin-top: 136px;
         padding: 0 !important;
       }
@@ -597,7 +685,7 @@
         justify-content: center;
         margin: 0;
         .treatments-fields {
-          flex: 0 0 88%;
+          flex: 0 0 80%;
           margin: 0;
           input {
             box-sizing: border-box;
@@ -605,7 +693,7 @@
         }
         textarea.borders {
           margin: 0 0 24px 0;
-          flex: 0 0 82%;
+          flex: 0 0 73%;
         }
       }
     }
