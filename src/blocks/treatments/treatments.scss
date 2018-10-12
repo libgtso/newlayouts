@@ -1,30 +1,9 @@
 .treatments {
   display: flex;
   justify-content: center;
-  background: #eceaea;
-  background: -moz-radial-gradient(
-    top,
-    ellipse cover,
-    #eceaea 0%,
-    #edebeb 10%,
-    #f4f4f4 60%
-  );
-  background: -webkit-radial-gradient(
-    top,
-    ellipse cover,
-    #eceaea 0%,
-    #edebeb 10%,
-    #f4f4f4 60%
-  );
-  background: radial-gradient(
-    ellipse at top,
-    #eceaea 0%,
-    #edebeb 10%,
-    #f4f4f4 60%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
+  @include treatments-bg;
   padding-bottom: 48px;
-  border-top: 2px solid $border-line;
+  border-top: $border-line;
   .content {
     max-width: 896px;
     .rules {
@@ -52,9 +31,9 @@
         margin-bottom: 24px;
         .borders {
           margin-right: 0;
-          border: 2px solid $border-line;
+          border: $border-line;
           &:focus {
-            border: 2px solid $border-line-focus;
+            border: $border-line-focus;
           }
         }
         input {
@@ -72,14 +51,14 @@
         height: 88px;
         padding: 24px 24px;
         resize: none;
-        border: 2px solid $border-line;
+        border: $border-line;
         background: none;
         &:focus {
-          border: 2px solid $border-line-focus;
+          border: $border-line-focus;
         }
       }
       .button {
-        border: 2px solid $white;
+        border: $border-style;
         padding: 16px 88px;
         background: #f4f4f4;
         margin: 0 auto;

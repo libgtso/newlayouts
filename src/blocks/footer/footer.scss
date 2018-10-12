@@ -1,5 +1,5 @@
 footer {
-  background: #333c40;
+  background: $footerbg;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -7,7 +7,7 @@ footer {
   .footer-bottom {
     display: flex;
     width: 100%;
-    border-top: 2px solid #2a3337;
+    border-top: $footer-top-border;
     flex-direction: column;
     .content {
       width: 100%;
@@ -18,17 +18,17 @@ footer {
         }
         .ratings,
         .blind {
-          border: 2px solid $white;
+          border: $border-style;
           line-height: 32px;
         }
         .searchpanel {
           background: $footerbg;
           color: $white;
           &:hover {
-            border: 2px solid #546167;
+            border: $border-search-style;
           }
           &:focus {
-            border: 2px solid $white;
+            border: $border-style;
           }
           input {
             color: $footertextcolor;

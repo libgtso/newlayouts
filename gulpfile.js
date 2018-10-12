@@ -16,17 +16,47 @@ var path = {
   }
 };
 
-gulp.task("sass", function() {
-  return gulp
-    .src("src/style/main.scss")
-    .pipe(sourcemaps.init())
-    .pipe(sass())
-    .pipe(autoprefixer(["last 2 versions", "> 1%"], { cascade: true }))
-    .pipe(csso())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./style"))
-    .pipe(browserSync.reload({ stream: true }));
-});
+// gulp.task("sass", function() {
+//   return gulp
+//     .src("src/style/main.scss")
+//     .pipe(sourcemaps.init())
+//     .pipe(sass())
+//     .pipe(autoprefixer(["last 2 versions", "> 1%"], { cascade: true }))
+//     .pipe(csso())
+//     .pipe(sourcemaps.write())
+//     .pipe(gulp.dest("./style"))
+//     .pipe(browserSync.reload({ stream: true }));
+// });
+
+function wrapPipe(taskFn) {
+  return function(done) {
+    var onSuccess = function() {
+      done();
+    };
+    var onError = function(err) {
+      done(err);
+    };
+    var outStream = taskFn(onSuccess, onError);
+    if (outStream && typeof outStream.on === "function") {
+      outStream.on("end", onSuccess);
+    }
+  };
+}
+
+gulp.task(
+  "sass",
+  wrapPipe(function(success, error) {
+    return gulp
+      .src("src/style/main.scss")
+      .pipe(sourcemaps.init())
+      .pipe(browserSync.reload({ stream: true }))
+      .pipe(sass().on("error", error))
+      .pipe(autoprefixer(["last 2 versions", "> 1%"], { cascade: true }))
+      .pipe(sourcemaps.write())
+      .pipe(csso())
+      .pipe(gulp.dest("./style"));
+  })
+);
 
 gulp.task("scripts", function() {
   return gulp

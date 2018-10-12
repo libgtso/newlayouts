@@ -2,7 +2,7 @@
   display: flex;
   margin: 48px 0 32px;
   .searchpanel {
-    border: 2px solid $bordercolor;
+    border: $bordercolor;
     flex: 1 1 auto;
     padding: 13px 24px;
     input {
@@ -42,35 +42,9 @@
     }
   }
   .sh-btn {
-    display: block;
-    position: relative;
-    &:before {
-      position: absolute;
-      content: "";
-      background: url("../images/lupa.png");
-      width: 16px;
-      height: 16px;
-      top: 20px;
-      left: 20px;
-    }
+    @include panel-sh-btn;
   }
   .cls-btn {
-    position: relative;
-    &:before,
-    &:after {
-      position: absolute;
-      width: 28px;
-      height: 1px;
-      content: "";
-      background: $gray;
-      top: 28px;
-      left: 13px;
-    }
-    &:after {
-      transform: rotate(45deg);
-    }
-    &:before {
-      transform: rotate(-45deg);
-    }
+    @include panel-cls-btn;
   }
 }
