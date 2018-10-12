@@ -22,7 +22,7 @@
       }
       .blind:hover,
       .ratings:hover {
-        background: #fcfcfc;
+        background: $button-panel-hover-bg;
         border: $border-style;
         color: $button-text-hover;
       }
