@@ -5,7 +5,7 @@
     margin-bottom: 24px;
     li {
       a {
-        border-bottom: 2px dotted $gray;
+        border-bottom: $border-dotted-links;
         &:hover {
           color: $button-text-hover;
         }

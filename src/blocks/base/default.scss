@@ -6,6 +6,7 @@ $header-color: #2c2c2c;
 
 $footerbg: #333c40;
 $footer-top-border: 2px solid #2a3337;
+$footer-links-header-color: #3d96c6;
 
 $bordercolor: 2px solid #485257;
 $border-line: 2px solid #e8e8e8;
@@ -13,6 +14,7 @@ $border-line-focus: 2px solid #dad9d9;
 $border-style: 2px solid $white;
 $border-search-style: 2px solid #546167;
 $border-dotted-links: 2px dotted $gray;
+$border-slider-color: 2px solid $gray;
 
 $button-hover: #c2c5c6;
 $button-text-hover: #5ab7e9;
@@ -157,4 +159,28 @@ $calendar-color: #434343;
   &:before {
     transform: rotate(-45deg);
   }
+}
+@mixin menu-container-bg {
+  background: #eceaea;
+  background: -moz-radial-gradient(
+    top,
+    ellipse cover,
+    #eceaea 0%,
+    #edebeb 10%,
+    #f4f4f4 60%
+  );
+  background: -webkit-radial-gradient(
+    top,
+    ellipse cover,
+    #eceaea 0%,
+    #edebeb 10%,
+    #f4f4f4 60%
+  );
+  background: radial-gradient(
+    ellipse at top,
+    #eceaea 0%,
+    #edebeb 10%,
+    #f4f4f4 60%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
 }

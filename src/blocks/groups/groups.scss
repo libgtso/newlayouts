@@ -50,7 +50,7 @@
         }
         a {
           color: $links-color;
-          border-bottom: 2px dotted $dotted-border;
+          border-bottom: $border-dotted-links;
           &:hover {
             color: $links-hover-color;
           }
@@ -62,7 +62,7 @@
     }
   }
   .button {
-    border: 2px solid $white;
+    border: $border-style;
     padding: 8px 88px;
     text-align: center;
     // width: 10%;
