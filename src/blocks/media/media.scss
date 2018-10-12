@@ -178,10 +178,10 @@
           position: relative;
         }
       }
-      .side-menu {
-        ul {
-          flex: 0 0 90%;
-        }
+    }
+    .side-menu {
+      ul {
+        flex: 0 0 90%;
       }
     }
   }
@@ -259,6 +259,18 @@
       }
     }
   }
+  .contacts {
+    .content {
+      #map {
+        width: 320px;
+        height: 320px;
+      }
+      .contacts-info {
+        flex: 0 0 40%;
+        margin-left: 80px;
+      }
+    }
+  }
   .treatments {
     .treatments-form {
       flex-direction: column !important;
@@ -278,6 +290,58 @@
   .footer {
     .footer-top {
       margin: 0;
+    }
+    .footer-bottom {
+      .content {
+        width: 90%;
+        .blocks.sh-block.sh-hidden {
+          justify-content: space-around;
+          .sh-btn {
+            display: flex;
+            background: none;
+            margin-right: 0;
+          }
+          .cls-btn {
+            display: none;
+          }
+          .borders {
+            margin-right: 0;
+          }
+          .searchpanel {
+            width: 0;
+            flex: 0 0 0;
+            padding: 0;
+            border: 0;
+            input {
+              width: 0;
+            }
+          }
+          .blind.borders,
+          .ratings.borders {
+            display: flex;
+          }
+        }
+        .blocks.sh-block {
+          .button.ratings,
+          .button.blind {
+            display: none;
+          }
+          .searchpanel {
+            transition: flex 0.5s linear;
+            display: flex;
+            margin-right: 0;
+            flex: 1 1 auto;
+          }
+          .sh-btn {
+            display: none;
+          }
+          .cls-btn {
+            display: block;
+            position: relative;
+            background: none;
+          }
+        }
+      }
     }
   }
 }
@@ -375,7 +439,6 @@
           }
         }
       }
-      nav.side-menu,
       nav.main-menu {
         display: none;
       }
@@ -409,6 +472,9 @@
     }
     .burger-time {
       display: flex;
+    }
+    nav.side-menu {
+      display: none;
     }
   }
 

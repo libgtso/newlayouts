@@ -64,7 +64,7 @@
       width: 24px;
       height: 2px;
       background: $links-color;
-      top: 26px;
+      top: 26px !important;
       left: 26%;
       transform: rotate(-45deg);
     }
@@ -74,7 +74,7 @@
       width: 24px;
       height: 2px;
       background: $links-color;
-      bottom: 24px;
+      top: 26px;
       left: 27%;
       transform: rotate(45deg);
     }
@@ -112,7 +112,9 @@
     nav.side-menu {
       display: flex;
       margin: 0 4%;
+      background: none;
       ul {
+        display: flex !important;
         flex-direction: column;
         justify-content: center;
         flex: 0 0 100%;
@@ -122,6 +124,9 @@
           text-align: center;
           letter-spacing: 2px;
         }
+      }
+      .sh-btn {
+        display: none;
       }
     }
     nav.main-menu {

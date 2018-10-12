@@ -54,4 +54,23 @@
       left: 20px;
     }
   }
+  .cls-btn {
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      width: 28px;
+      height: 1px;
+      content: "";
+      background: $gray;
+      top: 28px;
+      left: 13px;
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
+  }
 }
