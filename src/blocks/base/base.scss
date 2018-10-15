@@ -28,7 +28,7 @@ h6 {
   text-transform: uppercase;
   font-family: $header-font;
   padding: 96px 0 56px 0;
-  color: $textcolor;
+  color: $header-color;
   letter-spacing: 2px;
   line-height: 40px;
 }
@@ -70,7 +70,7 @@ a {
     content: "";
     width: 124px;
     height: 2px;
-    background: $white;
+    background: $center-line-bg;
     left: 50%;
     margin-left: -60px;
     bottom: 0;
@@ -103,13 +103,13 @@ img {
   position: relative;
   cursor: pointer;
   padding: 8px 64px;
-  color: #466171;
+  color: $button-text-color;
   text-transform: lowercase;
   &:hover {
     color: $button-text-hover;
   }
   &:active {
-    background: $white !important;
+    background: $button-active-bg !important;
     color: $button-text-color-click;
   }
 }
@@ -135,7 +135,7 @@ img {
     width: 80px;
     height: 80px;
     background: #f5f5f5;
-    border: 2px solid $white;
+    border: $border-style;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
@@ -164,8 +164,8 @@ img {
   }
   .owl-next:hover:before,
   .owl-prev:hover:before {
-    border-left: 2px solid $arrow-hover;
-    border-top: 2px solid $arrow-hover;
+    border-left: $border-slider-color;
+    border-top: $border-slider-color;
   }
   .owl-prev:before {
     transform: rotate(-45deg);
@@ -176,7 +176,7 @@ img {
   }
   .owl-next:active,
   .owl-prev:active {
-    background: $white;
+    background: $button-active-bg;
   }
   .owl-next:active:before,
   .owl-prev:active:before {
@@ -317,4 +317,27 @@ img {
   right: 52px;
   top: -46px;
   z-index: 99;
+}
+
+.container.group {
+  display: flex;
+  flex-direction: row;
+  .content {
+    flex: 0 0 50%;
+    align-self: baseline;
+  }
+  .contacts {
+    background: none;
+  }
+}
+
+.text-container {
+  position: relative;
+  .text-caption {
+    padding: 0 160px 24px 206px;
+  }
+  p {
+    padding: 0 160px 0 206px;
+    text-align: justify;
+  }
 }

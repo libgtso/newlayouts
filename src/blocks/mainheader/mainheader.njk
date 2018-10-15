@@ -3,11 +3,11 @@
 <header class="header">
     <div class="content">
         {% include '../panel/panel.njk' %}
-        <div class="header-caption">
-            <img src="./images/black.jpg">
-            <h1>{{header_name}}</h1>
-        </div>
+        <h1>{{header_name}}</h1>
         {% include '../mainmenu/mainmenu.njk' %}
+        {% include '../mainslider/mainslider.njk' %}
+        
     </div>
-     {% include '../sidemenu/sidemenu.njk'%}
+    {% include '../sidemenu/sidemenu.njk'%}
+    {% include '../mobile_menu/mobile_menu.njk' %}
 </header>

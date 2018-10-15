@@ -1,0 +1,45 @@
+.header {
+  background: $page-bg;
+  display: flex;
+  justify-content: center;
+  border-bottom: $border-line;
+  flex-direction: column;
+
+  .content {
+    width: 100%;
+    .blocks {
+      .sh-btn {
+        display: none;
+      }
+      .searchpanel,
+      .ratings,
+      .blind {
+        border: $border-style;
+        color: $links-color;
+      }
+      .ratings {
+        line-height: 32px;
+      }
+      .blind:hover,
+      .ratings:hover {
+        background: $button-panel-hover-bg;
+        border: $border-style;
+        color: $button-text-hover;
+      }
+      .blind:active,
+      .ratings:active {
+        background: $button-active-bg;
+        color: $button-text-color-click;
+      }
+    }
+    h1 {
+      text-align: center;
+      font-size: 36px;
+      padding-top: 0;
+      color: $header-color;
+    }
+  }
+  .burger-time {
+    display: none;
+  }
+}

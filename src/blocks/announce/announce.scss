@@ -12,10 +12,7 @@
       display: flex;
       justify-content: center;
       flex-direction: column;
-
-      .announce-caption {
-        padding: 0 160px 24px 206px;
-      }
+      margin-bottom: 32px;
 
       img {
         width: 224px;
@@ -24,10 +21,7 @@
         align-self: center;
         margin-bottom: 40px;
       }
-      p {
-        padding: 0 160px 0 206px;
-        text-align: justify;
-      }
+
       .open-img {
         position: absolute;
         width: 56px;
@@ -41,9 +35,6 @@
           height: auto;
         }
       }
-      .announce-container {
-        position: relative;
-      }
     }
     .announce-desc.sh-block.sh-hidden {
       .cls-btn {
@@ -53,28 +44,7 @@
         display: block;
         top: 0;
         right: 0;
-        &:before {
-          width: 12px;
-          height: 12px;
-          position: absolute;
-          border-top: 2px solid $gray;
-          border-left: 2px solid $gray;
-          content: "";
-          top: 32%;
-          left: 38%;
-          transform: rotate(225deg);
-        }
-        &:hover:before {
-          border-left: 2px solid $arrow-hover;
-          border-top: 2px solid $arrow-hover;
-        }
-        &:active:before {
-          border-left: 2px solid $button-text-color-click;
-          border-top: 2px solid $button-text-color-click;
-        }
-        &:active {
-          background: $white;
-        }
+        @include show-text-button;
       }
       .line {
         display: none;

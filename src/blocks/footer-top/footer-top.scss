@@ -16,7 +16,6 @@
         display: flex;
         position: relative;
         flex: 0 0 50%;
-        color: $gray;
         line-height: 24px;
         margin-bottom: 40px;
         position: relative;
@@ -25,9 +24,9 @@
           content: "";
           width: 6px;
           height: 6px;
-          background: $white;
+          background: $list-dots-bg;
           border-radius: 50%;
-          top: 8px;
+          top: 12px;
           left: -16px;
         }
         a {
@@ -45,7 +44,7 @@
     }
     .survey-text {
       margin-bottom: 24px;
-      color: $white;
+      color: $survey-color-text;
     }
     .survey-item {
       display: flex;
@@ -59,7 +58,7 @@
     .answers {
       position: relative;
       padding-left: 48px;
-      color: $gray;
+      color: $survey-answer-text;
       cursor: pointer;
     }
     .answers:first-child {
@@ -108,17 +107,17 @@
     }
 
     .send_answer {
-      border: 2px solid $white;
+      border: $border-style;
       padding: 16px 64px;
       border-radius: 40px;
       background: $footerbg;
-      color: $gray;
+      color: $survey-answer-text;
       &:hover {
         background: $button-hover;
         color: $button-text-hover;
       }
       &:active {
-        background: $white;
+        background: $button-active-bg;
         color: $button-text-color-click;
       }
     }

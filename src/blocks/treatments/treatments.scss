@@ -60,7 +60,7 @@
       .button {
         border: $border-style;
         padding: 16px 88px;
-        background: #f4f4f4;
+        background: $button-bg;
         margin: 0 auto;
         &:hover {
           background: $button-bg-hover !important;

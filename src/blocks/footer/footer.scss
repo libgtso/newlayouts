@@ -23,7 +23,7 @@ footer {
         }
         .searchpanel {
           background: $footerbg;
-          color: $white;
+          color: $footer-search-panel-text-color;
           &:hover {
             border: $border-search-style;
           }
@@ -33,7 +33,7 @@ footer {
           input {
             color: $footertextcolor;
             &:focus {
-              color: $white;
+              color: $footer-search-panel-text-color;
             }
           }
         }

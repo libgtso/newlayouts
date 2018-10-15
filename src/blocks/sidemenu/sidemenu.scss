@@ -55,3 +55,55 @@
     display: none;
   }
 }
+
+.aside {
+  display: flex;
+  background: none;
+  flex: 0 0 15%;
+  padding-left: 80px;
+  nav.side-menu {
+    padding-top: 244px;
+    background: none;
+    align-content: flex-start;
+
+    ul {
+      display: flex !important;
+      flex-direction: column;
+      flex: 0 0 100%;
+      justify-content: flex-start;
+      li {
+        padding-bottom: 24px;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "";
+          background: $side-menu-dots-bg;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          top: 12px;
+          left: -40px;
+          z-index: 10;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 100%;
+          background: $side-menu-line-between-items-bg;
+          top: 20px;
+          left: -37px;
+          z-index: 9;
+        }
+        &:last-child:after {
+          height: 0;
+          background: none;
+        }
+      }
+    }
+    .cls-btn,
+    .sh-btn {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{% extends 'base/base.njk' %}
+
+{% set title = "Группы" %}
+
+{% block title %}{{title}}{% endblock %}
+{% block header %}
+    {% include 'header/header.njk' %}
+{% endblock %}
+
+{% block content %}
+<section class="container group">
+    <div class="aside">
+        {% include 'sidemenu/sidemenu.njk'%}
+    </div>
+    <div class="content">
+        {% include 'group/group.njk' %}
+    </div>
+</section>
+    {% include 'contacts/contacts.njk' %}
+	{% include 'treatments/treatments.njk' %}
+{% endblock %}

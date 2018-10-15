@@ -16,13 +16,13 @@
 
   .ratings,
   .blind {
-    color: $gray;
+    color: $search-panel-text-color;
     &:hover {
       background: $button-hover;
       color: $button-text-hover;
     }
     &:active {
-      background: $white;
+      background: $search-panel-button-active-bg;
       color: $button-text-color-click;
     }
   }
@@ -38,7 +38,7 @@
       height: 17px;
       left: 20px;
       top: 16px;
-      background: url(../images/blind.png);
+      background: $panel-button-blind-eye;
     }
   }
   .sh-btn {

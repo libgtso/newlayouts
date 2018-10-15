@@ -28,7 +28,7 @@
         left: -32px;
         width: 24px;
         height: 15px;
-        background: url(../images/eye.png);
+        background: $counter-eye;
       }
     }
 
@@ -42,31 +42,9 @@
       display: none;
     }
     .sh-btn {
-      display: block;
       top: -104px;
       right: 0;
-      &:before {
-        width: 12px;
-        height: 12px;
-        position: absolute;
-        border-top: 2px solid $gray;
-        border-left: 2px solid $gray;
-        content: "";
-        top: 32%;
-        left: 38%;
-        transform: rotate(225deg);
-      }
-      &:hover:before {
-        border-left: 2px solid $arrow-hover;
-        border-top: 2px solid $arrow-hover;
-      }
-      &:active:before {
-        border-left: 2px solid $button-text-color-click;
-        border-top: 2px solid $button-text-color-click;
-      }
-      &:active {
-        background: $white;
-      }
+      @include show-text-button;
     }
     .line {
       display: none;

@@ -3,10 +3,17 @@ $gray: #a7aeb1;
 $footertextcolor: #535d62;
 $textcolor: #2c2c2c;
 $header-color: #2c2c2c;
+$search-panel-text-color: $gray;
+$search-panel-button-active-bg: $white;
+$panel-button-blind-eye: url(../images/blind.png);
+$counter-eye: url(../images/eye.png);
+$survey-color-text: $white;
+$survey-answer-text: $gray;
 
 $footerbg: #333c40;
 $footer-top-border: 2px solid #2a3337;
 $footer-links-header-color: #3d96c6;
+$footer-search-panel-text-color: $white;
 
 $bordercolor: 2px solid #485257;
 $border-line: 2px solid #e8e8e8;
@@ -16,22 +23,29 @@ $border-search-style: 2px solid #546167;
 $border-dotted-links: 2px dotted $gray;
 $border-slider-color: 2px solid $gray;
 
+$button-bg: #f4f4f4;
+$button-text-color: #466171;
 $button-hover: #c2c5c6;
 $button-text-hover: #5ab7e9;
 $button-bg-hover: #fcfcfc;
 $button-text-color-click: #3097cf;
+$button-active-bg: #fff;
+$button-panel-hover-bg: #fcfcfc;
 
 $links-color-footer: #959c9f;
 $links-hover-color: #5ab7e9;
 $links-color: #315264;
 
-$button-panel-hover-bg: #fcfcfc;
 $page-bg: #f5f5f5;
 $black: #000;
 $arrow-hover: #2f5363;
 $dotted-border: #babdbe;
 $second-border: #dacbbc;
 $calendar-color: #434343;
+$center-line-bg: $white;
+$list-dots-bg: $white;
+$side-menu-dots-bg: #3fa1d6;
+$side-menu-line-between-items-bg: #dfdfdf;
 
 @mixin container-bg {
   background: #eceaea;
@@ -184,4 +198,29 @@ $calendar-color: #434343;
     #f4f4f4 60%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
+}
+@mixin show-text-button {
+  display: block;
+  &:before {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-top: 2px solid $gray;
+    border-left: 2px solid $gray;
+    content: "";
+    top: 32%;
+    left: 38%;
+    transform: rotate(225deg);
+  }
+  &:hover:before {
+    border-left: 2px solid $arrow-hover;
+    border-top: 2px solid $arrow-hover;
+  }
+  &:active:before {
+    border-left: 2px solid $button-text-color-click;
+    border-top: 2px solid $button-text-color-click;
+  }
+  &:active {
+    background: $white;
+  }
 }
