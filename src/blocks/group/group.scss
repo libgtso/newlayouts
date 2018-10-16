@@ -1,57 +1,63 @@
-.group-desc {
-  margin-bottom: 64px;
-  .text-container {
-    position: relative;
-    .text-caption {
-      padding: 0 160px 24px 0;
+.container.group {
+  .content {
+    .group-desc {
+      margin-bottom: 64px;
+      .text-container {
+        position: relative;
+        .text-caption {
+          padding: 0 160px 24px 0;
+        }
+        p {
+          padding: 0 160px 0 0;
+        }
+      }
+      .center {
+        &:before {
+          left: 56px;
+        }
+      }
     }
-    p {
-      padding: 0 160px 0 0;
+    .group-desc.sh-block.sh-hidden {
+      .cls-btn {
+        display: none;
+      }
+      .sh-btn {
+        top: 0;
+        right: 0;
+        @include show-text-button;
+      }
+      .line {
+        display: none;
+      }
+      p {
+        max-height: 130px;
+        overflow: hidden;
+      }
     }
-  }
-  .center {
-    &:before {
-      left: 56px;
+    .group-desc.sh-block {
+      .line {
+        top: 0;
+      }
+      .sh-btn {
+        display: none;
+      }
+      .cls-btn {
+        z-index: 100;
+        display: block;
+        right: 0;
+        bottom: 0;
+      }
+      .cls-btn-top {
+        right: 0;
+        top: 0;
+      }
     }
-  }
-}
-.group-desc.sh-block.sh-hidden {
-  .cls-btn {
-    display: none;
-  }
-  .sh-btn {
-    top: 0;
-    right: 0;
-    @include show-text-button;
-  }
-  .line {
-    display: none;
-  }
-  p {
-    max-height: 130px;
-    overflow: hidden;
-  }
-}
-.group-desc.sh-block {
-  .line {
-    top: 0;
-  }
-  .sh-btn {
-    display: none;
-  }
-  .cls-btn {
-    z-index: 100;
-    display: block;
-    right: 0;
-    bottom: 0;
-  }
-  .cls-btn-top {
-    right: 0;
-    top: 0;
   }
 }
 
 .discussions {
+  display: flex;
+  flex-direction: column;
   .date {
     position: relative;
     display: flex;
@@ -61,16 +67,79 @@
       left: 64px;
       position: absolute;
       height: 2px;
-      width: 95%;
+      width: 80%;
       content: "";
       background: $side-menu-line-between-items-bg;
     }
   }
-  .discussions-preview-header {
-    padding: 56px 0 56px;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 952px;
-    text-overflow: ellipsis;
+  .discussions-item {
+    .text-caption {
+      cursor: pointer;
+      margin: 56px 0 56px;
+      max-width: 720px;
+      padding: 0;
+    }
+    position: relative;
+    p {
+      padding: 0;
+      max-width: 788px;
+    }
+    margin-bottom: 64px;
+  }
+  .discussions-item.sh-block.sh-hidden {
+    .text-caption {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+    .cls-btn {
+      display: none;
+    }
+    .sh-btn {
+      display: none;
+    }
+    p {
+      //max-height: 132px;
+      overflow: hidden;
+    }
+    .line {
+      display: none;
+    }
+  }
+  .discussions-item.sh-block {
+    .text-caption {
+      white-space: normal;
+    }
+    .sh-btn {
+      display: none;
+    }
+    .cls-btn {
+      display: block;
+    }
+    .cls-btn-top {
+      right: 0;
+      top: 0;
+    }
+    .cls-btn {
+      z-index: 100;
+      display: block;
+      right: 0;
+      bottom: 0;
+    }
+    .line {
+      top: 35px;
+      height: 90%;
+    }
+  }
+  .discussions-item.sh-block.sh-hidden.show-button {
+    .cls-btn {
+      display: none;
+    }
+    .sh-btn {
+      display: flex;
+      top: 0;
+      right: 0;
+      @include show-text-button;
+    }
   }
 }

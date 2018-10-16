@@ -5,6 +5,7 @@ $(document).ready(function() {
   textCut();
   mapsCustom();
   usefullslider();
+  showButt();
 });
 
 function showHideBlock(e) {
@@ -15,7 +16,7 @@ function showHideBlock(e) {
 }
 
 function showHide() {
-  $(document).on("click", ".sh-btn", showHideBlock);
+  $(document).on("click", ".sh-btn, .rylo", showHideBlock);
   $(document).on("click", ".cls-btn", showHideBlock);
 }
 
@@ -42,6 +43,16 @@ function usefullslider() {
     navText: false,
     slideBy: 2
   });
+}
+
+function showButt() {
+  var heightText = 132;
+  var defaultClass = $(document).find(".discussions-item.sh-block.sh-hidden");
+  var text = $(document).find(".discussions-item.sh-block.sh-hidden p");
+
+  if (heightText < text.height()) {
+    defaultClass.toggleClass("show-button");
+  }
 }
 
 function openimage() {
