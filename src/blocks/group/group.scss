@@ -37,6 +37,7 @@
     .group-desc.sh-block {
       .line {
         top: 0;
+        display: block;
       }
       .sh-btn {
         display: none;
@@ -61,7 +62,7 @@
   .date {
     position: relative;
     display: flex;
-    color: $gray;
+    color: $survey-answer-text;
     &:before {
       top: 8px;
       left: 64px;
@@ -73,19 +74,128 @@
     }
   }
   .discussions-item {
-    .text-caption {
-      cursor: pointer;
-      margin: 56px 0 56px;
-      max-width: 720px;
-      padding: 0;
+    margin-bottom: 80px;
+    .text-container {
+      .text-caption {
+        cursor: pointer;
+        margin: 56px 0 56px;
+        max-width: 720px;
+        padding: 0 160px 0 0;
+      }
+      p {
+        padding: 0 160px 0 0;
+      }
     }
     position: relative;
     p {
       padding: 0;
       max-width: 788px;
     }
-    margin-bottom: 64px;
+    .comments {
+      margin-top: 24px;
+      position: relative;
+      .counter-item {
+        cursor: pointer;
+        .img {
+          display: inline-flex;
+          vertical-align: top;
+          width: 28px;
+          height: 24px;
+          background: url("../images/bubble.png") no-repeat;
+        }
+        .comments-counter {
+          vertical-align: top;
+          display: inline-flex;
+          margin-left: 16px;
+          color: $links-color;
+          border-bottom: $border-dotted-links;
+          font-family: $second-text-font;
+        }
+        &:hover {
+          .img {
+            background: url("../images/bubble_hover.png") no-repeat;
+          }
+          .comments-counter {
+            color: $button-text-hover;
+          }
+        }
+        &:active {
+          .img {
+            background: url("../images/bubble_click.png") no-repeat;
+          }
+          .comments-counter {
+            color: $button-text-color-click;
+          }
+        }
+      }
+
+      .caption {
+        padding: 0 0 16px 0;
+        color: $button-text-hover;
+      }
+      .comments-item {
+        font-family: $second-text-font;
+        .comment-item-counter {
+          margin-bottom: 40px;
+        }
+        .comment-date {
+          display: block;
+          color: $survey-answer-text;
+          margin-bottom: 40px;
+        }
+        p {
+          position: relative;
+          padding: 64px 0;
+          margin-left: 48px;
+          &:before,
+          &:after {
+            content: "";
+            width: 33px;
+            height: 22px;
+            position: absolute;
+          }
+          &:before {
+            background: url("../images/begin.png");
+            top: 24px;
+          }
+          &:after {
+            background: url("../images/end.png");
+            bottom: 24px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    .comments.sh-block.sh-hidden {
+      .counter-item {
+        display: inline-block;
+      }
+      .caption {
+        display: none;
+      }
+    }
+    .comments.sh-block {
+      .counter-item {
+        display: none;
+      }
+      .caption {
+        display: block;
+      }
+    }
+
+    .text-container {
+      .text-caption:hover {
+        color: $button-text-hover;
+      }
+      .text-caption:active {
+        color: $button-text-color-click;
+      }
+    }
   }
+
+  //TODO вынести классы для обсуждения и новостей и еще чего-то в base.scss
+  .discussions-item.sh-block.sh-hidden.show-button,
   .discussions-item.sh-block.sh-hidden {
     .text-caption {
       overflow: hidden;
@@ -95,18 +205,11 @@
     .cls-btn {
       display: none;
     }
-    .sh-btn {
-      display: none;
-    }
-    p {
-      //max-height: 132px;
-      overflow: hidden;
-    }
     .line {
       display: none;
     }
   }
-  .discussions-item.sh-block {
+  .discussions-item.sh-block.show-button {
     .text-caption {
       white-space: normal;
     }
@@ -129,17 +232,47 @@
     .line {
       top: 35px;
       height: 90%;
+      display: block;
     }
   }
   .discussions-item.sh-block.sh-hidden.show-button {
-    .cls-btn {
-      display: none;
-    }
     .sh-btn {
       display: flex;
       top: 0;
       right: 0;
       @include show-text-button;
+    }
+  }
+  .comment-send {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+    .comment-send-caption {
+      color: $button-text-color-click;
+      font-family: $header-font;
+      font-size: 24px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    form {
+      align-self: center;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      input,
+      textarea {
+        margin-bottom: 24px;
+        border: $border-line;
+        background: none;
+        padding: 24px;
+      }
+
+      textarea {
+        resize: vertical;
+        min-height: 80px;
+      }
     }
   }
 }

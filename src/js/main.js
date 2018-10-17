@@ -6,6 +6,7 @@ $(document).ready(function() {
   mapsCustom();
   usefullslider();
   showButt();
+  loadComments();
 });
 
 function showHideBlock(e) {
@@ -16,7 +17,7 @@ function showHideBlock(e) {
 }
 
 function showHide() {
-  $(document).on("click", ".sh-btn, .rylo", showHideBlock);
+  $(document).on("click", ".sh-btn, .show-text", showHideBlock);
   $(document).on("click", ".cls-btn", showHideBlock);
 }
 
@@ -47,12 +48,29 @@ function usefullslider() {
 
 function showButt() {
   var heightText = 132;
-  var defaultClass = $(document).find(".discussions-item.sh-block.sh-hidden");
-  var text = $(document).find(".discussions-item.sh-block.sh-hidden p");
+  var text = $(".sh-block.sh-hidden p");
 
-  if (heightText < text.height()) {
-    defaultClass.toggleClass("show-button");
+  for (var i = 0; i < text.length; i++) {
+    if (heightText < text[i].offsetHeight) {
+      $(text[i])
+        .closest(".sh-block.sh-hidden")
+        .toggleClass("show-button");
+    }
   }
+}
+
+function loadComments() {
+  $(document).on("click", ".comments .counter-item", function(e) {
+    var container = $(".comments-item", $(e.target).closest(".comments"));
+    $.ajax({
+      url: "./src/blocks/tests/test.html",
+      cache: false,
+      type: "GET",
+      success: function(html) {
+        $(container).append(html);
+      }
+    });
+  });
 }
 
 function openimage() {
@@ -82,11 +100,9 @@ function textCut() {
   text.each(function(i, item) {
     var size = 98;
     var elementText = item.innerText;
-    //console.log(elementText.length);
     if (elementText.length > size) {
       var result = elementText.substring(0, size) + "...";
       result.replace(/\s{2,}/g, " ");
-      //console.log(result);
       item.innerText = result;
     } else {
       return item;
