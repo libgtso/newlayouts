@@ -68,6 +68,7 @@
     <div class="center"></div>
 </div>
 {% endfor %}
+{% include '../photo/photo.njk' %}
 <div class="discussions">
     <h3 class="discussions-header">Обсуждения</h3>
     {% for item in discuss %}
@@ -89,7 +90,7 @@
         <form action="POST">
             <input type="text" placeholder="Как к вам обращаться" class="borders">
             <textarea class="borders"></textarea>
-            <button class="borders button" type="submit">Отправить</button>
+            <button class="button borders" type="submit">отправить</button>
         </form>
     </div>
 </div>

@@ -1,0 +1,50 @@
+.photoalbums {
+  display: flex;
+  flex-direction: column;
+  .albums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    .album-item {
+      flex-direction: column;
+      display: flex;
+      flex: 0 0 50%;
+      margin-bottom: 64px;
+      align-self: flex-start;
+      position: relative;
+      img {
+        width: 224px;
+        height: 224px;
+        border-radius: 50%;
+      }
+
+      .open-img {
+        position: absolute;
+        width: 56px;
+        height: 56px;
+        top: 0;
+        left: 160px;
+        cursor: pointer;
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+      .counter {
+        margin-top: 40px;
+        position: relative;
+        align-self: flex-start;
+      }
+      .album-item-name {
+        width: 80%;
+        margin-top: 16px;
+        order: 1;
+      }
+    }
+  }
+
+  .center:before {
+    left: 64px;
+  }
+}

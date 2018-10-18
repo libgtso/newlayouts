@@ -1,0 +1,41 @@
+{% set album = [
+        {
+            'src': './images/black.jpg',
+            'alt': 'photoname',
+            'counter': '1488'
+        },
+        {
+            'src': './images/cats1.jpg',
+            'alt': 'photoname',
+            'counter': '1488'
+        },
+        {
+            'src': './images/bb.jpg',
+            'alt': 'photoname',
+            'counter': '1488'
+        },
+        {
+            'src': './images/hello.gif',
+            'alt': 'photoname',
+            'counter': '1488'
+        }
+    ]
+%}
+
+<div class="photoalbums">
+    <h3>Фотоальбомы группы</h3>
+    <div class="albums">
+        {% for item in album %}
+        <div class="album-item item">
+            <img class="album-prev" src="{{item.src}}" alt="{{item.alt}}">
+            <div class="popup"></div>
+            <div class="open-img">
+                <img src="./images/expand.png">
+            </div>
+            <div class="counter">x {{item.counter}}</div>
+            <a class="album-item-name" href="/">Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома</a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="center"></div>
+</div>

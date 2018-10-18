@@ -7,6 +7,8 @@ $(document).ready(function() {
   usefullslider();
   showButt();
   loadComments();
+  indexPage();
+  showPic();
 });
 
 function showHideBlock(e) {
@@ -54,7 +56,7 @@ function showButt() {
     if (heightText < text[i].offsetHeight) {
       $(text[i])
         .closest(".sh-block.sh-hidden")
-        .toggleClass("show-button");
+        .addClass("show-button");
     }
   }
 }
@@ -68,6 +70,8 @@ function loadComments() {
       type: "GET",
       success: function(html) {
         $(container).append(html);
+        showButt(); //добавляем класс, если комментарий превышает дефолтную высоту
+        indexPage();
       }
     });
   });
@@ -143,3 +147,52 @@ function mapsCustom() {
     myMap.geoObjects.add(myPlacemarkWithContent);
   });
 }
+
+function indexPage() {
+  // обрезать название рубрик по ширине
+  var captions = $(".text-container p");
+  if (captions.length) {
+    captions.each(function() {
+      $clamp(this, { clamp: 3 });
+    });
+  }
+}
+
+function showPic() {
+  $(document).on("click", ".open-img", function(e) {
+    var container = $(".popup", $(e.target).closest(".item"));
+    var img = $(".album-prev", $(e.target).closest(".item"));
+    var popup = $(".veil");
+    popup.show();
+    container
+      .html($(img).clone())
+      .fadeIn()
+      .append('<div class="popup-close"></div>');
+
+    closePopup();
+
+    function closePopup() {
+      $(document).on("click", ".popup-close", function(e) {
+        container.fadeOut();
+        container.empty();
+        popup.hide();
+      });
+    }
+  });
+}
+
+// $(document).on('click', '#header .menu a', function(e){
+//     var href = $(this).attr('href');
+//     if (href.indexOf('/#') === 0) {
+//         var id = href.substring(2),
+//             block = $('#'+id);
+
+//         if (block.length) {
+//             e.preventDefault();
+//             $('html, body').animate({
+//                 'scrollTop' : block.offset().top - 40
+//             });
+//         }
+//     }
+// });
+//}
