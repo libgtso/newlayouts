@@ -1,23 +1,26 @@
-{% set treatments_header = "Обращения граждан" %}
-{% set treatments_text = "С помощью этой формы вы можете направить обращение в МАОУ СОШ 5. Сотрудники МАОУ СОШ 5
-подготовят ответ
-и вышлют его на электронный адрес, оставленный вами при обращении. Уважаемые пользователи, просим вас внимательно
-ознакомиться с порядком приема и рассмотрения обращений в электронном виде." %}
-{% set rules = "Порядок приема и правила рассмотрения обращений граждан." %}
-{% set send = "отправить" %}
+{%
+    set treatments = {
+        "header": "Обращения граждан",
+        "text": "С помощью этой формы вы можете направить обращение в МАОУ СОШ 5. Сотрудники МАОУ СОШ 5
+                подготовят ответ и вышлют его на электронный адрес, оставленный вами при обращении. Уважаемые пользователи, просим вас внимательно
+                ознакомиться с порядком приема и рассмотрения обращений в электронном виде.",
+        "rules": "Порядок приема и правила рассмотрения обращений граждан.",
+        "send": "отправить"
+    }
+%}
 
 <section class="treatments">
     <div class="content">
-        <h2 class="header">{{treatments_header}}</h2>
-        <p>{{treatments_text}}</p>
-        <a class="rules" href="/"><span>{{rules}}</span></a>
+        <h2 class="header">{{treatments.header}}</h2>
+        <p>{{treatments.text}}</p>
+        <a class="rules" href="/"><span>{{treatments.rules}}</span></a>
         <form class="treatments-form" action="post">
             <div class="treatments-fields">
                 <input class="borders" type="text">
                 <input class="borders" type="text">
             </div>
             <textarea class="borders" cols="30" rows="10"></textarea>
-            <button class="button borders" type="submit">{{send}}</button>
+            <button class="button borders" type="submit">{{treatments.send}}</button>
         </form>
     </div>
 </section>

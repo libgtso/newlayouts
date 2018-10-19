@@ -1,84 +1,86 @@
-{% set days = [
-    {
-        "day": "Пн."
-    },
-    {
-        "day": "Вт."
-    },
-    {
-        "day": "Ср."
-    },
-    {
-        "day": "Чт."
-    },
-    {
-        "day": "Пт."
-    },
-    {
-        "day": "Сб."
-    },
-    {
-        "day": "Вс."
-    }
-] %}
-
 {%
-    set  calendarDate = {
-        numberOfCalendar : 31,
-        today: 12,
-        emptyCell: 6,
-        active: 26
-    }
-%}
-
-{%
-    set data = [
-        {
-            "type":"Добавлено мероприятие",
-            "header": "Это превью заголовка",
-            "counter": "99",
-            "src": "./images/black.jpg",
-            "link": "Подробнее"
-        },
-        {
-            "type":"Добавлено мероприятие",
-            "header": "Это превью заголовка",
-            "counter": "99",
-            "src": "./images/black.jpg",
-            "link": "Подробнее"
-        },
-        {
-            "type":"Добавлено мероприятие",
-            "header": "Это превью заголовка",
-            "counter": "99",
-            "src": "./images/black.jpg",
-            "link": "Подробнее"
+    set events = {
+        "header": "События",
+        "year": "2017",
+        "month": "Сентябрь",
+        "eventsDate": "26 сентября",
+        "day": [
+            {
+                "day": "Пн."
+            },
+            {
+                "day": "Вт."
+            },
+            {
+                "day": "Ср."
+            },
+            {
+                "day": "Чт."
+            },
+            {
+                "day": "Пт."
+            },
+            {
+                "day": "Сб."
+            },
+            {
+                "day": "Вс."
+            }
+        ],
+        "data": [
+            {
+                "type":"Добавлено мероприятие",
+                "header": "Это превью заголовка",
+                "counter": "99",
+                "src": "./images/black.jpg",
+                "link": "Подробнее"
+            },
+            {
+                "type":"Добавлено мероприятие",
+                "header": "Это превью заголовка",
+                "counter": "99",
+                "src": "./images/black.jpg",
+                "link": "Подробнее"
+            },
+            {
+                "type":"Добавлено мероприятие",
+                "header": "Это превью заголовка",
+                "counter": "99",
+                "src": "./images/black.jpg",
+                "link": "Подробнее"
+            }
+        ],
+        "calendarDate": {
+            "numberOfCalendar" : 31,
+            "today": 12,
+            "emptyCell": 6,
+            "active": 26
         }
-    ]
+    }
 %}
 
 <section class="events center">
-    <h2 class="header">События</h2>
+    <h2 class="header">{{events.header}}</h2>
     <div class="content">
         <div class="events-calendar">
             <div class="calendar-container">
-                <span class="year">2017</span>
-                <span class="month">Сентябрь</span>
+                <span class="year">{{events.year}}</span>
+                <span class="month">{{events.month}}</span>
                 <div class="days">
-                    {% for item in days %}
+                    {% for item in days.day %}
                         <span class="day">{{item.day}}</span>
                     {% endfor %}
                 </div>
                 <div class="list">
-                    {% for i in range(0, calendarDate.emptyCell) %}
+                    {% for i in range(0, events.calendarDate.emptyCell) %}
                         <div class="cell emptycell"></div>
                     {% endfor %}
-                    {% for i in range(1, calendarDate.numberOfCalendar) %}
+                    {% for i in range(1, events.calendarDate.numberOfCalendar) %}
                         <div class="cell">
-                            {% if i == calendarDate.today %}
-                                <a href="/" class="numb event">{{calendarDate.today}}</a>
-                            {% elif i == calendarDate.active %}
-                                <a href="/" class="numb active">{{calendarDate.active}}</a>
+                            {% if i == events.calendarDate.today %}
+                                <a href="/" class="numb event">{{events.calendarDate.today}}</a>
+                            {% elif i == events.calendarDate.active %}
+                                <a href="/" class="numb active">{{events.calendarDate.active}}</a>
                             {% else %}
                                 <p class="numb">{{i}}</p>
                             {% endif %}
@@ -88,9 +90,9 @@
             </div>
         </div>
         <div class="events-info">
-            <h3 class="events-date">26 сентября</h3>
+            <h3 class="events-date">{{events.eventsDate}}</h3>
             <div class="events-blocks">
-            {% for item in data %}
+            {% for item in events.data %}
                 <div class="event-item">
                     <img src="{{item.src}}">
                     {% if item.counter %}

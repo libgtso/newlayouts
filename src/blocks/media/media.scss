@@ -359,6 +359,18 @@
   }
 }
 
+@media (min-width: 801px) and (max-width: 999px) {
+  header {
+    .burger-time {
+      display: flex;
+    }
+    nav.main-menu,
+    nav.side-menu {
+      display: none;
+    }
+  }
+}
+
 @media (min-width: 320px) and (max-width: 800px) {
   .content {
     max-width: 640px;
@@ -619,7 +631,7 @@
         }
         .events-blocks {
           margin-left: 4% !important;
-          .events-block {
+          .event-item {
             flex-direction: column;
             align-items: center;
             .counter {

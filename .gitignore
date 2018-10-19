@@ -1,4 +1,8 @@
 node_modules/
 text.txt
-*.css
+style/main.css
 js/main.js
+./*html
+group.html
+groups.html
+news.html

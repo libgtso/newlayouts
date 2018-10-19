@@ -62,6 +62,11 @@
 .discussions {
   display: flex;
   flex-direction: column;
+  .discussions-item {
+    .text-caption {
+      color: $button-text-hover;
+    }
+  }
   .date {
     position: relative;
     display: flex;
@@ -201,7 +206,7 @@
     }
   }
 
-  //TODO вынести классы для обсуждения и новостей и еще чего-то в base.scss
+  //TODO вынести классы кнопок для обсуждения и новостей и еще чего-то в base.scss
   .discussions-item.sh-block.sh-hidden.show-button,
   .discussions-item.sh-block.sh-hidden {
     .text-caption {
