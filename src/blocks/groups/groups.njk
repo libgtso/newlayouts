@@ -8,12 +8,14 @@
             "header": "Ета превлю названия группы",
             "preview": "Маленький рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни",
             "link": "Подробнее",
+            "href": "/groups.html",
             "src": "./images/black.jpg"
         },
         {
             "header": "Ета превлю заголовка",
             "preview": "При выборе элементов фильтра и нажатия кнопки Submit, должны отсылаться данные в POST и обновляться элемент, который отвечает за список товаров.",
             "link": "Подробнее",
+            "href": "/groups.html",
             "src": "./images/black.jpg"
         }
     ]
@@ -21,7 +23,7 @@
 
 <section class="groups">
         <div class="content">
-        <h2 class="groups-header">{{title}}</h2>
+        <h2 class="header">{{title}}</h2>
         <div class="groups-block">
             {% for item in groups_item %}
                 <div class="groups-item">
@@ -34,7 +36,7 @@
                             <p>{{item.preview}}</p>
                         </div>
                         <span>
-                            <a href="/">{{item.link}}</a>
+                            <a href="{{item.href}}">{{item.link}}</a>
                         </span>
                     </div>
                 </div>

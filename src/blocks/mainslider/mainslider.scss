@@ -1,17 +1,12 @@
 .slider-container {
   position: relative;
   .open-img {
-    position: absolute;
-    border-radius: 50%;
     left: 50%;
-    z-index: 998;
+    z-index: 88;
     margin-left: 125px;
     top: 11%;
-    cursor: pointer;
   }
-  .popup {
-    top: -20%;
-  }
+
   .mainslider {
     margin: 32px auto;
     height: 464px;

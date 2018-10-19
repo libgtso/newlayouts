@@ -44,12 +44,12 @@
 ] %}
 
 <section class="announce center">
-    <div class="content block">
-        <h2 class="announce-header">{{header}}</h2>
+    <div class="content">
+        <h2 class="header">{{header}}</h2>
         {% for item in announce %}
-        <div class="announce-desc sh-block sh-hidden active">
+        <div class="announce-desc sh-block sh-hidden item">
             <div class="popup"></div>
-            <img class="announce-img" src="{{item.src}}"/>
+            <img class="img-prev" src="{{item.src}}"/>
             <div class="open-img">
                 <img src="./images/expand.png">
             </div>

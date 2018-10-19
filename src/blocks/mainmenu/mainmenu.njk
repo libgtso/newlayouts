@@ -7,7 +7,7 @@
     "link": "/" 
     },  
     { "name": "Новости",
-    "link": "/" 
+    "link": "/news.html" 
     }, 
     { "name": "Информация", 
     "link": "/" 
@@ -31,7 +31,7 @@
     <ul>
         {% for item in menu %}
         <li>
-            <a href="item.link" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
+            <a href="{{item.link}}" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
         </li>
         {% endfor %}
     </ul>

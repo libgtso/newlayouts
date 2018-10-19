@@ -151,7 +151,7 @@ function mapsCustom() {
 function showPic() {
   $(document).on("click", ".open-img", function(e) {
     var container = $(".popup", $(e.target).closest(".item"));
-    var img = $(".album-prev", $(e.target).closest(".item"));
+    var img = $(".img-prev", $(e.target).closest(".item"));
     var popup = $(".veil");
     popup.show();
     container
@@ -207,33 +207,33 @@ function indexPage() {
 // });
 //}
 
-// function sectionPage() {
-//   var pubs = $(".section-pubs .pub-container");
-//   if (pubs.length) {
-//     pubs.each(function() {
-//       var caption = $(".caption", $(this)),
-//         annotation = $(".annotation", $(this));
-//       checkClamp($(this));
-//       if (caption.height() > 92 || annotation.height() > 96) {
-//         $(this).addClass("sh-hidden hideable");
-//       } else {
-//         $(this).removeClass("sh-hidden hideable");
-//       }
-//     });
+function sectionPage() {
+  var pubs = $(".section-pubs .pub-container");
+  if (pubs.length) {
+    pubs.each(function() {
+      var caption = $(".caption", $(this)),
+        annotation = $(".annotation", $(this));
+      checkClamp($(this));
+      if (caption.height() > 92 || annotation.height() > 96) {
+        $(this).addClass("sh-hidden hideable");
+      } else {
+        $(this).removeClass("sh-hidden hideable");
+      }
+    });
 
-//     pubs.on("click", ".sh-btn", function() {
-//       checkClamp($(this).closest(".sh-block"));
-//     });
-//   }
+    pubs.on("click", ".sh-btn", function() {
+      checkClamp($(this).closest(".sh-block"));
+    });
+  }
 
-//   function checkClamp(item) {
-//     // этот скрипт срабатывает раньше чем стандартный для sh-block, поэтому тут ноборот проверка
-//     if (item.is(".sh-hidden")) {
-//       $clamp($(".caption", item)[0], { clamp: "1000px" });
-//       $clamp($(".annotation", item)[0], { clamp: "1000px" });
-//     } else {
-//       $clamp($(".caption", item)[0], { clamp: 3 });
-//       $clamp($(".annotation", item)[0], { clamp: 3 });
-//     }
-//   }
-// }
+  // function checkClamp(item) {
+  //   // этот скрипт срабатывает раньше чем стандартный для sh-block, поэтому тут ноборот проверка
+  //   if (item.is(".sh-hidden")) {
+  //     $clamp($(".caption", item)[0], { clamp: "1000px" });
+  //     $clamp($(".annotation", item)[0], { clamp: "1000px" });
+  //   } else {
+  //     $clamp($(".caption", item)[0], { clamp: 3 });
+  //     $clamp($(".annotation", item)[0], { clamp: 3 });
+  //   }
+  // }
+}

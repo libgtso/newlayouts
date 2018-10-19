@@ -13,23 +13,14 @@
       margin-bottom: 64px;
       align-self: flex-start;
       position: relative;
-      img {
-        width: 224px;
-        height: 224px;
-        border-radius: 50%;
+      .img-prev {
+        align-self: flex-start;
       }
 
       .open-img {
-        position: absolute;
-        width: 56px;
-        height: 56px;
         top: 0;
         left: 160px;
         cursor: pointer;
-        img {
-          width: auto;
-          height: auto;
-        }
       }
       .counter {
         margin-top: 40px;

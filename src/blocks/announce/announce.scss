@@ -3,10 +3,6 @@
   justify-content: center;
 
   .content {
-    .announce-header {
-      display: flex;
-      justify-content: center;
-    }
     .announce-desc {
       position: relative;
       display: flex;
@@ -14,29 +10,16 @@
       flex-direction: column;
       margin-bottom: 32px;
 
-      img {
-        width: 224px;
-        height: 224px;
-        border-radius: 50%;
-        align-self: center;
-        margin-bottom: 40px;
-      }
-
       .open-img {
-        position: absolute;
-        width: 56px;
-        height: 56px;
         left: 50%;
         margin-left: 40px;
         top: 0;
-        cursor: pointer;
-        img {
-          width: auto;
-          height: auto;
-        }
       }
     }
     .announce-desc.sh-block.sh-hidden {
+      .text-container {
+        margin-top: 40px;
+      }
       .cls-btn {
         display: none;
       }

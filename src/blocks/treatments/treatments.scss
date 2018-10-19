@@ -6,6 +6,9 @@
   border-top: $border-line;
   .content {
     max-width: 896px;
+    .header {
+      align-self: flex-start;
+    }
     .rules {
       line-height: 32px;
       display: inline-block;

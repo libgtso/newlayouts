@@ -45,6 +45,11 @@ h6 {
   font-size: 24px;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 li,
 p,
 a {
@@ -246,7 +251,7 @@ img {
   height: auto;
   right: 30%;
   left: 30%;
-  top: 10%;
+  top: 15%;
   width: auto;
   img {
     width: 100% !important;
@@ -299,7 +304,6 @@ img {
 }
 .cls-btn {
   z-index: 100;
-  display: none;
   &:before,
   &:after {
     position: absolute;
@@ -348,11 +352,53 @@ img {
 
 .text-container {
   position: relative;
+  display: flex;
+  flex-direction: column;
   .text-caption {
     padding: 0 160px 24px 206px;
+    order: -1;
   }
   p {
     padding: 0 160px 0 206px;
     text-align: justify;
+  }
+}
+
+.open-img {
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  img {
+    width: auto;
+    height: auto;
+  }
+}
+
+.img-prev {
+  width: 224px;
+  height: 224px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.container.news-page {
+  flex-direction: row;
+  .page-content {
+    flex: 0 0 50%;
+    .content {
+      .header {
+        align-self: flex-start;
+        margin-left: 48px;
+      }
+      .news-block {
+        .news-item {
+          flex: 0 0 100% !important;
+        }
+      }
+      .button {
+        display: none;
+      }
+    }
   }
 }

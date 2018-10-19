@@ -6,8 +6,9 @@
   .links {
     display: flex;
     flex-direction: column;
-    .links-header {
+    .header {
       color: $footer-links-header-color;
+      align-self: flex-start;
     }
     ul {
       display: flex;

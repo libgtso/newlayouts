@@ -130,7 +130,7 @@
     min-width: 640px;
   }
 
-  .header {
+  header {
     .content {
       margin: 0 4%;
       width: 93%;
@@ -387,7 +387,16 @@
     }
   }
 
-  .header {
+  .text-container {
+    .text-caption {
+      padding: 0;
+    }
+    p {
+      padding: 64px 0;
+    }
+  }
+
+  header {
     .content {
       margin: 0 4%;
       width: auto;
@@ -508,7 +517,7 @@
   }
 
   .about.center {
-    padding-bottom: 136px;
+    padding-bottom: 96px;
     .about-desc {
       display: flex;
       flex-direction: column;
@@ -530,6 +539,7 @@
         margin-right: 0;
         margin-top: 120px;
         margin-bottom: -120px;
+        align-self: center;
       }
       p {
         transition: margin-top 0.5s ease-in;
@@ -539,7 +549,7 @@
     }
     .about-desc.sh-block {
       .cls-btn-top {
-        top: 166px !important;
+        top: 80px !important;
         left: 50%;
         margin-left: -24px;
       }
@@ -593,11 +603,10 @@
           display: flex;
           position: relative;
           align-self: center;
-          margin: 0;
+          margin-top: 24px;
         }
         .cls-btn-top {
           order: -1;
-          margin-bottom: 32px;
         }
         .line {
           display: none;

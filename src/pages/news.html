@@ -1,0 +1,21 @@
+{% extends 'base/base.njk' %}
+
+{% set title = "Новости" %}
+
+{% block title %}{{title}}{% endblock %}
+{% block header %}
+    {% include 'header/header.njk' %}
+{% endblock %}
+
+{% block content %}
+<section class="container news-page">
+    <div class="aside">
+        {% include 'sidemenu/sidemenu.njk'%}
+    </div>
+    <div class="page-content">
+        {% include 'news/news.njk' %}
+    </div>
+</section>
+    {% include 'contacts/contacts.njk' %}
+	{% include 'treatments/treatments.njk' %}
+{% endblock %}
