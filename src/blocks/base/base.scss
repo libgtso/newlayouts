@@ -381,24 +381,3 @@ img {
   border-radius: 50%;
   align-self: center;
 }
-
-.container.news-page {
-  flex-direction: row;
-  .page-content {
-    flex: 0 0 50%;
-    .content {
-      .header {
-        align-self: flex-start;
-        margin-left: 48px;
-      }
-      .news-block {
-        .news-item {
-          flex: 0 0 100% !important;
-        }
-      }
-      .button {
-        display: none;
-      }
-    }
-  }
-}

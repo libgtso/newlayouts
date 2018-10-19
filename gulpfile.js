@@ -46,15 +46,17 @@ function wrapPipe(taskFn) {
 gulp.task(
   "sass",
   wrapPipe(function(success, error) {
-    return gulp
-      .src("src/style/main.scss")
-      .pipe(sourcemaps.init())
-      .pipe(browserSync.reload({ stream: true }))
-      .pipe(sass().on("error", error))
-      .pipe(autoprefixer(["last 2 versions", "> 1%"], { cascade: true }))
-      .pipe(sourcemaps.write())
-      .pipe(csso())
-      .pipe(gulp.dest("./style"));
+    return (
+      gulp
+        .src("src/style/main.scss")
+        .pipe(sourcemaps.init())
+        .pipe(browserSync.reload({ stream: true }))
+        .pipe(sass().on("error", error))
+        .pipe(autoprefixer(["last 2 versions", "> 1%"], { cascade: true }))
+        .pipe(sourcemaps.write())
+        //.pipe(csso())
+        .pipe(gulp.dest("./style"))
+    );
   })
 );
 

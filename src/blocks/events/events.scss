@@ -96,7 +96,7 @@
       .events-blocks {
         margin-left: 60px;
         flex-direction: column;
-        .events-block {
+        .event-item {
           display: flex;
           flex-direction: row;
           margin-bottom: 64px;
@@ -109,6 +109,7 @@
           }
           .counter {
             left: 56px;
+            top: 130px;
           }
           .events-caption {
             flex-direction: column;

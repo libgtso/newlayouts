@@ -1,5 +1,8 @@
 .container.group {
   .content {
+    .header {
+      align-self: flex-start;
+    }
     .group-desc {
       margin-bottom: 64px;
       .text-container {
@@ -84,6 +87,9 @@
       }
       p {
         padding: 0 160px 0 0;
+      }
+      .sh-btn {
+        top: 48px !important;
       }
     }
     position: relative;

@@ -33,21 +33,23 @@
           span {
             padding-left: 204px;
           }
+          .counter {
+            top: 130px;
+          }
         }
         .news-preview {
           display: flex;
           margin-left: 204px;
           flex-direction: column;
 
-          .news-preview-cut {
-            height: 96px;
-            overflow: hidden;
-            margin-bottom: 42px;
+          .text-container {
+            p {
+              font-family: "OpenSans Semibold";
+              text-align: justify;
+              padding: 0;
+            }
           }
-          p {
-            font-family: "OpenSans Semibold";
-            text-align: justify;
-          }
+
           a {
             color: $links-color;
             border-bottom: $border-dotted-links;
