@@ -372,6 +372,11 @@
 }
 
 @media (min-width: 320px) and (max-width: 800px) {
+  .popup {
+    right: 16%;
+    left: 16%;
+    top: 24%;
+  }
   .content {
     max-width: 640px;
     margin: 0 4%;
