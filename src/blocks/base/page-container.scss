@@ -2,10 +2,13 @@
   flex-direction: row;
   .page-content {
     flex: 0 0 50%;
+    .header {
+      justify-content: flex-start;
+    }
     .content {
       .header {
         align-self: flex-start;
-        margin-left: 40px;
+        //margin-left: 40px;
       }
       .news-block {
         .news-item {
@@ -24,9 +27,15 @@
   }
 }
 
-@media (min-width: 1024px) and (max-width: 11549px) {
+@media (min-width: 1000px) and (max-width: 1023px) {
+}
+
+@media (min-width: 1000px) and (max-width: 1549px) {
   .container.page-item {
     justify-content: space-around;
+    .page-content {
+      flex: 0 0 70%;
+    }
   }
 }
 
@@ -42,7 +51,92 @@
       display: none;
     }
     .page-content {
-      flex: 0 0 100%;
+      flex: 0 0 90%;
+      h3 {
+        padding: 24px 0 56px 0;
+      }
+    }
+  }
+  .second-header {
+    .burger-right {
+      display: flex;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 800px) {
+  .container.page-item {
+    .content {
+      flex: 0 0 90%;
+      .photoalbums {
+        .albums {
+          .item {
+            flex: 0 0 100%;
+            .img-prev {
+              align-self: center;
+              margin-top: -64px;
+            }
+            .open-img {
+              display: flex;
+              align-self: center;
+              position: relative;
+              order: -1;
+              margin-left: -140px;
+            }
+            .counter {
+              left: 0;
+              align-self: center;
+            }
+            .album-item-name {
+              width: 100%;
+            }
+          }
+        }
+      }
+      .discussions {
+        .comment-send {
+          form {
+            width: 100%;
+            .button {
+              display: flex;
+              margin-right: 0;
+              align-self: center;
+              width: auto;
+            }
+          }
+        }
+        &-item {
+          .text-container {
+            .cls-btn-top,
+            .sh-btn {
+              top: 0 !important;
+            }
+          }
+        }
+      }
+      div.text-container {
+        h3.text-caption {
+          padding: 0 !important;
+          margin-bottom: 16px;
+        }
+      }
+      .cls-btn-top,
+      .sh-btn {
+        position: relative;
+        order: -1;
+        align-self: center;
+      }
+      .cls-btn {
+        position: relative;
+        align-self: center;
+        margin-top: 32px;
+      }
+      .line {
+        display: none !important;
+      }
+      p {
+        padding: 0 !important;
+      }
     }
   }
 }

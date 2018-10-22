@@ -70,15 +70,17 @@ gulp.task("scripts", function() {
 });
 
 gulp.task("html", function() {
-  return gulp
-    .src("src/pages/*.html")
-    .pipe(
-      nunjucks({
-        searchPaths: [path.src.templates]
-      })
-    )
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("./"));
+  return (
+    gulp
+      .src("src/pages/*.html")
+      .pipe(
+        nunjucks({
+          searchPaths: [path.src.templates]
+        })
+      )
+      //.pipe(htmlmin({ collapseWhitespace: true }))
+      .pipe(gulp.dest("./"))
+  );
 });
 
 gulp.task("img", function() {

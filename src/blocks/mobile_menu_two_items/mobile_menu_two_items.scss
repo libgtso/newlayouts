@@ -1,0 +1,25 @@
+.burger-time.burger-left.sh-block.sh-hidden {
+  .sh-btn {
+    display: flex;
+    top: -28px;
+    left: 48px;
+  }
+}
+
+.burger-time.burger-left.sh-block {
+  .cls-btn {
+    left: 48px;
+    top: -28px;
+  }
+}
+
+.burger-right.sh-block.sh-hidden {
+  position: relative;
+  .sh-btn {
+    display: flex;
+    top: -28px;
+    right: 0;
+    background: url("../images/r_menu.png") no-repeat 50% 50%;
+    z-index: 101;
+  }
+}

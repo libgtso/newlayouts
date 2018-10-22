@@ -244,7 +244,7 @@ img {
 .popup {
   display: none;
   position: fixed;
-  border: 5px solid $gray;
+  border: 3px solid $gray;
   z-index: 999;
   border-radius: 5px;
   width: auto;
@@ -260,23 +260,24 @@ img {
   }
   &-close {
     position: absolute;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     background: $gray;
-    right: -17px;
-    top: -19px;
+    right: -14px;
+    top: -14px;
+    border: 2px solid #fff;
     cursor: pointer;
     &:before,
     &:after {
       content: "";
       position: absolute;
-      width: 24px;
+      width: 16px;
       height: 2px;
       background: $white;
       top: 47%;
       transform: rotate(45deg);
-      left: 14%;
+      left: 20%;
     }
     &:before {
       transform: rotate(45deg);
@@ -380,4 +381,10 @@ img {
   height: 224px;
   border-radius: 50%;
   align-self: center;
+}
+
+.second-header {
+  .burger-right {
+    display: none;
+  }
 }

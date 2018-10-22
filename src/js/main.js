@@ -1,7 +1,7 @@
 $(document).ready(function() {
   showHide();
   mainslider();
-  openimage();
+  openSliderImage();
   textCut();
   mapsCustom();
   usefullslider();
@@ -77,7 +77,7 @@ function loadComments() {
   });
 }
 
-function openimage() {
+function openSliderImage() {
   $(document).on("click", ".open-img", function(e) {
     e.preventDefault();
 
@@ -148,6 +148,18 @@ function mapsCustom() {
   });
 }
 
+//закроем попап по клику вне его
+function closeDiv() {
+  $(document).on("mouseup", function(e) {
+    var popup = $(".veil");
+    var div = $(".popup");
+    if (!div.is(e.target) && div.has(e.target).length === 0) {
+      div.hide();
+      popup.hide();
+    }
+  });
+}
+
 function showPic() {
   $(document).on("click", ".open-img", function(e) {
     var container = $(".popup", $(e.target).closest(".item"));
@@ -160,6 +172,7 @@ function showPic() {
       .append('<div class="popup-close"></div>');
 
     closePopup();
+    closeDiv();
 
     function closePopup() {
       $(document).on("click", ".popup-close", function(e) {

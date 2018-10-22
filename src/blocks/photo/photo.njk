@@ -1,31 +1,41 @@
-{% set album = [
+{% set photo = {
+    "header": "Фотоальбомы группы",
+    "album": [
         {
             'src': './images/black.jpg',
             'alt': 'photoname',
-            'counter': '1488'
+            'counter': '1488',
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
         },
         {
             'src': './images/cats1.jpg',
             'alt': 'photoname',
-            'counter': '1488'
+            'counter': '1488',
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
         },
         {
             'src': './images/bb.jpg',
             'alt': 'photoname',
-            'counter': '1488'
+            'counter': '1488',
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
         },
         {
             'src': './images/rih.jpg',
             'alt': 'photoname',
-            'counter': '1488'
+            'counter': '1488',
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
         }
     ]
-%}
+} %}
+
 
 <div class="photoalbums">
-    <h3>Фотоальбомы группы</h3>
+    {% if photo.mainHeader %}
+        <h2 class="header">{{photo.mainHeader}}</h2>
+    {% endif %}
+    <h3>{{photo.header}}</h3>
     <div class="albums">
-        {% for item in album %}
+        {% for item in photo.album %}
         <div class="album-item item">
             <img class="img-prev" src="{{item.src}}" alt="{{item.alt}}">
             <div class="popup"></div>
@@ -33,7 +43,7 @@
                 <img src="./images/expand.png">
             </div>
             <div class="counter">x {{item.counter}}</div>
-            <a class="album-item-name" href="/">Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома</a>
+            <a class="album-item-name" href="/">{{item.albumName}}</a>
         </div>
         {% endfor %}
     </div>
