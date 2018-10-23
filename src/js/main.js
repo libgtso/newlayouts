@@ -2,7 +2,7 @@ $(document).ready(function() {
   showHide();
   mainslider();
   openSliderImage();
-  textCut();
+  //textCut();
   mapsCustom();
   usefullslider();
   showButt();
@@ -115,20 +115,20 @@ function openSliderImage() {
   });
 }
 
-function textCut() {
-  var text = $(document).find(".news-preview p");
-  text.each(function(i, item) {
-    var size = 98;
-    var elementText = item.innerText;
-    if (elementText.length > size) {
-      var result = elementText.substring(0, size) + "...";
-      result.replace(/\s{2,}/g, " ");
-      item.innerText = result;
-    } else {
-      return item;
-    }
-  });
-}
+// function textCut() {
+//   var text = $(document).find(".news-preview p");
+//   text.each(function(i, item) {
+//     var size = 98;
+//     var elementText = item.innerText;
+//     if (elementText.length > size) {
+//       var result = elementText.substring(0, size) + "...";
+//       result.replace(/\s{2,}/g, " ");
+//       item.innerText = result;
+//     } else {
+//       return item;
+//     }
+//   });
+// }
 
 function mapsCustom() {
   ymaps.ready(function() {

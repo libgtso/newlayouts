@@ -6,6 +6,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 48px;
+    flex-wrap: wrap;
     li {
       margin: 0 2%;
       a {
@@ -57,6 +58,7 @@
     display: flex;
   }
   .cls-btn {
+    @include side-menu-cls-btn;
     display: flex;
     align-self: center;
     bottom: -24px;

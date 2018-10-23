@@ -4,13 +4,13 @@
 
 {% block title %}{{title}}{% endblock %}
 {% block header %}
-    {% include 'header/header.njk' %}
+    {% include 'header_two_menu/header.njk' %}
 {% endblock %}
 
 {% block content %}
 <section class="container group page-item">
     <div class="aside">
-        {% include 'sidemenu/sidemenu.njk'%}
+        {% include 'navigation/navigation.njk'%}
     </div>
     <div class="content">
         {% include 'group/group.njk' %}

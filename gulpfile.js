@@ -61,12 +61,14 @@ gulp.task(
 );
 
 gulp.task("scripts", function() {
-  return gulp
-    .src("src/js/*.js")
-    .pipe(sourcemaps.init())
-    .pipe(uglify())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("js"));
+  return (
+    gulp
+      .src("src/js/*.js")
+      .pipe(sourcemaps.init())
+      //.pipe(uglify())
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest("js"))
+  );
 });
 
 gulp.task("html", function() {
