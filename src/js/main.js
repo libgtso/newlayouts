@@ -9,7 +9,25 @@ $(document).ready(function() {
   loadComments();
   indexPage();
   showPic();
+  hideMenuItems();
 });
+
+function hideMenuItems() {
+  //лимит показываемых элементов
+  var limit = 6;
+  var burgerMenu = $(".burger-time .menu-container .main-menu");
+  //исключаем мобильное меню
+  var container = $(".main-menu").not(burgerMenu);
+  var hideContainer = $(".hidden-list");
+  if (!container.length || $("a", container).length <= limit + 1) return true;
+
+  init();
+
+  function init() {
+    $("li:gt(" + (limit - 1) + ")", container).appendTo(hideContainer);
+    container.addClass("sh-block sh-hidden");
+  }
+}
 
 function showHideBlock(e) {
   e.preventDefault();
@@ -70,8 +88,6 @@ function loadComments() {
       type: "GET",
       success: function(html) {
         $(container).append(html);
-        showButt(); //добавляем класс, если комментарий превышает дефолтную высоту
-        indexPage();
       }
     });
   });
@@ -151,10 +167,12 @@ function mapsCustom() {
 //закроем попап по клику вне его
 function closeDiv() {
   $(document).on("mouseup", function(e) {
+    var container = $(".popup", $(e.target).closest(".item"));
     var popup = $(".veil");
     var div = $(".popup");
     if (!div.is(e.target) && div.has(e.target).length === 0) {
       div.hide();
+      container.empty();
       popup.hide();
     }
   });

@@ -364,8 +364,7 @@
     .burger-time {
       display: flex;
     }
-    nav.main-menu,
-    nav.side-menu {
+    nav.main-menu {
       display: none;
     }
   }
@@ -478,9 +477,6 @@
           }
         }
       }
-      nav.main-menu {
-        display: none;
-      }
       .slider-container {
         margin-bottom: 56px;
         .mainslider {
@@ -511,6 +507,9 @@
     }
     .burger-time {
       display: flex;
+    }
+    nav.main-menu {
+      display: none;
     }
     nav.side-menu {
       display: none;

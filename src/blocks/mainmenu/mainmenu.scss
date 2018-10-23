@@ -1,9 +1,13 @@
 .main-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   ul {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 24px;
+    justify-content: center;
+    margin-bottom: 48px;
     li {
+      margin: 0 2%;
       a {
         border-bottom: $border-dotted-links;
         &:hover {
@@ -17,5 +21,44 @@
         color: $button-text-color-click;
       }
     }
+  }
+  .hidden-list {
+    display: none;
+    @include sidemenu-bg;
+    margin-bottom: 0;
+    justify-content: center;
+    padding: 32px 64px 64px;
+    flex-wrap: wrap;
+    li {
+      margin: 0 32px 24px 32px;
+    }
+  }
+  .sh-btn {
+    @include side-menu-sh-btn;
+    display: none;
+  }
+}
+
+.main-menu.sh-block.sh-hidden {
+  .hidden-list {
+    display: none;
+  }
+  .sh-btn {
+    display: flex;
+    align-self: center;
+  }
+  .cls-btn {
+    display: none;
+  }
+}
+
+.main-menu.sh-block {
+  .hidden-list {
+    display: flex;
+  }
+  .cls-btn {
+    display: flex;
+    align-self: center;
+    bottom: -24px;
   }
 }

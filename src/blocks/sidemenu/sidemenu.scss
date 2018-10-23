@@ -3,9 +3,11 @@
   display: flex;
   justify-content: center;
   position: relative;
-  @include sidemenu-bg;
+  flex-direction: row;
+  flex-flow: row wrap;
+  //   @include sidemenu-bg;
+  //   border-top: $border-line;
 
-  border-top: $border-line;
   ul {
     padding-top: 16px;
     display: flex;
@@ -29,8 +31,19 @@
       }
     }
   }
+  .hidden-list {
+    @include sidemenu-bg;
+    margin-bottom: 0;
+    flex: 0 0 100%;
+    justify-content: center;
+    padding-bottom: 64px;
+    li {
+      margin-right: 64px;
+    }
+  }
   .sh-btn {
     @include side-menu-sh-btn;
+    display: none;
   }
 }
 
@@ -42,7 +55,7 @@
   .sh-btn {
     display: flex;
   }
-  ul {
+  .hidden-list {
     display: none;
   }
 }

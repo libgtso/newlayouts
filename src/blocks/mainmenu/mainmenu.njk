@@ -2,10 +2,7 @@
     { "name": "Сведения об образовательной организации", 
     "link": "/", 
     "active": "active" 
-    },
-    { "name": "Обращения граждан", 
-    "link": "/" 
-    },  
+    }, 
     { "name": "Новости",
     "link": "/news.html" 
     }, 
@@ -23,11 +20,45 @@
     { 
     "name": "Контакты", 
     "link": "/" 
-    } 
+    },
+    { "name": "Сведения об образовательной организации", 
+    "link": "/", 
+    "active": "active" 
+    }, 
+    { "name": "Новости",
+    "link": "/news.html" 
+    }, 
+    { "name": "Информация", 
+    "link": "/" 
+    }, 
+    { 
+    "name": "Проекты", 
+    "link": "/" 
+    }, 
+    { 
+    "name": "Фотоальбомы", 
+    "link":"/photos.html" 
+    }, 
+    { 
+    "name": "Контакты", 
+    "link": "/" 
+    }, 
+    { 
+    "name": "Контакты", 
+    "link": "/" 
+    }, 
+    { 
+    "name": "Контакты", 
+    "link": "/" 
+    }, 
+    { 
+    "name": "Контакты", 
+    "link": "/" 
+    }
 ] 
 %}
 
-<nav class="main-menu sh-block">
+<nav class="main-menu">
     <ul>
         {% for item in menu %}
         <li>
@@ -35,4 +66,7 @@
         </li>
         {% endfor %}
     </ul>
+    <ul class="hidden-list"></ul>
+    <button class="sh-btn"></button>
+    <button class="cls-btn"></button>
 </nav>

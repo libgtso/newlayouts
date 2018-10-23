@@ -1,7 +1,7 @@
 .container.page-item {
   flex-direction: row;
   .page-content {
-    flex: 0 0 50%;
+    flex: 0 0 65%;
     .header {
       justify-content: flex-start;
     }
@@ -22,6 +22,28 @@
       }
       .button {
         display: none;
+      }
+      .photoalbums {
+        .albums {
+          .album-item {
+            align-items: center;
+            .img-prev {
+              align-self: center;
+            }
+            .open-img {
+              display: flex;
+              position: relative;
+              cursor: pointer;
+              order: -1;
+              margin-bottom: -64px;
+              margin-left: -156px;
+            }
+            .counter {
+              margin-left: -180px;
+              align-self: center;
+            }
+          }
+        }
       }
     }
   }
@@ -82,10 +104,12 @@
               position: relative;
               order: -1;
               margin-left: -140px;
+              margin-bottom: 0 !important;
             }
             .counter {
               left: 0;
               align-self: center;
+              margin-left: 0 !important;
             }
             .album-item-name {
               width: 100%;

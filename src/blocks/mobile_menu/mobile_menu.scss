@@ -124,6 +124,17 @@
           letter-spacing: 2px;
         }
       }
+      .hidden-list {
+        background: inherit;
+        padding: 0 0 64px 0;
+        li {
+          margin: 0 2%;
+        }
+      }
+    }
+    .cls-btn,
+    .sh-btn {
+      display: none;
     }
   }
 }
