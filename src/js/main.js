@@ -2,7 +2,6 @@ $(document).ready(function() {
   showHide();
   mainslider();
   openSliderImage();
-  //textCut();
   mapsCustom();
   usefullslider();
   showButt();
@@ -11,7 +10,6 @@ $(document).ready(function() {
   showPic();
   hideMenuItems();
   loadingEvents();
-  navigation();
 });
 
 function hideMenuItems() {
@@ -282,23 +280,14 @@ function loadingEvents() {
       .removeClass("event")
       .addClass("active");
     eventsInfo.empty();
+    console.log(this);
     $.ajax({
       url: "./src/blocks/tests/test1.html",
       cache: false,
       type: "GET",
       success: function(html) {
-        $(eventsInfo).append(html);
+        $(eventsInfo).html(html);
       }
     });
   });
-}
-
-function navigation() {
-  var container = $(".section");
-  var header = $("h3").closest(container);
-  var navigation = $(".navigation li a");
-
-  for (var i = 0; i < navigation.length; i++) {
-    console.log(navigation[i]);
-  }
 }

@@ -10,14 +10,16 @@
     ] 
 %}
 
-<nav class="navigation sh-block sh-hidden">
-    <ul>
-        {% for item in menu %}
-        <li>
-            <a href="{{item.link}}" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
-        </li>
-        {% endfor %}
-    </ul>
-    <button class="sh-btn"></button>
-    <button class="cls-btn"></button>
-</nav>
+<div class="aside">
+    <nav class="navigation sh-block sh-hidden">
+        <ul>
+            {% for item in menu %}
+            <li>
+                <a href="{{item.link}}" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        <button class="sh-btn"></button>
+        <button class="cls-btn"></button>
+    </nav>
+</div>
