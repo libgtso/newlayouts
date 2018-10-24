@@ -44,8 +44,8 @@ $second-border: #dacbbc;
 $calendar-color: #434343;
 $center-line-bg: $white;
 $list-dots-bg: $white;
-$side-menu-dots-bg: #3fa1d6;
-$side-menu-line-between-items-bg: #dfdfdf;
+$navigation-dots-bg: #3fa1d6;
+$navigation-line-between-items-bg: #dfdfdf;
 
 @mixin container-bg {
   background: #eceaea;
@@ -102,7 +102,7 @@ $side-menu-line-between-items-bg: #dfdfdf;
   background: linear-gradient(to bottom, #dcdcdc 0%, #e6e5e5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dcdcdc', endColorstr='#e6e5e5',GradientType=0 );
 }
-@mixin side-menu-cls-btn {
+@mixin navigation-cls-btn {
   z-index: 70;
   display: flex;
   bottom: -26px;
@@ -129,7 +129,7 @@ $side-menu-line-between-items-bg: #dfdfdf;
     transform: rotate(45deg);
   }
 }
-@mixin side-menu-sh-btn {
+@mixin navigation-sh-btn {
   z-index: 70;
   display: flex;
   bottom: -28px;

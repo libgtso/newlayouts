@@ -10,6 +10,8 @@ $(document).ready(function() {
   indexPage();
   showPic();
   hideMenuItems();
+  loadingEvents();
+  navigation();
 });
 
 function hideMenuItems() {
@@ -267,4 +269,36 @@ function sectionPage() {
   //     $clamp($(".annotation", item)[0], { clamp: 3 });
   //   }
   // }
+}
+
+function loadingEvents() {
+  $(document).on("click", ".cell .numb.event", function(e) {
+    e.preventDefault();
+
+    var active = $(".cell .numb.active"),
+      eventsInfo = $(".events-info");
+    active.removeClass("active").addClass("event");
+    $(this)
+      .removeClass("event")
+      .addClass("active");
+    eventsInfo.empty();
+    $.ajax({
+      url: "./src/blocks/tests/test1.html",
+      cache: false,
+      type: "GET",
+      success: function(html) {
+        $(eventsInfo).append(html);
+      }
+    });
+  });
+}
+
+function navigation() {
+  var container = $(".section");
+  var header = $("h3").closest(container);
+  var navigation = $(".navigation li a");
+
+  for (var i = 0; i < navigation.length; i++) {
+    console.log(navigation[i]);
+  }
 }

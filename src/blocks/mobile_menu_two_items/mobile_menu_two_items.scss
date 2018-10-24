@@ -48,7 +48,7 @@
     border-radius: 16px;
     box-shadow: 0px 1px 10px -1px $gray;
     top: -24px;
-    .side-menu {
+    .navigation {
       display: block;
       background: none;
       .sh-btn {
@@ -64,7 +64,7 @@
           &:before {
             position: absolute;
             content: "";
-            background: $side-menu-dots-bg;
+            background: $navigation-dots-bg;
             width: 8px;
             height: 8px;
             border-radius: 50%;
@@ -77,7 +77,7 @@
             content: "";
             width: 2px;
             height: 100%;
-            background: $side-menu-line-between-items-bg;
+            background: $navigation-line-between-items-bg;
             top: 20px;
             left: -45px;
             z-index: 9;

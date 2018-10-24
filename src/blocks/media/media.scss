@@ -87,7 +87,7 @@
     width: 100%;
     left: 0;
   }
-  .side-menu {
+  .navigation {
     ul {
       flex: 0 0 75%;
     }
@@ -192,7 +192,7 @@
         }
       }
     }
-    .side-menu {
+    .navigation {
       ul {
         flex: 0 0 90%;
       }
@@ -511,7 +511,7 @@
     nav.main-menu {
       display: none;
     }
-    nav.side-menu {
+    nav.navigation {
       display: none;
     }
   }

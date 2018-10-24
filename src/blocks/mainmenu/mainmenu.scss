@@ -35,7 +35,7 @@
     }
   }
   .sh-btn {
-    @include side-menu-sh-btn;
+    @include navigation-sh-btn;
     display: none;
   }
 }
@@ -58,7 +58,7 @@
     display: flex;
   }
   .cls-btn {
-    @include side-menu-cls-btn;
+    @include navigation-cls-btn;
     display: flex;
     align-self: center;
     bottom: -24px;

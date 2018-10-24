@@ -52,7 +52,7 @@
         ],
         "calendarDate": {
             "numberOfCalendar" : 31,
-            "today": 12,
+            "event": 12,
             "emptyCell": 6,
             "active": 26
         }
@@ -77,10 +77,10 @@
                     {% endfor %}
                     {% for i in range(1, events.calendarDate.numberOfCalendar) %}
                         <div class="cell">
-                            {% if i == events.calendarDate.today %}
-                                <a href="/" class="numb event">{{events.calendarDate.today}}</a>
+                            {% if i == events.calendarDate.event %}
+                                <p class="numb event">{{events.calendarDate.event}}</p>
                             {% elif i == events.calendarDate.active %}
-                                <a href="/" class="numb active">{{events.calendarDate.active}}</a>
+                                <p class="numb active">{{events.calendarDate.active}}</p>
                             {% else %}
                                 <p class="numb">{{i}}</p>
                             {% endif %}

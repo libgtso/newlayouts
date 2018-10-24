@@ -1455,7 +1455,7 @@
 				});
 			}
 
-			// Create navigation arrows
+			// Create navigator arrows
 			if (current.arrows && F.group.length > 1) {
 				if (current.loop || current.index > 0) {
 					$(current.tpl.prev).appendTo(F.outer).bind('click.fb', F.prev);

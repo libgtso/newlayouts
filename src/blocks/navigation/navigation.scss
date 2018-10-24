@@ -1,4 +1,4 @@
-.side-menu {
+.navigation {
   margin-top: 16px;
   display: flex;
   justify-content: center;
@@ -42,12 +42,12 @@
     }
   }
   .sh-btn {
-    @include side-menu-sh-btn;
+    @include navigation-sh-btn;
     display: none;
   }
 }
 
-.side-menu.sh-block.sh-hidden {
+.navigation.sh-block.sh-hidden {
   border-top: none;
   .cls-btn {
     display: none;
@@ -60,9 +60,9 @@
   }
 }
 
-.side-menu.sh-block {
+.navigation.sh-block {
   .cls-btn {
-    @include side-menu-cls-btn;
+    @include navigation-cls-btn;
   }
   .sh-btn {
     display: none;
@@ -74,7 +74,7 @@
   background: none;
   flex: 0 0 15%;
   padding-left: 80px;
-  nav.side-menu {
+  nav.navigation {
     padding-top: 244px;
     background: none;
     align-content: flex-start;
@@ -90,7 +90,7 @@
         &:before {
           position: absolute;
           content: "";
-          background: $side-menu-dots-bg;
+          background: $navigation-dots-bg;
           width: 8px;
           height: 8px;
           border-radius: 50%;
@@ -103,7 +103,7 @@
           content: "";
           width: 2px;
           height: 100%;
-          background: $side-menu-line-between-items-bg;
+          background: $navigation-line-between-items-bg;
           top: 20px;
           left: -37px;
           z-index: 9;

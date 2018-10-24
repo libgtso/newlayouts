@@ -29,11 +29,11 @@
 } %}
 
 
-<div class="photoalbums">
+<div class="photoalbums section">
     {% if photo.mainHeader %}
         <h2 class="header">{{photo.mainHeader}}</h2>
     {% endif %}
-    <h3>{{photo.header}}</h3>
+    <h3 class="header">{{photo.header}}</h3>
     <div class="albums">
         {% for item in photo.album %}
         <div class="album-item item">

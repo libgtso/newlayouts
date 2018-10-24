@@ -87,8 +87,8 @@
 </div>
 {% endfor %}
 {% include '../photo/photo.njk' %}
-<div class="discussions">
-    <h3 class="discussions-header">{{group.discussionsHeader}}</h3>
+<div class="discussions section">
+    <h3 class="header">{{group.discussionsHeader}}</h3>
     {% for item in discuss %}
         <span class="date">{{item.date}}</span>
         <div class="discussions-item sh-block sh-hidden">            
