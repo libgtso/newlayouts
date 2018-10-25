@@ -1,18 +1,24 @@
 .container.page-item {
   flex-direction: row;
   .page-content {
-    flex: 0 0 65%;
+    .aside {
+      margin-right: 64px;
+    }
+    flex: 0 0 70%;
+    flex-direction: row;
+    display: flex;
     .header {
       justify-content: flex-start;
     }
     .content {
       .header {
         align-self: flex-start;
-        //margin-left: 40px;
       }
       .news-block {
+        flex-direction: row;
         .news-item {
-          flex: 0 0 100% !important;
+          flex: 0 0 48%;
+          margin-right: 8px;
         }
       }
       .groups-block {
@@ -27,6 +33,7 @@
         .albums {
           .album-item {
             align-items: center;
+            flex: 0 0 50%;
             .img-prev {
               align-self: center;
             }
@@ -49,33 +56,79 @@
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1023px) {
-}
-
-@media (min-width: 1000px) and (max-width: 1549px) {
+@media (min-width: 1282px) and (max-width: 1800px) {
   .container.page-item {
-    justify-content: space-around;
     .page-content {
-      flex: 0 0 70%;
+      width: 100%;
+      max-width: 1232px;
+      flex: 0 0 auto;
     }
   }
 }
 
-@media (min-width: 1550px) {
+@media (max-width: 1281px) and (min-width: 1000px) {
   .container.page-item {
-    justify-content: center;
+    .page-content {
+      width: 100%;
+      max-width: 1020px;
+      flex: 0 0 auto;
+      .aside {
+        margin-right: 32px;
+      }
+      .content {
+        .news-block {
+          .news-item {
+            flex: 0 0 100%;
+          }
+        }
+      }
+    }
   }
 }
+
+@media (min-width: 801px) and (max-width: 1023px) {
+  .page-content {
+    .content {
+      width: 90%;
+    }
+  }
+}
+
+// @media (min-width: 1000px) and (max-width: 1023px) {
+// }
+
+// @media (min-width: 1000px) and (max-width: 1549px) {
+//   .container.page-item {
+//     justify-content: space-around;
+//     .page-content {
+//       flex: 0 0 70%;
+//     }
+//   }
+// }
+
+// @media (min-width: 1550px) {
+//   .container.page-item {
+//     justify-content: center;
+//   }
+// }
 
 @media (min-width: 320px) and (max-width: 999px) {
   .container.page-item {
-    .aside {
-      display: none;
-    }
     .page-content {
-      flex: 0 0 90%;
+      //width: 100%;
+      flex: 0 0 100%;
       h3 {
         padding: 24px 0 56px 0;
+      }
+      .aside {
+        display: none;
+      }
+      .content {
+        .news-block {
+          .news-item {
+            flex: 0 0 100%;
+          }
+        }
       }
     }
   }
@@ -92,7 +145,7 @@
       flex: 0 0 90%;
       .photoalbums {
         .albums {
-          .item {
+          .album-item.item {
             flex: 0 0 100%;
             .img-prev {
               align-self: center;

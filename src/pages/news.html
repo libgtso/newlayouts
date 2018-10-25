@@ -10,7 +10,10 @@
 {% block content %}
 <section class="container page-item">
     <div class="page-content">
-        {% include 'news/news.njk' %}
+        {% include 'navigation/navigation.njk'%} 
+        <div class="content">
+            {% include 'news/news.njk' %}
+        </div>
     </div>
 </section>
     {% include 'contacts/contacts.njk' %}
