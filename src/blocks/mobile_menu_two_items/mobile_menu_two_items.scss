@@ -48,43 +48,47 @@
     border-radius: 16px;
     box-shadow: 0px 1px 10px -1px $gray;
     top: -24px;
-    .navigation {
-      display: block;
-      background: none;
-      .sh-btn {
-        display: none;
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        li {
-          margin-left: 88px;
-          padding-bottom: 16px;
-          position: relative;
-          &:before {
-            position: absolute;
-            content: "";
-            background: $navigation-dots-bg;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            top: 12px;
-            left: -48px;
-            z-index: 10;
-          }
-          &:after {
-            position: absolute;
-            content: "";
-            width: 2px;
-            height: 100%;
-            background: $navigation-line-between-items-bg;
-            top: 20px;
-            left: -45px;
-            z-index: 9;
-          }
-          &:last-child:after {
-            height: 0;
-            background: none;
+    .aside {
+      padding-left: 16px;
+      .navigation {
+        display: block;
+        background: none;
+        padding-top: 32px;
+        .sh-btn {
+          display: none;
+        }
+        ul {
+          display: flex;
+          flex-direction: column;
+          li {
+            margin-left: 88px;
+            padding-bottom: 16px;
+            position: relative;
+            &:before {
+              position: absolute;
+              content: "";
+              background: $navigation-dots-bg;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              top: 12px;
+              left: -48px;
+              z-index: 10;
+            }
+            &:after {
+              position: absolute;
+              content: "";
+              width: 2px;
+              height: 100%;
+              background: $navigation-line-between-items-bg;
+              top: 20px;
+              left: -45px;
+              z-index: 9;
+            }
+            &:last-child:after {
+              height: 0;
+              background: none;
+            }
           }
         }
       }

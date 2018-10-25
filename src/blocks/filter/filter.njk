@@ -1,20 +1,20 @@
 {% set menu = [ 
-        { "name": "Обращения граждан", "link": "/", "active": "active" }, 
-        { "name": "Советы специалистов",
+        { "name": "Насилие в школах", "link": "/", "active": "active" }, 
+        { "name": "Коррупция",
         "link": "/" }, 
-        { "name": "Азбука", "link": "/" }, 
-        { "name": "Проекты", "link": "/" }, 
-        { "name": "Фотоальбомы", "link": "/" }, 
-        { "name": "Контакты", "link": "/" }
+        { "name": "Злые педагоги", "link": "/" }, 
+        { "name": "Отравления", "link": "/" }, 
+        { "name": "Фоточки моего кота", "link": "/" }, 
+        { "name": "Убийства", "link": "/" }
 
     ] 
 %}
 
-<div class="aside">
-    <nav class="navigation sh-block sh-hidden">
+<div class="aside filter">
+    <nav class="filter sh-block sh-hidden">
         <ul>
             {% for item in menu %}
-            <li>
+            <li class="button borders">
                 <a href="{{item.link}}" class="{% if item.active %}{{item.active}}{% endif %}">{{item.name}}</a>
             </li>
             {% endfor %}

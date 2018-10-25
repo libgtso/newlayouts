@@ -75,6 +75,10 @@
       .aside {
         margin-right: 32px;
       }
+      .aside.filter {
+        margin-right: 16px;
+        padding-left: 16px;
+      }
       .content {
         .news-block {
           .news-item {
@@ -86,10 +90,21 @@
   }
 }
 
-@media (min-width: 801px) and (max-width: 1023px) {
+@media (min-width: 1000px) and (max-width: 1023px) {
   .page-content {
     .content {
       width: 90%;
+    }
+    .aside.filter {
+      margin-right: 0 !important;
+    }
+  }
+  .group {
+    .page-content {
+      .content {
+        width: 90%;
+        //flex: 0 0 88%;
+      }
     }
   }
 }
@@ -115,8 +130,8 @@
 @media (min-width: 320px) and (max-width: 999px) {
   .container.page-item {
     .page-content {
-      //width: 100%;
-      flex: 0 0 100%;
+      width: 100%;
+      flex: none;
       h3 {
         padding: 24px 0 56px 0;
       }
@@ -132,6 +147,12 @@
       }
     }
   }
+  .container.group {
+    .content {
+      //width: 100%;
+      flex: 0 0 90%;
+    }
+  }
   .second-header {
     .burger-right {
       display: flex;
@@ -142,7 +163,6 @@
 @media (min-width: 320px) and (max-width: 800px) {
   .container.page-item {
     .content {
-      flex: 0 0 90%;
       .photoalbums {
         .albums {
           .album-item.item {

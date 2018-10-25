@@ -1,0 +1,29 @@
+.aside.filter {
+  padding-left: 40px;
+  //margin-right: 0 !important;
+  .filter {
+    display: flex;
+    margin-top: 194px;
+    ul {
+      li {
+        width: 216px;
+        margin-bottom: 8px;
+        padding: 8px;
+        background: $button-bg;
+        text-align: center;
+        border: $border-style;
+        &:hover {
+          background: $button-bg-hover;
+          a {
+            color: $links-color;
+          }
+        }
+        &:active {
+          a {
+            color: $button-text-color-click;
+          }
+        }
+      }
+    }
+  }
+}
