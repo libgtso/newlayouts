@@ -41,7 +41,7 @@
     margin-bottom: 96px;
     .survey-header {
       margin-top: 32px;
-      color: #3d96c6;
+      color: $survey-header-color;
     }
     .survey-text {
       margin-bottom: 24px;
@@ -72,11 +72,11 @@
     }
 
     .answers:hover input ~ .checkmark {
-      background-color: #ccc;
+      background-color: $checkmark-default-bg;
     }
 
     .answers input:checked ~ .checkmark {
-      background-color: #a7aeb1;
+      background-color: $checkmark-checked-bg;
     }
 
     .checkmark {
@@ -85,7 +85,7 @@
       left: 24px;
       height: 16px;
       width: 16px;
-      background-color: #eee;
+      background-color: $checkmark-bg;
       border-radius: 50%;
       &:after {
         content: "";
