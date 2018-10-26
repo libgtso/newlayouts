@@ -204,7 +204,7 @@ function showPic() {
 
 function indexPage() {
   // обрезать название рубрик по ширине
-  var captions = $(".text-container p");
+  var captions = $(".show-button .text-container p");
   if (captions.length) {
     captions.each(function() {
       $clamp(this, { clamp: 3 });
