@@ -18,6 +18,12 @@
         .news-caption {
           position: relative;
           min-height: 114px;
+          h3 {
+            color: $news-header-color;
+          }
+          span {
+            color: $news-date-color;
+          }
           .news-img {
             position: absolute;
             width: 106px;
