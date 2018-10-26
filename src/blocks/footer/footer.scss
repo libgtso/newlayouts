@@ -22,7 +22,7 @@ footer {
           line-height: 32px;
         }
         .searchpanel {
-          background: $footerbg;
+          background: $searchpanel-footerbg;
           color: $footer-search-panel-text-color;
           &:hover {
             border: $border-search-style;
