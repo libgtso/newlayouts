@@ -86,6 +86,15 @@
           }
         }
       }
+      .text-container {
+        .text-caption {
+          padding: 0;
+          margin-bottom: 24px;
+        }
+        p {
+          padding: 0;
+        }
+      }
     }
   }
 }
@@ -94,6 +103,15 @@
   .page-content {
     .content {
       width: 90%;
+      .text-container {
+        .text-caption {
+          padding: 0;
+          margin-bottom: 24px;
+        }
+        p {
+          padding: 0;
+        }
+      }
     }
     .aside.filter {
       margin-right: 0 !important;
@@ -143,6 +161,15 @@
           .news-item {
             flex: 0 0 100%;
           }
+        }
+      }
+      .text-container {
+        .text-caption {
+          padding: 0;
+          margin-bottom: 24px;
+        }
+        p {
+          padding: 0;
         }
       }
     }
