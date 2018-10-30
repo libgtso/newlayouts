@@ -21,11 +21,13 @@
         {% include 'mainheader/mainheader.njk' %}
         {% endblock %}
 
+    <div class="test">
         {% block content %}{% endblock %}
         
         {% block footer %}
         {% include 'footer/footer.njk' %}
         {% endblock %}
+    </div>
     <script type="text/javascript" src="vendor/jquery-1.8.2.min.js"></script>
     {% block script %}{% endblock %}
     <script src='js/main.js'></script>
