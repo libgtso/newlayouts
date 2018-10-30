@@ -11,7 +11,7 @@
     .events-calendar {
       flex: 0 0 44%;
       border-radius: 50%;
-      border: 2px solid $white;
+      border: $border-style;
       min-height: 510px;
       width: auto;
       overflow: hidden;
@@ -42,7 +42,7 @@
             display: flex;
             flex: 0 0 13%;
             font-family: $second-text-font;
-            color: $gray;
+            color: $day-color;
           }
         }
         .list {
@@ -74,7 +74,7 @@
               }
             }
             .active {
-              color: $white;
+              color: $active-day-color;
               line-height: 40px;
               width: 29px;
               height: 40px;
@@ -120,15 +120,16 @@
 
             .events-type {
               font-family: $second-text-font;
-              color: $gray;
+              color: $events-type-color;
             }
 
             h3 {
               padding-top: 24px;
+              color: $news-header-color;
             }
             a {
               color: $links-color;
-              border-bottom: 2px dotted $dotted-border;
+              border-bottom: $border-dotted-links;
               &:hover {
                 color: $links-hover-color;
               }
