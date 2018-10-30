@@ -26,20 +26,20 @@ $checkmark-bg: #eee;
 $bordercolor: 2px solid #485257;
 $border-line: 2px solid #1e5169;
 $border-line-focus: 2px solid #dad9d9;
-$border-style: 2px solid $white;
+$border-style: 2px solid #5ab7e9;
 $border-search-style: 2px solid #546167;
 $border-dotted-links: 2px dotted $gray;
-$border-slider-color: 2px solid $gray;
+$border-slider-color: 2px solid #fff;
 
 $button-bg: #f4f4f4;
 $button-text-color: #466171;
 $button-hover: #c2c5c6;
 $button-text-hover: #5ab7e9;
-$button-bg-hover: #fcfcfc;
+$button-bg-hover: #5ab7e9;
 $button-text-color-click: #3097cf;
 $button-active-bg: #fff;
 $button-panel-hover-bg: #fcfcfc;
-$button-owl-nav-bg: #f5f5f5;
+$button-owl-nav-bg: inherit;
 $owl-dots-bg-color: $gray;
 $counter-default-iamge: url("../images/eye.png");
 
