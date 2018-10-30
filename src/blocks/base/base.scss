@@ -113,6 +113,7 @@ img {
   text-transform: lowercase;
   &:hover {
     color: $button-text-hover;
+    background: $button-slider-active-bg !important;
   }
   &:active {
     background: $button-active-bg !important;
