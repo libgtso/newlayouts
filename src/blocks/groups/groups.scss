@@ -61,10 +61,6 @@
     border: $border-style;
     padding: 8px 88px;
     text-align: center;
-    // width: 10%;
     align-self: center;
-    &:hover {
-      background: $button-bg-hover !important;
-    }
   }
 }
