@@ -8,8 +8,8 @@ $header-color: #fff;
 
 $search-panel-text-color: $gray;
 $search-panel-button-active-bg: $white;
-$panel-button-blind-eye: url(../images/blind.png);
-$counter-eye: url(../images/eye.png);
+$panel-button-blind-eye: url("../images/space/eye.png");
+$counter-eye: url("../images/space/eye_d.png") no-repeat;
 
 $footerbg: url("../images/space/bg-bottom.png") bottom no-repeat $page-bg;
 $footer-top-border: inherit;
@@ -22,6 +22,7 @@ $survey-header-color: #3d96c6;
 $checkmark-default-bg: #ccc;
 $checkmark-checked-bg: #a7aeb1;
 $checkmark-bg: #eee;
+$searchpanel-footerbg: inherit;
 
 $bordercolor: 2px solid #485257;
 $border-line: 2px solid #1e5169;
@@ -32,6 +33,7 @@ $border-dotted-links: 2px dotted $gray;
 $border-slider-color: 2px solid #fff;
 
 $button-bg: #184b63;
+$button-hover: #5ab7e9;
 $button-text-color: #fff;
 $button-text-hover: #fff;
 $button-bg-hover: #5ab7e9;
@@ -41,7 +43,8 @@ $button-panel-hover-bg: #fcfcfc;
 $button-owl-nav-bg: inherit;
 $owl-dots-bg-color: $gray;
 $button-slider-active-bg: #4fa1ce;
-$counter-default-iamge: url("../images/eye.png");
+$counter-default-iamge: $counter-eye;
+$send-answer-button-bg: #184b63;
 
 $links-color-footer: #959c9f;
 $links-hover-color: #5ab7e9;
@@ -57,9 +60,10 @@ $arrow-hover: #2f5363;
 $dotted-border: #babdbe;
 $second-border: #dacbbc;
 $calendar-color: #434343;
-$center-line-bg: $white;
+$center-line-bg: #24546a;
 $list-dots-bg: $white;
 $line-bg-between-buttons: $center-line-bg;
+$news-header-color: #3897c3;
 
 @mixin container-bg {
   background: $page-bg;
