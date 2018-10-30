@@ -52,6 +52,7 @@ $links-hover-color: #5ab7e9;
 $links-color: #315264;
 $news-header-color: $links-color;
 $news-date-color: $gray;
+$events-type-color: $gray;
 
 $navigation-dots-bg: #3fa1d6;
 $navigation-line-between-items-bg: #dfdfdf;
@@ -61,9 +62,10 @@ $main-header-bg: $page-bg;
 
 $black: #000;
 $arrow-hover: #2f5363;
-$dotted-border: #babdbe;
 $calendar-color: #434343;
 $center-line-bg: $white;
+$day-color: $gray;
+$active-day-color: $white;
 $list-dots-bg: $white;
 $line-bg-between-buttons: $center-line-bg;
 
