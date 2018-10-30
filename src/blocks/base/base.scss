@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+.test {
+  background: $page-bg;
+}
+
 $header-font: "Akrobat-semibold";
 $text-font: "OpenSans Regular";
 $second-text-font: "OpenSans Semibold";
