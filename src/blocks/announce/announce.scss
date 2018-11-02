@@ -10,6 +10,10 @@
       flex-direction: column;
       margin-bottom: 32px;
 
+      .text-container {
+        margin-top: 40px;
+      }
+
       .open-img {
         left: 50%;
         margin-left: 40px;
@@ -17,9 +21,6 @@
       }
     }
     .announce-desc.sh-block.sh-hidden {
-      .text-container {
-        margin-top: 40px;
-      }
       .cls-btn {
         display: none;
       }
