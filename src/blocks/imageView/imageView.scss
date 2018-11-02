@@ -1,0 +1,11 @@
+.image-prev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin: 24px 0 40px 0;
+  .open-img {
+    left: 50%;
+    margin-left: 40px;
+  }
+}

@@ -1,6 +1,9 @@
 
 <div class="text-container section">
     <h3 class="text-caption show-text">{{item.name}}</h3>
+    {% if item.src %}
+        {% include '../imageView/imageView.njk' %}
+    {% endif %}
     <p>{{item.text}}</p>            
     <div class="sh-btn"></div>                
     <div class="cls-btn cls-btn-top"></div>
