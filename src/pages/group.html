@@ -8,11 +8,13 @@
 {% endblock %}
 
 {% block content %}
-<section class="container group page-item">
-    <div class="page-content">
-        {% include 'navigation/navigation.njk'%}    
+<section class="container page-item">
+    <div class="page-content">  
         <div class="content">
-            {% include 'group/group.njk' %}
+            {% include 'navigation/navigation.njk'%}
+            <div class="group">
+                {% include 'group/group.njk' %}
+            <div>
         </div>
     </div>
 </section>

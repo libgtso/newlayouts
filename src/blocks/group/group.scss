@@ -1,22 +1,24 @@
-.container.group {
+.container.page-item {
   .content {
-    .header {
-      align-self: flex-start;
-    }
-    .group-desc {
-      margin-bottom: 64px;
-      .text-container {
-        position: relative;
-        .text-caption {
-          padding: 0 160px 24px 0;
-        }
-        p {
-          padding: 0 160px 0 0;
-        }
+    .group {
+      .header {
+        align-self: flex-start;
       }
-      .center {
-        &:before {
-          left: 56px;
+      .group-desc {
+        margin-bottom: 64px;
+        .text-container {
+          position: relative;
+          .text-caption {
+            padding: 0 160px 24px 0;
+          }
+          p {
+            padding: 0 160px 0 0;
+          }
+        }
+        .center {
+          &:before {
+            left: 56px;
+          }
         }
       }
     }
@@ -206,7 +208,7 @@
     }
   }
 
-  //TODO вынести классы кнопок для обсуждения и новостей и еще чего-то в base.scss
+  //   //TODO вынести классы кнопок для обсуждения и новостей и еще чего-то в base.scss
   .discussions-item.sh-block.sh-hidden.show-button,
   .discussions-item.sh-block.sh-hidden {
     .text-caption {
