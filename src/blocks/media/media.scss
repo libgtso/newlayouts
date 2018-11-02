@@ -17,6 +17,17 @@
     margin-right: 0;
     flex: 0 0 50%;
   }
+
+  .group {
+    .discussions .discussions-item.sh-block,
+    .discussions .discussions-item.sh-block.sh-hidden {
+      .text-caption,
+      p {
+        width: 88%;
+      }
+    }
+  }
+
   .treatments .content {
     max-width: 827px;
   }
@@ -359,6 +370,15 @@
       }
     }
   }
+  .group {
+    .discussions .discussions-item.sh-block,
+    .discussions .discussions-item.sh-block.sh-hidden {
+      .text-caption,
+      p {
+        width: 88%;
+      }
+    }
+  }
 }
 
 @media (min-width: 801px) and (max-width: 999px) {
@@ -410,6 +430,12 @@
     .button {
       padding: 10px 80px;
       width: auto;
+    }
+  }
+
+  .group {
+    .discussions .discussions-item.sh-block.sh-hidden .text-caption {
+      white-space: normal;
     }
   }
 
