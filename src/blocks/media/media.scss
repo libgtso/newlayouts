@@ -370,6 +370,27 @@
       display: none;
     }
   }
+  .text-container {
+    .text-caption {
+      padding: 0;
+    }
+    p {
+      padding: 64px 0;
+    }
+  }
+  .container.page-item {
+    .content {
+      .group {
+        .group-desc {
+          .text-container {
+            p {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 320px) and (max-width: 800px) {
@@ -377,6 +398,9 @@
     right: 16%;
     left: 16%;
     top: 24%;
+    .img-prev {
+      margin-top: 0 !important;
+    }
   }
   .content {
     max-width: 640px;
@@ -392,6 +416,9 @@
   .text-container {
     .text-caption {
       padding: 0;
+    }
+    .image-prev {
+      order: -1;
     }
     p {
       padding: 64px 0;

@@ -82,6 +82,7 @@
       flex: 0 0 auto;
       .aside {
         margin-right: 16px;
+        flex: 0 0 24%;
       }
 
       .content {
@@ -170,6 +171,7 @@
 @media (min-width: 320px) and (max-width: 800px) {
   .container.page-item {
     .content {
+      justify-content: center;
       .photoalbums {
         .albums {
           .album-item.item {
@@ -240,6 +242,11 @@
       }
       p {
         padding: 0 !important;
+      }
+      .group {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 90%;
       }
     }
   }
