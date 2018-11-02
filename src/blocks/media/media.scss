@@ -13,9 +13,9 @@
       }
     }
   }
-  .groups .groups-block .groups-item {
+  .groups .content .groups-block .groups-item {
     margin-right: 0;
-    flex: 0 0 45%;
+    flex: 0 0 50%;
   }
   .treatments .content {
     max-width: 827px;
@@ -264,11 +264,13 @@
     }
   }
   .groups {
-    .groups-block {
-      flex-direction: column;
-      .groups-item {
-        flex: 0 0 50%;
-        margin-right: 0;
+    .content {
+      .groups-block {
+        flex-direction: column;
+        .groups-item {
+          flex: 0 0 50%;
+          margin-right: 0;
+        }
       }
     }
   }
@@ -742,26 +744,29 @@
   }
 
   .groups {
-    .groups-block {
-      .groups-item {
-        margin-left: 16px;
-        flex: 0 0 100%;
-        margin: 0 0 32px 0;
-        .groups-caption {
-          height: auto;
-          h3 {
-            padding-left: 0;
-            margin-top: 144px;
+    .content {
+      .groups-block {
+        flex-direction: column;
+        .groups-item {
+          flex: 0 0 100%;
+          margin: 0 0 64px 0;
+          .caption {
+            height: auto;
+            align-items: center;
+            h3 {
+              padding-left: 0;
+              margin: 96px 0 16px 0;
+            }
+            .groups-img {
+              left: 50%;
+              margin-left: -56px;
+            }
           }
-          .groups-img {
-            left: 50%;
-            margin-left: -55px;
-          }
-        }
-        .groups-preview {
-          margin-left: 0;
-          .groups-preview-cut {
-            margin-bottom: 0;
+          .groups-preview {
+            margin-left: 0;
+            .groups-preview-cut {
+              margin-bottom: 0;
+            }
           }
         }
       }
