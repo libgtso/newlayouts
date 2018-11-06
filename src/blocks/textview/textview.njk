@@ -1,6 +1,9 @@
 
 <div class="text-container section">
     <h3 class="text-caption show-text">{{item.name}}</h3>
+    {% if item.date %}
+        <span class="date">{{item.date}}</span>
+    {% endif %}
     {% if item.src %}
         {% include '../imageView/imageView.njk' %}
     {% endif %}
