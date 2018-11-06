@@ -81,6 +81,7 @@ function showButt() {
 
 function loadComments() {
   $(document).on("click", ".comments .counter-item", function(e) {
+    e.preventDefault();
     var container = $(".comments-item", $(e.target).closest(".comments"));
     $.ajax({
       url: "./src/blocks/tests/test.html",
