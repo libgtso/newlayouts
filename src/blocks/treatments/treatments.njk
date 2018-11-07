@@ -5,21 +5,53 @@
                 подготовят ответ и вышлют его на электронный адрес, оставленный вами при обращении. Уважаемые пользователи, просим вас внимательно
                 ознакомиться с порядком приема и рассмотрения обращений в электронном виде.",
         "rules": "Порядок приема и правила рассмотрения обращений граждан.",
-        "send": "отправить"
+        "send": "отправить",
+        "rules_list":[
+            {
+                "rule":"Тщательно мойте руки перед едой"
+            },
+            {
+                "rule":"Молитесь отцу нашему небесному, ибо он нам даровал жизнь и поесть"
+            },
+            {
+                "rule":"Правило номер один"
+            },
+            {
+                "rule":"Правило номер один"
+            },
+            {
+                "rule":"Правило номер один"
+            },
+            {
+                "rule":"Правило номер один"
+            }
+        ]
     }
 %}
 
 <section class="treatments">
-    <div class="content">
+    <div class="content sh-block sh-hidden">
         <h2 class="header">{{treatments.header}}</h2>
         <p>{{treatments.text}}</p>
-        <a class="rules" href="/"><span>{{treatments.rules}}</span></a>
+        <a class="rules sh-rules" href="/"><span>{{treatments.rules}}</span></a>
+        <ol class="rules-list">
+            {% for item in treatments.rules_list %}
+                <li>{{item.rule}}</li>
+            {% endfor %}
+        </ol>
         <form class="treatments-form" action="post">
             <div class="treatments-fields">
                 <input class="borders" type="text">
                 <input class="borders" type="text">
             </div>
             <textarea class="borders" cols="30" rows="10"></textarea>
+            <div class="agreement">
+                <label class="agreement-label">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                </label>
+                <p>Я согласен с <a href="/">соглашением</a> о политике конфиденциальности персональных данных образовательной организации.</p>
+            </div>
             <button class="button borders" type="submit">{{treatments.send}}</button>
         </form>
     </div>
