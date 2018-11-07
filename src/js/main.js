@@ -10,6 +10,7 @@ $(document).ready(function() {
   showPic();
   hideMenuItems();
   loadingEvents();
+  showAgreement();
 });
 
 function hideMenuItems() {
@@ -151,16 +152,17 @@ function mapsCustom() {
   });
 }
 
+var veil = $(".veil");
+
 //закроем попап по клику вне его
 function closeDiv() {
   $(document).on("mouseup", function(e) {
     var container = $(".popup", $(e.target).closest(".item"));
-    var popup = $(".veil");
     var div = $(".popup");
     if (!div.is(e.target) && div.has(e.target).length === 0) {
       div.hide();
       container.empty();
-      popup.hide();
+      veil.hide();
     }
   });
 }
@@ -169,8 +171,8 @@ function showPic() {
   $(document).on("click", ".open-img", function(e) {
     var container = $(".popup", $(e.target).closest(".item"));
     var img = $(".img-prev", $(e.target).closest(".item"));
-    var popup = $(".veil");
-    popup.show();
+
+    veil.show();
     container
       .html($(img).clone())
       .fadeIn()
@@ -183,7 +185,36 @@ function showPic() {
       $(document).on("click", ".popup-close", function(e) {
         container.fadeOut();
         container.empty();
-        popup.hide();
+        veil.hide();
+      });
+    }
+  });
+}
+
+function showAgreement() {
+  $(document).on("click", ".sh-agree", function(e) {
+    e.preventDefault();
+
+    var container = $(".popup", $(e.target).closest(".agreement"));
+    $.ajax({
+      url: "./src/blocks/tests/test1.html",
+      cache: false,
+      type: "GET",
+      success: function(html) {
+        $(container).append(html);
+      }
+    });
+
+    container.show().append('<div class="popup-close"></div>');
+    veil.show();
+    closeDiv();
+    closePopup();
+
+    function closePopup() {
+      $(document).on("click", ".popup-close", function(e) {
+        container.fadeOut();
+        container.empty();
+        veil.hide();
       });
     }
   });
@@ -214,22 +245,6 @@ function indexPage() {
     });
   }
 }
-
-// $(document).on('click', '#header .menu a', function(e){
-//     var href = $(this).attr('href');
-//     if (href.indexOf('/#') === 0) {
-//         var id = href.substring(2),
-//             block = $('#'+id);
-
-//         if (block.length) {
-//             e.preventDefault();
-//             $('html, body').animate({
-//                 'scrollTop' : block.offset().top - 40
-//             });
-//         }
-//     }
-// });
-//}
 
 function sectionPage() {
   var pubs = $(".section-pubs .pub-container");
