@@ -39,6 +39,7 @@ function showHideBlock(e) {
 function showHide() {
   $(document).on("click", ".sh-btn, .show-text", showHideBlock);
   $(document).on("click", ".cls-btn", showHideBlock);
+  $(document).on("click", ".sh-rules", showHideBlock);
 }
 
 function mainslider() {
@@ -81,6 +82,7 @@ function showButt() {
 
 function loadComments() {
   $(document).on("click", ".comments .counter-item", function(e) {
+    e.preventDefault();
     var container = $(".comments-item", $(e.target).closest(".comments"));
     $.ajax({
       url: "./src/blocks/tests/test.html",
@@ -114,21 +116,6 @@ function openSliderImage() {
     }
   });
 }
-
-// function textCut() {
-//   var text = $(document).find(".news-preview p");
-//   text.each(function(i, item) {
-//     var size = 98;
-//     var elementText = item.innerText;
-//     if (elementText.length > size) {
-//       var result = elementText.substring(0, size) + "...";
-//       result.replace(/\s{2,}/g, " ");
-//       item.innerText = result;
-//     } else {
-//       return item;
-//     }
-//   });
-// }
 
 function mapsCustom() {
   ymaps.ready(function() {
@@ -205,11 +192,17 @@ function showPic() {
 function indexPage() {
   // обрезать название рубрик по ширине
   var captions = $(".show-button .text-container p");
+  var newscaption = $(".news-preview .text-container p");
   if (captions.length) {
     captions.each(function() {
       $clamp(this, { clamp: 3 });
     });
     checkClamp(captions);
+  }
+  if (newscaption.length) {
+    newscaption.each(function() {
+      $clamp(this, { clamp: 3 });
+    });
   }
   function checkClamp(item) {
     $(document).on("click", ".sh-btn", function(e) {
@@ -280,7 +273,6 @@ function loadingEvents() {
       .removeClass("event")
       .addClass("active");
     eventsInfo.empty();
-    console.log(this);
     $.ajax({
       url: "./src/blocks/tests/test1.html",
       cache: false,

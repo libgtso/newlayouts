@@ -12,13 +12,22 @@
     .rules {
       line-height: 32px;
       display: inline-block;
-      margin-bottom: 48px;
+      margin-bottom: 24px;
       color: $links-color;
       &:hover {
         color: $links-hover-color;
       }
       span {
         border-bottom: $border-dotted-links;
+      }
+    }
+    .rules-list {
+      counter-reset: section;
+      margin-bottom: 24px;
+      li:before {
+        margin-right: 16px;
+        counter-increment: section;
+        content: counters(section, ".") ". ";
       }
     }
     .treatments-form {
@@ -29,7 +38,7 @@
       flex-wrap: wrap;
       .treatments-fields {
         flex: 0 0 45%;
-        flex-direction: row;
+        flex-direction: column;
         margin-right: 24px;
         margin-bottom: 24px;
         .borders {
@@ -60,12 +69,83 @@
           border: $border-line-focus;
         }
       }
+
+      .agreement {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        p {
+          margin: 0 0 24px 24px;
+        }
+      }
+
+      .agreement-label {
+        margin-bottom: 24px;
+        position: absolute;
+        padding-left: 32px;
+        cursor: pointer;
+        user-select: none;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+        }
+        .checkmark {
+          position: absolute;
+          top: 6px;
+          left: 0;
+          height: 16px;
+          width: 16px;
+          background-color: $checkmark-default-bg;
+          border-radius: 50%;
+          &:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+        }
+      }
+
+      .agreement-label:hover input ~ .checkmark {
+        background-color: $checkmark-checked-bg;
+      }
+
+      .agreement-label input:checked ~ .checkmark {
+        background-color: $checkmark-checked-bg;
+      }
+
+      .agreement-label input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .agreement-label .checkmark:after {
+        top: 4px;
+        left: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: white;
+      }
+
       .button {
         border: $border-style;
         padding: 16px 88px;
         background: $button-bg;
         margin: 0 auto;
       }
+    }
+  }
+  .content.sh-block.sh-hidden {
+    .rules-list {
+      height: 0;
+      overflow: hidden;
+    }
+  }
+  .content.sh-block {
+    .rules-list {
+      height: 100%;
     }
   }
 }
