@@ -1,17 +1,47 @@
+{% 
+    set photos = {
+        "header":"Название фотоальбома",
+        "photos_item": [
+            {
+                "class":"item",
+                "group": "group1",
+                "href": "./images/black.jpg",
+                "id": "1"
+
+            },
+            {
+                "class":"item",
+                "group": "group1",
+                "href": "./images/sakura.jpg",
+                "id": "2"
+
+            },
+            {
+                "class":"item",
+                "group": "group1",
+                "href": "./images/rih.jpg",
+                "id": "3"
+
+            },
+            {
+                "class":"item",
+                "group": "group1",
+                "href": "./images/hello.gif",
+                "id": "4"
+
+            }
+        ]
+    }
+%}
+
 <div class="photos section">
-    <h2>Заголовок</h2>
+    <h2 class="caption">{{photos.header}}</h2>
     <div class="photo-list">
-        <a class="group" id="single_image" href="./images/black.jpg">
-            <img src="./images/black.jpg" alt="" />
+    {% for item in photos.photos_item %}
+        <a class="{{item.class}}" rel="{{item.group}}" href="{{item.href}}">
+            <img id="{{item.id}}" src="{{item.href}}" alt="" />
+            <span class="child">Описание фото</span>
         </a>
-        <a class="group" id="single_image1" href="./images/black.jpg">
-            <img src="./images/black.jpg" alt="" />
-        </a>
-        <a class="group" id="single_image2" href="./images/black.jpg">
-            <img src="./images/black.jpg" alt="" />
-        </a>
-        <a class="group" id="single_image3" href="./images/black.jpg">
-            <img src="./images/black.jpg" alt="" />
-        </a>
+    {% endfor %}
     </div>
 </div>

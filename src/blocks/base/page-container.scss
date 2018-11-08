@@ -1,5 +1,5 @@
-.container.page-item {
-  flex-direction: row;
+.page-item {
+  flex-direction: column;
   .page-content {
     flex-direction: column !important;
     flex-direction: row;
@@ -120,6 +120,11 @@
             }
           }
         }
+        .photos {
+          .photo-list {
+            justify-content: center;
+          }
+        }
       }
       .content.publication {
         .text-container {
@@ -160,6 +165,14 @@
               .news-item {
                 flex: 0 0 100%;
               }
+            }
+          }
+        }
+        .photos {
+          .photo-list {
+            justify-content: center;
+            .item img {
+              margin: 0 8px 24px 8px;
             }
           }
         }
@@ -210,7 +223,7 @@
 }
 
 @media (min-width: 320px) and (max-width: 800px) {
-  .container.page-item {
+  .page-item {
     .content {
       justify-content: center;
       .photoalbums {
