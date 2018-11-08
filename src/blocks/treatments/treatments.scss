@@ -77,6 +77,15 @@
         p {
           margin: 0 0 24px 24px;
         }
+        .popup {
+          background: $white;
+          color: $black;
+          .blocks {
+            height: 500px;
+            overflow-x: hidden;
+            flex-direction: column;
+          }
+        }
       }
 
       .agreement-label {

@@ -195,9 +195,9 @@ function showAgreement() {
   $(document).on("click", ".sh-agree", function(e) {
     e.preventDefault();
 
-    var container = $(".popup", $(e.target).closest(".agreement"));
+    var container = $(".popup", $(e.target).closest(".item"));
     $.ajax({
-      url: "./src/blocks/tests/test1.html",
+      url: "./src/blocks/tests/test2.html",
       cache: false,
       type: "GET",
       success: function(html) {
