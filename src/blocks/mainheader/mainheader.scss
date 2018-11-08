@@ -8,6 +8,9 @@ header {
   .content {
     width: 100%;
     .blocks {
+      background: $panel-header-bg;
+      border-bottom-right-radius: 64px;
+      border-bottom-left-radius: 64px;
       .sh-btn {
         display: none;
       }
