@@ -1,0 +1,181 @@
+$white: #fff;
+$gray: #a7aeb1;
+$textcolor: #fff;
+$veil-bg: #000;
+$page-bg: none;
+$test-bg: url("../images/vintage/bg-bottom.png") no-repeat #184b63 bottom center;
+
+$header-color: #fff;
+
+$search-panel-text-color: $gray;
+$search-panel-button-active-bg: $white;
+$panel-button-blind-eye: url("../images/vintage/eye.png");
+$counter-eye: url("../images/vintage/eye_d.png") no-repeat;
+
+$footerbg: none;
+$footer-top-border: inherit;
+$footer-links-header-color: #3d96c6;
+$footer-search-panel-text-color: $white;
+$footertextcolor: #535d62;
+$survey-color-text: $white;
+$survey-answer-text: $gray;
+$survey-header-color: #3d96c6;
+$checkmark-default-bg: #5ab7e9;
+$checkmark-checked-bg: #3b7995;
+$checkmark-bg: #eee;
+$searchpanel-footerbg: inherit;
+
+$bordercolor: 2px solid #5ab7e9;
+$border-line: 2px solid #1e5169;
+$border-line-focus: 2px solid #dad9d9;
+$border-style: 2px solid #5ab7e9;
+$border-search-style: 2px solid #546167;
+$border-dotted-links: 2px dotted $gray;
+$border-slider-color: 2px solid #fff;
+$border-contacts-top: 2px solid #1e5169;
+
+$button-bg: #184b63;
+$button-hover: #5ab7e9;
+$button-text-color: #fff;
+$button-text-hover: #fff;
+$button-bg-hover: #5ab7e9;
+$button-text-color-click: #fff;
+$button-active-bg: #4fa1ce;
+$button-panel-hover-bg: #fcfcfc;
+$button-owl-nav-bg: inherit;
+$owl-dots-bg-color: #3b7995;
+$button-slider-active-bg: #4fa1ce;
+$counter-default-iamge: $counter-eye;
+$send-answer-button-bg: #184b63;
+$links-color-footer: #959c9f;
+$links-hover-color: #5ab7e9;
+$links-color: #fff;
+
+$navigation-dots-bg: #3fa1d6;
+$navigation-line-between-items-bg: #dfdfdf;
+
+$main-header-bg: url("../images/vintage/bg-top.png") no-repeat center top
+  #184b63;
+
+$black: #000;
+$arrow-hover: #2f5363;
+$dotted-border: #babdbe;
+$second-border: #dacbbc;
+$calendar-color: #fff;
+$day-color: $white;
+$hover-event-day-color: $white;
+$center-line-bg: #24546a;
+$list-dots-bg: $white;
+$line-bg-between-buttons: $center-line-bg;
+$news-header-color: #3897c3;
+
+@mixin container-bg {
+  background: $page-bg;
+}
+@mixin treatments-bg {
+  background: none;
+}
+@mixin sidemenu-bg {
+  background: none;
+}
+@mixin navigation-cls-btn {
+  z-index: 70;
+  display: flex;
+  bottom: -26px;
+  justify-content: center;
+  margin-right: 0;
+  &:before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 2px;
+    background: $links-color;
+    top: 26px !important;
+    left: 26%;
+    transform: rotate(-45deg);
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 2px;
+    background: $links-color;
+    top: 26px;
+    left: 27%;
+    transform: rotate(45deg);
+  }
+}
+@mixin navigation-sh-btn {
+  z-index: 70;
+  display: flex;
+  bottom: -28px;
+  justify-content: center;
+  margin-right: 0;
+  &:before {
+    position: absolute;
+    content: "...";
+    font-size: 32px;
+    top: -1px;
+    color: $links-color;
+  }
+}
+@mixin panel-sh-btn {
+  display: block;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: "";
+    background: url("../images/lupa.png");
+    width: 16px;
+    height: 16px;
+    top: 20px;
+    left: 20px;
+  }
+}
+@mixin panel-cls-btn {
+  position: relative;
+  &:before,
+  &:after {
+    position: absolute;
+    width: 28px;
+    height: 1px;
+    content: "";
+    background: $gray;
+    top: 28px;
+    left: 13px;
+  }
+  &:after {
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+}
+@mixin menu-container-bg {
+  background: inherit;
+}
+@mixin show-text-button {
+  display: block;
+  &:before {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-top: 2px solid $gray;
+    border-left: 2px solid $gray;
+    content: "";
+    top: 32%;
+    left: 38%;
+    transform: rotate(225deg);
+  }
+  &:hover:before {
+    border-left: 2px solid $arrow-hover;
+    border-top: 2px solid $arrow-hover;
+  }
+  &:active:before {
+    border-left: 2px solid $button-text-color-click;
+    border-top: 2px solid $button-text-color-click;
+  }
+  &:active {
+    background: $button-active-bg;
+  }
+}
