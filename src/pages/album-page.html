@@ -1,0 +1,23 @@
+{% extends 'base/base.njk' %}
+
+{% set title = "Фотоальбомы" %}
+
+{% set mainHeader =  "Фотоальбомы" %}
+
+{% block title %}{{title}}{% endblock %}
+{% block header %}
+    {% include 'header/header.njk' %}
+{% endblock %}
+
+{% block content %}
+<section class="container page-item"> 
+    <div class="page-content">        
+        <div class="content">
+            {% include 'navigation/navigation.njk'%} 
+            {% include 'photos/photos.njk' %}
+        </div>
+    </div>
+</section>
+    {% include 'contacts/contacts.njk' %}
+	{% include 'treatments/treatments.njk' %}
+{% endblock %}

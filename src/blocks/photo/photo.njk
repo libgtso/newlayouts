@@ -5,25 +5,29 @@
             'src': './images/black.jpg',
             'alt': 'photoname',
             'counter': '1488',
-            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома",
+            "href": "/album-page.html"
         },
         {
             'src': './images/cats1.jpg',
             'alt': 'photoname',
             'counter': '1488',
-            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома",
+            "href": "/album-page.html"
         },
         {
             'src': './images/bb.jpg',
             'alt': 'photoname',
             'counter': '1488',
-            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома",
+            "href": "/album-page.html"
         },
         {
             'src': './images/rih.jpg',
             'alt': 'photoname',
             'counter': '1488',
-            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома"
+            "albumName": "Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома Какое-то имя альбома",
+            "href": "/album-page.html"
         }
     ]
 } %}
@@ -43,7 +47,7 @@
                 <img src="./images/expand.png">
             </div>
             <div class="counter">x {{item.counter}}</div>
-            <a class="album-item-name" href="/">{{item.albumName}}</a>
+            <a class="album-item-name" href="{{item.href}}">{{item.albumName}}</a>
         </div>
         {% endfor %}
     </div>

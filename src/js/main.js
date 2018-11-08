@@ -11,6 +11,7 @@ $(document).ready(function() {
   hideMenuItems();
   loadingEvents();
   showAgreement();
+  fancybox();
 });
 
 function hideMenuItems() {
@@ -296,5 +297,15 @@ function loadingEvents() {
         $(eventsInfo).html(html);
       }
     });
+  });
+}
+
+function fancybox() {
+  $("a.group").fancybox({
+    transitionIn: "elastic",
+    transitionOut: "elastic",
+    speedIn: 600,
+    speedOut: 200,
+    overlayShow: false
   });
 }
