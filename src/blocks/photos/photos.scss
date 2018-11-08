@@ -1,0 +1,19 @@
+.photos {
+  display: flex;
+  flex-direction: column;
+  .photo-list {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    a {
+      flex: 0 0 25%;
+      img {
+        width: 240px;
+        height: 240px;
+        margin-right: 12px;
+        margin-left: 12px;
+        margin-bottom: 24px;
+      }
+    }
+  }
+}

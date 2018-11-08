@@ -4,13 +4,14 @@ $(document).ready(function() {
   openSliderImage();
   mapsCustom();
   usefullslider();
-  showButt();
+  showButton();
   loadComments();
   indexPage();
   showPic();
   hideMenuItems();
   loadingEvents();
   showAgreement();
+  fancybox();
 });
 
 function hideMenuItems() {
@@ -68,7 +69,7 @@ function usefullslider() {
   });
 }
 
-function showButt() {
+function showButton() {
   var heightText = 132;
   var text = $(".sh-block.sh-hidden p");
 
@@ -195,9 +196,9 @@ function showAgreement() {
   $(document).on("click", ".sh-agree", function(e) {
     e.preventDefault();
 
-    var container = $(".popup", $(e.target).closest(".agreement"));
+    var container = $(".popup", $(e.target).closest(".item"));
     $.ajax({
-      url: "./src/blocks/tests/test1.html",
+      url: "./src/blocks/tests/test2.html",
       cache: false,
       type: "GET",
       success: function(html) {
@@ -296,5 +297,15 @@ function loadingEvents() {
         $(eventsInfo).html(html);
       }
     });
+  });
+}
+
+function fancybox() {
+  $("a.group").fancybox({
+    transitionIn: "elastic",
+    transitionOut: "elastic",
+    speedIn: 600,
+    speedOut: 200,
+    overlayShow: false
   });
 }
