@@ -175,6 +175,6 @@ $news-header-color: #3897c3;
     border-top: 2px solid $button-text-color-click;
   }
   &:active {
-    background: $white;
+    background: $button-active-bg;
   }
 }
