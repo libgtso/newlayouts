@@ -44,6 +44,18 @@ function showHide() {
   $(document).on("click", ".sh-rules", showHideBlock);
 }
 
+var veil = $(".veil");
+
+//закрытие попапа по клику на крест
+function closePopup() {
+  $(document).on("click", ".popup-close", function(e) {
+    var container = $(".popup", $(e.target).closest(".item"));
+    container.fadeOut();
+    container.empty();
+    veil.hide();
+  });
+}
+
 function mainslider() {
   $(".mainslider").owlCarousel({
     loop: true,
@@ -153,8 +165,6 @@ function mapsCustom() {
   });
 }
 
-var veil = $(".veil");
-
 //закроем попап по клику вне его
 function closeDiv() {
   $(document).on("mouseup", function(e) {
@@ -181,14 +191,6 @@ function showPic() {
 
     closePopup();
     closeDiv();
-
-    function closePopup() {
-      $(document).on("click", ".popup-close", function(e) {
-        container.fadeOut();
-        container.empty();
-        veil.hide();
-      });
-    }
   });
 }
 
@@ -210,14 +212,6 @@ function showAgreement() {
     veil.show();
     closeDiv();
     closePopup();
-
-    function closePopup() {
-      $(document).on("click", ".popup-close", function(e) {
-        container.fadeOut();
-        container.empty();
-        veil.hide();
-      });
-    }
   });
 }
 
