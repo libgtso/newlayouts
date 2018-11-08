@@ -80,10 +80,23 @@
         .popup {
           background: $white;
           color: $black;
+          border-radius: 64px;
+          width: 56%;
+          left: 24%;
+          right: 24%;
           .blocks {
             height: 500px;
             overflow-x: hidden;
             flex-direction: column;
+            margin: 64px;
+            .pubitem {
+              .page-caption {
+                h1,
+                h2 {
+                  padding: 24px 0 24px 0;
+                }
+              }
+            }
           }
         }
       }

@@ -4,7 +4,7 @@ $(document).ready(function() {
   openSliderImage();
   mapsCustom();
   usefullslider();
-  showButt();
+  showButton();
   loadComments();
   indexPage();
   showPic();
@@ -68,7 +68,7 @@ function usefullslider() {
   });
 }
 
-function showButt() {
+function showButton() {
   var heightText = 132;
   var text = $(".sh-block.sh-hidden p");
 
