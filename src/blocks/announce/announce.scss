@@ -20,7 +20,7 @@
         top: 0;
       }
     }
-    .announce-desc.sh-block.sh-hidden {
+    .announce-desc.sh-block.sh-hidden.item.show-button {
       .cls-btn {
         display: none;
       }
@@ -36,6 +36,17 @@
       p {
         max-height: 136px;
         overflow: hidden;
+      }
+    }
+    .announce-desc.announce-desc.sh-block.sh-hidden {
+      .sh-btn {
+        display: none;
+      }
+      .cls-btn {
+        display: none;
+      }
+      .line {
+        display: none;
       }
     }
     .announce-desc.sh-block {
