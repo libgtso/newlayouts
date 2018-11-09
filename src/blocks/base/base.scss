@@ -301,7 +301,6 @@ img {
   border-radius: 50%;
   position: absolute;
   margin-right: 24px;
-  background: $button-bg;
   cursor: pointer;
   &:hover {
     background: $button-bg-hover;
@@ -312,6 +311,7 @@ img {
 }
 .cls-btn {
   z-index: 100;
+  @include cls-button;
   &:before,
   &:after {
     position: absolute;
