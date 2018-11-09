@@ -34,10 +34,22 @@
     }
   }
   .about-desc.sh-block.sh-hidden {
+    .sh-btn {
+      display: none;
+    }
+    .cls-btn {
+      display: none;
+    }
+    .line {
+      display: none;
+    }
+  }
+  .about-desc.sh-block.sh-hidden.show-button {
     .cls-btn {
       display: none;
     }
     .sh-btn {
+      display: block;
       top: -104px;
       right: 0;
       @include show-text-button;
@@ -50,7 +62,7 @@
       overflow: hidden;
     }
   }
-  .about-desc.sh-block {
+  .about-desc.sh-block.show-button {
     .sh-btn {
       display: none;
     }

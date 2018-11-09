@@ -306,6 +306,9 @@ img {
   &:hover {
     background: $button-bg-hover;
   }
+  &:active {
+    background: red;
+  }
 }
 .cls-btn {
   z-index: 100;
