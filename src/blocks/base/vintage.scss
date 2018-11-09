@@ -188,6 +188,7 @@ $news-header-color: $links-color;
   display: block;
   border: none;
   box-shadow: inset 0 -2px 1px 1px #87664f;
+  background: #b9855d;
 
   &:before {
     width: 12px;
@@ -252,4 +253,10 @@ $news-header-color: $links-color;
   background: $line-bg-between-buttons;
   border-left: 1px solid #e0fbce;
   border-right: 1px solid #e0fbce;
+}
+
+@mixin cls-button {
+  background: #b9855d;
+  border: none;
+  box-shadow: inset 0 -2px 1px 1px #87664f;
 }
