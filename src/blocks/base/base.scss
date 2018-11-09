@@ -306,7 +306,7 @@ img {
     background: $button-bg-hover;
   }
   &:active {
-    background: red;
+    background: $button-active-bg;
   }
 }
 .cls-btn {
