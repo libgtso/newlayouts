@@ -165,6 +165,22 @@ $line-bg-between-buttons: $center-line-bg;
 @mixin search-panel {
   background: $search-panel-header-bg;
 }
+@mixin search-panel-footer {
+  background: $searchpanel-footerbg;
+  color: $footer-search-panel-text-color;
+  &:hover {
+    border: $border-search-style;
+  }
+  &:focus {
+    border: $border-style;
+  }
+  input {
+    color: $footertextcolor;
+    &:focus {
+      color: $footer-search-panel-text-color;
+    }
+  }
+}
 @mixin navigation-sh-btn {
   z-index: 70;
   display: flex;
