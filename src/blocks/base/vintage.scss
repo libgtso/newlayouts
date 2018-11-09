@@ -226,3 +226,23 @@ $news-header-color: $links-color;
   border: $border-style;
   @include search-panel;
 }
+
+@mixin navigation-buttons {
+  background: #9f7d66;
+  border: none;
+  box-shadow: inset 0 -2px 1px 1px #87664f;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 48px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 8px 4px #553f47;
+  }
+  &:active {
+    box-shadow: inset 0 -2px 1px 1px #7c5c46;
+  }
+}
