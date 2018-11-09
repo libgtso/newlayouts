@@ -114,6 +114,7 @@ $news-header-color: #3897c3;
   background: #9f7d66;
   box-shadow: 0 4px 1px 1px #87664f;
   position: relative;
+  color: $white;
   &:after {
     position: absolute;
     content: "";
