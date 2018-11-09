@@ -61,7 +61,7 @@ $panel-header-bg: url("../images/vintage/plashka2.png") no-repeat top;
 $buttons-panel-bg: #9f7d66;
 
 $black: #000;
-$arrow-hover: #2f5363;
+$arrow-hover: #fff;
 $dotted-border: #babdbe;
 $second-border: #dacbbc;
 $calendar-color: #fff;
@@ -188,6 +188,7 @@ $news-header-color: $links-color;
   display: block;
   border: none;
   box-shadow: inset 0 -2px 1px 1px #87664f;
+
   &:before {
     width: 12px;
     height: 12px;
