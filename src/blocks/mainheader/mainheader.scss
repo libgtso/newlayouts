@@ -20,6 +20,9 @@ header {
         color: $links-color;
         z-index: 999;
       }
+      .searchpanel {
+        background: $search-panel-header-bg;
+      }
       .ratings,
       .blind {
         background: $buttons-panel-bg;
