@@ -249,6 +249,6 @@ $news-header-color: $links-color;
 
 @mixin line {
   background: $line-bg-between-buttons;
-  border-left: 2px solid #e0fbce;
-  border-right: 2px solid #e0fbce;
+  border-left: 1px solid #e0fbce;
+  border-right: 1px solid #e0fbce;
 }
