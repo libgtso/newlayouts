@@ -149,6 +149,7 @@ img {
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
+    @include navigation-buttons;
   }
   .owl-prev {
     left: 0;
