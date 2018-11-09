@@ -32,7 +32,7 @@ $border-line-focus: 2px solid #dad9d9;
 $border-style: 2px solid #977761;
 $border-search-style: 2px solid #546167;
 $border-dotted-links: 2px dotted $gray;
-$border-slider-color: 2px solid #fff;
+$border-slider-color: 2px solid #e0fbce;
 $border-contacts-top: 2px solid #1e5169;
 
 $button-bg: #184b63;
@@ -122,6 +122,11 @@ $news-header-color: #3897c3;
     left: -2px;
     box-shadow: 0 2px 15px -1px rgb(31, 29, 29);
   }
+}
+
+@mixin search-panel {
+  background: $search-panel-header-bg;
+  box-shadow: 0 0 16px -1px rgb(31, 29, 29);
 }
 
 @mixin navigation-sh-btn {
