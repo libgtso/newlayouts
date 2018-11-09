@@ -21,6 +21,7 @@ footer {
         .blind {
           border: $border-style;
           line-height: 32px;
+          background: $buttons-panel-bg;
         }
         .searchpanel {
           background: $searchpanel-footerbg;
