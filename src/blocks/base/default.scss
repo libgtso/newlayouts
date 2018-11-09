@@ -287,3 +287,6 @@ $line-bg-between-buttons: $center-line-bg;
   background: $button-owl-nav-bg;
   border: $border-style;
 }
+@mixin line {
+  background: $line-bg-between-buttons;
+}
