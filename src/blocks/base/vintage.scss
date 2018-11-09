@@ -12,7 +12,7 @@ $search-panel-button-active-bg: $white;
 $panel-button-blind-eye: url("../images/vintage/eye.png");
 $counter-eye: url("../images/vintage/eye_d.png") no-repeat;
 
-$footerbg: none;
+$footerbg: url("../images/vintage/footer-bottom-bg.png") no-repeat bottom;
 $footer-top-border: inherit;
 $footer-links-header-color: #3d96c6;
 $footer-search-panel-text-color: $white;
@@ -202,4 +202,9 @@ $news-header-color: #3897c3;
   &:active {
     background: $button-active-bg;
   }
+}
+
+@mixin search-panel-footer {
+  border: $border-style;
+  @include search-panel;
 }
