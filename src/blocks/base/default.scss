@@ -162,6 +162,9 @@ $line-bg-between-buttons: $center-line-bg;
 @mixin panel-buttons {
   background: none;
 }
+@mixin search-panel {
+  background: $search-panel-header-bg;
+}
 @mixin navigation-sh-btn {
   z-index: 70;
   display: flex;
@@ -194,7 +197,6 @@ $line-bg-between-buttons: $center-line-bg;
   &:before,
   &:after {
     position: absolute;
-
     width: 28px;
     height: 1px;
     content: "";

@@ -21,7 +21,7 @@ header {
         z-index: 999;
       }
       .searchpanel {
-        background: $search-panel-header-bg;
+        @include search-panel;
       }
       .ratings,
       .blind {
