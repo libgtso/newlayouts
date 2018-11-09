@@ -145,11 +145,11 @@ img {
   .owl-next {
     width: 80px;
     height: 80px;
-    background: $button-owl-nav-bg;
     border: $border-style;
     border-radius: 50%;
     cursor: pointer;
     position: absolute;
+    @include navigation-buttons;
   }
   .owl-prev {
     left: 0;
