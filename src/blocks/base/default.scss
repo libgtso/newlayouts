@@ -4,6 +4,7 @@ $textcolor: #2c2c2c;
 $veil-bg: #000;
 
 $header-color: #2c2c2c;
+$main-header-color: $header-color;
 
 $search-panel-text-color: $gray;
 $search-panel-button-active-bg: $white;
@@ -25,8 +26,8 @@ $signature: $gray;
 $checkmark-bg: #eee;
 $searchpanel-footerbg: $footerbg;
 $send-answer-button-bg: $footerbg;
-$footer-padding-bottom: 64px;
-$copyrights-margin-bottom: 56px;
+$footer-padding-bottom: 0;
+$copyrights-margin-bottom: 16px;
 
 $bordercolor: 2px solid #485257;
 $border-line: 2px solid #e8e8e8;
