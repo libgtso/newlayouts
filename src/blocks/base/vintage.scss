@@ -129,6 +129,9 @@ $news-header-color: #3897c3;
 @mixin search-panel {
   background: $search-panel-header-bg;
   box-shadow: 0 0 16px -1px rgb(31, 29, 29);
+  input {
+    color: $white;
+  }
 }
 
 @mixin navigation-sh-btn {
