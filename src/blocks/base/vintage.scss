@@ -110,6 +110,7 @@ $news-header-color: #3897c3;
 
 @mixin panel-buttons {
   background: #9f7d66;
+  box-shadow: 0 2px 2px 1px #87664f;
 }
 
 @mixin navigation-sh-btn {
