@@ -21,22 +21,10 @@ footer {
         .blind {
           border: $border-style;
           line-height: 32px;
+          @include panel-buttons;
         }
         .searchpanel {
-          background: $searchpanel-footerbg;
-          color: $footer-search-panel-text-color;
-          &:hover {
-            border: $border-search-style;
-          }
-          &:focus {
-            border: $border-style;
-          }
-          input {
-            color: $footertextcolor;
-            &:focus {
-              color: $footer-search-panel-text-color;
-            }
-          }
+          @include search-panel-footer;
         }
       }
       .copyrights {
