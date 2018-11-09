@@ -110,7 +110,18 @@ $news-header-color: #3897c3;
 
 @mixin panel-buttons {
   background: #9f7d66;
-  box-shadow: 0 2px 2px 1px #87664f;
+  box-shadow: 0 4px 1px 1px #87664f;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 102%;
+    height: 112%;
+    border-radius: 48px;
+    top: -1px;
+    left: -2px;
+    box-shadow: 0 2px 15px -1px rgb(31, 29, 29);
+  }
 }
 
 @mixin navigation-sh-btn {
