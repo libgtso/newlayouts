@@ -70,7 +70,7 @@ $hover-event-day-color: $white;
 $center-line-bg: #e0fbce;
 $list-dots-bg: $white;
 $line-bg-between-buttons: $center-line-bg;
-$news-header-color: #3897c3;
+$news-header-color: $links-color;
 
 @mixin container-bg {
   background: $page-bg;
