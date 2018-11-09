@@ -69,7 +69,7 @@ $day-color: $white;
 $hover-event-day-color: $white;
 $center-line-bg: #e0fbce;
 $list-dots-bg: $white;
-$line-bg-between-buttons: $center-line-bg;
+$line-bg-between-buttons: #56634d;
 $news-header-color: $links-color;
 
 @mixin container-bg {
@@ -245,4 +245,10 @@ $news-header-color: $links-color;
   &:active {
     box-shadow: inset 0 -2px 1px 1px #7c5c46;
   }
+}
+
+@mixin line {
+  background: $line-bg-between-buttons;
+  border-left: 2px solid #e0fbce;
+  border-right: 2px solid #e0fbce;
 }
