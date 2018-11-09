@@ -283,3 +283,7 @@ $line-bg-between-buttons: $center-line-bg;
     background: $white;
   }
 }
+@mixin navigation-buttons {
+  background: $button-owl-nav-bg;
+  border: $border-style;
+}
