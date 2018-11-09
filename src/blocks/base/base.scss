@@ -115,6 +115,7 @@ img {
   padding: 8px 64px;
   color: $button-text-color;
   text-transform: lowercase;
+  @include link-button-bg;
   &:hover {
     color: $button-text-hover;
     background: $button-hover !important;
