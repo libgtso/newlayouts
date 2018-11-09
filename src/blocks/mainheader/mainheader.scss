@@ -25,7 +25,7 @@ header {
       }
       .ratings,
       .blind {
-        background: $buttons-panel-bg;
+        @include panel-buttons;
       }
       .ratings {
         line-height: 32px;

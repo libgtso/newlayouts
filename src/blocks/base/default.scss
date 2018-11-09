@@ -159,6 +159,9 @@ $line-bg-between-buttons: $center-line-bg;
     transform: rotate(45deg);
   }
 }
+@mixin panel-buttons {
+  background: none;
+}
 @mixin navigation-sh-btn {
   z-index: 70;
   display: flex;
@@ -191,6 +194,7 @@ $line-bg-between-buttons: $center-line-bg;
   &:before,
   &:after {
     position: absolute;
+
     width: 28px;
     height: 1px;
     content: "";
