@@ -142,6 +142,7 @@ $line-bg-between-buttons: $center-line-bg;
   bottom: -26px;
   justify-content: center;
   margin-right: 0;
+  background: #f4f4f4;
   &:before {
     position: absolute;
     content: "";
@@ -194,6 +195,7 @@ $line-bg-between-buttons: $center-line-bg;
   bottom: -28px;
   justify-content: center;
   margin-right: 0;
+  background: #f4f4f4;
   &:before {
     position: absolute;
     content: "...";
@@ -288,4 +290,7 @@ $line-bg-between-buttons: $center-line-bg;
 }
 @mixin line {
   background: $line-bg-between-buttons;
+}
+@mixin cls-button {
+  background: none;
 }
