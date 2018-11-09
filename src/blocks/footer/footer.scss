@@ -3,7 +3,7 @@ footer {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 64px;
+  padding-bottom: $footer-padding-bottom;
 
   .footer-bottom {
     display: flex;
@@ -31,7 +31,7 @@ footer {
         display: flex;
         flex-basis: 100%;
         justify-content: space-between;
-        margin-bottom: 56px;
+        margin-bottom: $copyrights-margin-bottom;
         color: $footertextcolor;
 
         .rights {
