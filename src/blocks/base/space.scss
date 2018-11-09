@@ -178,3 +178,20 @@ $news-header-color: #3897c3;
     background: $button-active-bg;
   }
 }
+
+@mixin search-panel-footer {
+  background: $searchpanel-footerbg;
+  color: $footer-search-panel-text-color;
+  &:hover {
+    border: 2px solid $button-active-bg;
+  }
+  &:focus {
+    border: $border-style;
+  }
+  input {
+    color: $footertextcolor;
+    &:focus {
+      color: $footer-search-panel-text-color;
+    }
+  }
+}
