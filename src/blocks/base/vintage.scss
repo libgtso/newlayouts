@@ -172,6 +172,9 @@ $news-header-color: $links-color;
 @mixin panel-sh-btn {
   display: block;
   position: relative;
+  background: #b9875d;
+  box-shadow: 0 0 32px -2px rgb(82, 69, 69);
+  z-index: 9;
   &:before {
     position: absolute;
     content: "";
