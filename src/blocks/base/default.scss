@@ -71,15 +71,18 @@ $test-bg: $page-bg;
 $map-border: 2px solid #dacbbc;
 $buttons-panel-bg: none;
 
-$arrow-hover: #2f5363;
 $calendar-color: #434343;
+$events-header-color: #3fa1d6;
 $border-style-calendar: 2px solid $white;
-$center-line-bg: $white;
 $day-color: $gray;
 $date-active-bg: $button-text-color-click;
 $hover-event-day-color: $links-hover-color;
 $active-day-color: $white;
+$event-border: 2px solid none;
+
+$arrow-hover: #2f5363;
 $list-dots-bg: $white;
+$center-line-bg: $white;
 $line-bg-between-buttons: $center-line-bg;
 
 @mixin container-bg {
