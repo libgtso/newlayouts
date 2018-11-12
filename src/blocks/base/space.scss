@@ -196,3 +196,11 @@ $news-header-color: #3897c3;
     }
   }
 }
+
+@mixin treatments {
+  color: $white;
+  background: none;
+  &:focus {
+    border: 2px solid #5ab7e9 !important;
+  }
+}
