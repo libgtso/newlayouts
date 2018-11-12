@@ -302,7 +302,9 @@ $line-bg-between-buttons: $center-line-bg;
 }
 @mixin link-button-bg {
   background: none;
+  border: $border-style;
 }
 @mixin treatments {
   background: none;
+  border: $border-line;
 }
