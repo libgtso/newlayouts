@@ -291,11 +291,10 @@
         padding: 24px;
       }
       .button {
-        border: $border-style;
-        background: none;
         width: 50%;
         align-self: center;
         padding: 16px 64px;
+        @include link-button-bg;
       }
     }
   }
