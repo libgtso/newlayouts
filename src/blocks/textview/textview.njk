@@ -1,6 +1,6 @@
 
 <div class="text-container section item">
-    <h3 class="text-caption show-text">{{item.name}}</h3>
+    <h3 {% if item.href %}id="{{item.href}}"{% endif %} class="text-caption show-text">{{item.name}}</h3>
     {% if item.date %}
         <span class="date">{{item.date}}</span>
     {% endif %}
