@@ -16,6 +16,7 @@ $second-text-font: "OpenSans Semibold";
   display: flex;
   flex-direction: column;
   align-self: center;
+  flex: 1 1 auto;
 }
 
 .borders {
@@ -115,6 +116,7 @@ img {
   padding: 8px 64px;
   color: $button-text-color;
   text-transform: lowercase;
+  @include link-button-bg;
   &:hover {
     color: $button-text-hover;
     background: $button-hover !important;
