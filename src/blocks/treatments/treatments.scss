@@ -36,6 +36,9 @@
       margin: 0 auto;
       flex-direction: row;
       flex-wrap: wrap;
+      .treatments-input {
+        @include treatments;
+      }
       .treatments-fields {
         flex: 0 0 45%;
         flex-direction: column;
@@ -53,7 +56,6 @@
           margin-bottom: 24px;
           padding: 20px 16px;
           border: $border-dotted-links;
-          background: none;
         }
       }
       textarea {
@@ -155,7 +157,6 @@
       .button {
         border: $border-style;
         padding: 16px 88px;
-        background: $button-bg;
         margin: 0 auto;
       }
     }

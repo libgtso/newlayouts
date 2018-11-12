@@ -142,6 +142,7 @@ $line-bg-between-buttons: $center-line-bg;
   bottom: -26px;
   justify-content: center;
   margin-right: 0;
+  background: #f4f4f4;
   &:before {
     position: absolute;
     content: "";
@@ -194,6 +195,7 @@ $line-bg-between-buttons: $center-line-bg;
   bottom: -28px;
   justify-content: center;
   margin-right: 0;
+  background: #f4f4f4;
   &:before {
     position: absolute;
     content: "...";
@@ -259,7 +261,6 @@ $line-bg-between-buttons: $center-line-bg;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eceaea', endColorstr='#f4f4f4',GradientType=1 );
 }
 @mixin show-text-button {
-  display: block;
   &:before {
     width: 12px;
     height: 12px;
@@ -282,4 +283,20 @@ $line-bg-between-buttons: $center-line-bg;
   &:active {
     background: $white;
   }
+}
+@mixin navigation-buttons {
+  background: $button-owl-nav-bg;
+  border: $border-style;
+}
+@mixin line {
+  background: $line-bg-between-buttons;
+}
+@mixin cls-button {
+  background: none;
+}
+@mixin link-button-bg {
+  background: none;
+}
+@mixin treatments {
+  background: none;
 }
