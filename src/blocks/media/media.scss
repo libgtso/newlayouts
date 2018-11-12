@@ -154,7 +154,7 @@
         }
       }
       .blocks.sh-block.sh-hidden {
-        justify-content: space-between;
+        justify-content: center;
         .searchpanel {
           width: 0;
           flex: 0 0 0;
@@ -200,6 +200,12 @@
         .cls-btn {
           display: block;
           position: relative;
+        }
+      }
+      .blocks {
+        .panel-bg {
+          padding: 0;
+          left: 0;
         }
       }
     }
@@ -392,10 +398,10 @@
   }
   .text-container {
     .text-caption {
-      padding: 0;
+      padding: 0 80px 0 0;
     }
     p {
-      padding: 64px 0;
+      padding: 0 64px 64px 0;
     }
   }
   .container.page-item {
@@ -430,6 +436,17 @@
     .button {
       padding: 10px 80px;
       width: auto;
+    }
+  }
+
+  header {
+    .content {
+      .blocks {
+        .panel-bg {
+          padding: 0;
+          left: 0;
+        }
+      }
     }
   }
 
