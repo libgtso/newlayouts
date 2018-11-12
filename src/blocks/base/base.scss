@@ -393,7 +393,13 @@ img {
 }
 
 .second-header {
-  color: $second-header-color;
+  .content {
+    .header-caption {
+      h1 {
+        color: $second-header-color;
+      }
+    }
+  }
   .burger-right {
     display: none;
   }
