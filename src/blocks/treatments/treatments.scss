@@ -56,6 +56,7 @@
           margin-bottom: 24px;
           padding: 20px 16px;
           border: $border-dotted-links;
+          @include treatments;
         }
       }
       textarea {
@@ -78,6 +79,9 @@
         flex-direction: row;
         p {
           margin: 0 0 24px 24px;
+        }
+        .sh-agree {
+          border-bottom: 2px dotted;
         }
         .popup {
           background: $white;
