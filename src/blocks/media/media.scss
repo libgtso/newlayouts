@@ -433,6 +433,17 @@
     }
   }
 
+  header {
+    .content {
+      .blocks {
+        .panel-bg {
+          padding: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+
   .group {
     .discussions .discussions-item.sh-block.sh-hidden .text-caption {
       white-space: normal;
