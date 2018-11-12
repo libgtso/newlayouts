@@ -4,7 +4,7 @@
         "year": "2017",
         "month": "Сентябрь",
         "eventsDate": "26 сентября",
-        "day": [
+        "days": [
             {
                 "day": "Пн."
             },
@@ -67,7 +67,7 @@
                 <span class="year">{{events.year}}</span>
                 <span class="month">{{events.month}}</span>
                 <div class="days">
-                    {% for item in days.day %}
+                    {% for item in events.days %}
                         <span class="day">{{item.day}}</span>
                     {% endfor %}
                 </div>
