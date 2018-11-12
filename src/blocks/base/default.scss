@@ -298,7 +298,7 @@ $line-bg-between-buttons: $center-line-bg;
   background: $line-bg-between-buttons;
 }
 @mixin cls-button {
-  background: none;
+  background: #fff;
 }
 @mixin link-button-bg {
   background: none;
