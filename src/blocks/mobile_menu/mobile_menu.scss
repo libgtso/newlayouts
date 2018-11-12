@@ -19,6 +19,7 @@
     left: 50%;
     margin-left: -28px;
     z-index: 88;
+    background: $button-bg;
     &:before {
       position: absolute;
       content: "";
