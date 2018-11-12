@@ -61,7 +61,7 @@
             .event {
               line-height: 32px;
               color: $links-color-footer;
-              border: 2px solid none;
+              border: $event-border;
               &:hover {
                 width: 29px;
                 height: 40px;
@@ -94,7 +94,7 @@
         font-size: 24px;
         text-transform: uppercase;
         padding: 0 0 0 216px;
-        color: $button-text-color-click;
+        color: $events-header-color;
         margin-bottom: 40px;
       }
       .events-blocks {
