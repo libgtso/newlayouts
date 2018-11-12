@@ -220,3 +220,7 @@ $news-header-color: #3897c3;
     border: 2px solid #5ab7e9 !important;
   }
 }
+
+@mixin cls-button {
+  background: #184b63;
+}
