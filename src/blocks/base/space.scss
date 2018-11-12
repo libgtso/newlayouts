@@ -84,6 +84,13 @@ $news-header-color: #3897c3;
   bottom: -26px;
   justify-content: center;
   margin-right: 0;
+  background: #184b63;
+  &:hover {
+    background: #5ab7e9;
+  }
+  &:active {
+    background: #4fa1ce;
+  }
   &:before {
     position: absolute;
     content: "";
@@ -111,6 +118,13 @@ $news-header-color: #3897c3;
   bottom: -28px;
   justify-content: center;
   margin-right: 0;
+  background: #184b63;
+  &:hover {
+    background: #5ab7e9;
+  }
+  &:active {
+    background: #4fa1ce;
+  }
   &:before {
     position: absolute;
     content: "...";
