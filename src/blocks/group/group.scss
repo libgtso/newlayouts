@@ -22,11 +22,12 @@
         }
       }
     }
-    .group-desc.sh-block.sh-hidden {
+    .group-desc.sh-block.sh-hidden.show-button {
       .cls-btn {
         display: none;
       }
       .sh-btn {
+        display: block;
         top: 0;
         right: 0;
         @include show-text-button;
@@ -37,6 +38,14 @@
       p {
         max-height: 130px;
         overflow: hidden;
+      }
+    }
+    .group-desc.sh-block.sh-hidden {
+      .cls-btn {
+        display: none;
+      }
+      .line {
+        display: none;
       }
     }
     .group-desc.sh-block {
@@ -91,6 +100,7 @@
         margin: 56px 0 56px;
         max-width: 720px;
         padding: 0 160px 0 0;
+        color: $header-color;
       }
       p {
         padding: 0 160px 0 0;
@@ -215,6 +225,7 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      color: $header-color;
     }
     .cls-btn {
       display: none;
