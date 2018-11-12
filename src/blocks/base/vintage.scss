@@ -48,7 +48,7 @@ $button-owl-nav-bg: inherit;
 $owl-dots-bg-color: #4d3840;
 $button-slider-active-bg: #866651;
 $counter-default-iamge: $counter-eye;
-$send-answer-button-bg: #184b63;
+$send-answer-button-bg: #b9875d;
 $links-color-footer: #523440;
 $links-hover-color: #865066;
 $links-color: #523440;
@@ -288,4 +288,20 @@ $news-header-color: $links-color;
   position: relative;
   color: $white;
   display: block;
+}
+
+@mixin link-button-bg {
+  box-shadow: inset 0 -2px 1px 1px #87664f;
+  background: #b9855d;
+  border: none !important;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 48px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 15px -1px rgb(31, 29, 29);
+  }
 }
