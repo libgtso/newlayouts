@@ -68,7 +68,9 @@ $calendar-color: #2c2c2c;
 $border-style-calendar: 2px solid #e0fbce;
 $date-active-bg: #865066;
 $day-color: #767c71;
-$hover-event-day-color: #865066;
+$hover-event-day-color: $white;
+$events-header-color: #523440;
+
 $center-line-bg: #e0fbce;
 $list-dots-bg: #4d3840;
 $line-bg-between-buttons: #56634d;
