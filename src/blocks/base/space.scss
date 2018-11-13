@@ -40,7 +40,7 @@ $border-contacts-top: 2px solid #1e5169;
 $button-bg: #184b63;
 $button-hover: #5ab7e9;
 $button-text-color: #fff;
-$button-text-hover: #fff;
+$button-text-hover: #c0bbbd;
 $button-bg-hover: #5ab7e9;
 $button-text-color-click: #fff;
 $button-active-bg: #4fa1ce;
@@ -70,6 +70,7 @@ $center-line-bg: #24546a;
 $list-dots-bg: $white;
 $line-bg-between-buttons: $center-line-bg;
 $news-header-color: #3897c3;
+$main-menu-links-color: $white;
 
 @mixin container-bg {
   background: $page-bg;
