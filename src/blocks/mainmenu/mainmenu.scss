@@ -10,6 +10,7 @@
     li {
       margin: 0 2%;
       a {
+        color: $main-menu-links-color;
         border-bottom: $border-dotted-links;
         &:hover {
           color: $button-text-hover;
