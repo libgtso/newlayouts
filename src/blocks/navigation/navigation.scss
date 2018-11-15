@@ -70,8 +70,9 @@
 .aside {
   display: flex;
   background: none;
-  flex: 0 0 18%;
+  flex: 0 0 auto;
   nav.navigation {
+    width: 160px;
     padding-top: 162px;
     background: none;
     align-content: flex-start;

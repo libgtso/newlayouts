@@ -215,6 +215,7 @@ function showAgreement() {
   });
 }
 
+//TODO ДОПИЛИТЬ СКРИПТ СКРЫВАЮЩИЙ
 function indexPage() {
   // обрезать название рубрик по ширине
   var captions = $(".show-button .text-container p");
@@ -229,12 +230,20 @@ function indexPage() {
     newscaption.each(function() {
       $clamp(this, { clamp: 3 });
     });
+    checkClamp(newscaption);
   }
   function checkClamp(item) {
     $(document).on("click", ".sh-btn", function(e) {
       if (item.closest(".sh-hidden")) {
         for (var i = 0; i < item.length; i++) {
           $clamp($(item)[i], { clamp: "1000px" });
+        }
+      }
+    });
+    $(document).on("click", ".cls-btn", function(e) {
+      if (item.closest(".sh-block")) {
+        for (var i = 0; i < item.length; i++) {
+          $clamp($(item)[i], { clamp: 3 });
         }
       }
     });
@@ -295,5 +304,5 @@ function loadingEvents() {
 }
 
 function fancybox() {
-  $("a.item").fancybox({ titleShow: false });
+  $("a.item").fancybox();
 }

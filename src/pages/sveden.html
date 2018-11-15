@@ -1,0 +1,42 @@
+{% extends 'base/base.njk' %}
+
+{% set title = "Сведения об образовательной организации" %}
+
+{% set menu = [ 
+        { "name": "Основные сведения", "link": "#name1", "active": "active" }, 
+        { "name": "Структура и органы управления образовательной организацией",
+        "link": "#name2" }, 
+        { "name": "Документы", "link": "#name3" }, 
+        { "name": "Образование", "link": "#name4" },
+         { "name": "Образовательные стандарты", "link": "#name1", "active": "active" }, 
+        { "name": "Руководство. Педагогический (научно-педагогический) состав",
+        "link": "#name2" }, 
+        { "name": "Материально-техническое обеспечение и оснащенность образовательного процесса", "link": "#name3" }, 
+        { "name": "Стипендии и иные виды материальной поддержки", "link": "#name4" },
+        { "name": "Платные образовательные услуги", "link": "#name1", "active": "active" }, 
+        { "name": "Финансово-хозяйственная деятельность",
+        "link": "#name2" }, 
+        { "name": "Вакантные места для приема (перевода)", "link": "#name3" }
+
+    ] 
+%}
+
+{% block title %}{{title}}{% endblock %}
+{% block header %}
+    {% include 'header_two_menu/header.njk' %}
+{% endblock %}
+
+{% block content %}
+<section class="container page-item">
+    <div class="page-content">  
+        <div class="content">
+            {% include 'navigation/navigation.njk'%}
+            <div class="information">
+                {% include 'information/information.njk' %}
+            <div>
+        </div>
+    </div>
+</section>
+    {% include 'contacts/contacts.njk' %}
+	{% include 'treatments/treatments.njk' %}
+{% endblock %}
