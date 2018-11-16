@@ -209,6 +209,41 @@
         ]
     }
 %}
+{%
+    set licence = [
+            {
+            "unit": "Лицензия на осуществление образовательной деятельности",
+            "arr": [
+                {
+                    "subheader2_1": "Лицезния",
+                    "data": [
+                        {
+                        "docs":"Устав учреждения.doc"
+                        },
+                        {
+                            "docs":"Устав учреждения.doc"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "arr": [
+                {
+                    "subheader2_1": "Приложение к лицензии",
+                    "data": [
+                        {
+                        "docs":"Устав учреждения.doc"
+                        },
+                        {
+                            "docs":"Устав учреждения.doc"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+%}
 
 <h2 class="header">{{information.informationName}}</h2>
 <div class="basic-informtaion center">
@@ -290,27 +325,6 @@
                 </a>
             {% endfor %}
         {% endfor %}
-    </div>
-    <div class="documents-item">
-    {%
-        set licence = {
-            "unit": "Лицензия на осуществление образовательной деятельности",
-            "arr": [
-                {
-                    "subheader2_1": "Лицезния",
-                    "data": [
-                        {
-                        "docs":"Устав учреждения.doc"
-                        },
-                        {
-                            "docs":"Устав учреждения.doc"
-                        }
-                    ]
-                }
-            ]
-        }
-    %}
-        {% include '../documents_view/documents_view.njk' %}
     </div>
     <div class="documents-item">
         {% include '../documents_view/documents_view.njk' %}
