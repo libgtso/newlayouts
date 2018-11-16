@@ -291,4 +291,28 @@
             {% endfor %}
         {% endfor %}
     </div>
+    <div class="documents-item">
+    {%
+        set licence = {
+            "unit": "Лицензия на осуществление образовательной деятельности",
+            "arr": [
+                {
+                    "subheader2_1": "Лицезния",
+                    "data": [
+                        {
+                        "docs":"Устав учреждения.doc"
+                        },
+                        {
+                            "docs":"Устав учреждения.doc"
+                        }
+                    ]
+                }
+            ]
+        }
+    %}
+        {% include '../documents_view/documents_view.njk' %}
+    </div>
+    <div class="documents-item">
+        {% include '../documents_view/documents_view.njk' %}
+    </div>
 </div>
