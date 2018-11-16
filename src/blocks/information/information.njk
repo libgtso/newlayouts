@@ -1,11 +1,212 @@
 {%
     set information = {
         "informationName": "Сведения об образовательной организации",
-        "subheader1":"Основные сведения"
+        "subheader1":"Основные сведения",
+        "info_item": [
+            {
+                "caption": "Полное наименование",
+                "info": [
+                    {
+                        "key":"Мау НТГО СОш №5"
+                    }
+                ]
+            },
+            {
+                "caption": "Адрес",
+                "info": [
+                    {
+                        "key": "143407, Московская область, ул. Знаний д.5, корп.2"
+                    }
+                ]
+            },
+            {
+                "caption": "Телефоны",
+                "info": [
+                    {
+                        "key": "+7(343)254-03-00, +7(343)254-03-00, +7(343)254-03-00"
+                    }
+                ]
+            },
+            {
+                "caption": "E-mail",
+                "info": [
+                    {
+                        "key": "qwerty@yandex.ru"
+                    }
+                ]
+            },
+            {
+                "caption": "Дата основания учереждения",
+                "info": [
+                    {
+                        "key": "3.03.1861"
+                    }
+                ]
+            },
+            {
+                "caption": "Язык образования",
+                "info": [
+                    {
+                        "key": "русский"
+                    }
+                ]
+            },
+            {
+                "caption": "Численность обучающихся",
+                "info": [
+                    {
+                        "key": "1488"
+                    }
+                ]
+            },
+            {
+                "caption": "Объем учебной нагрузки",
+                "info": [
+                    {
+                        "key": "полшишечки"
+                    }
+                ]
+            },
+            {
+                "caption": "Язык образования",
+                "info": [
+                    {
+                        "key":  "русский"
+                    }
+                ]
+            },
+            {
+                "caption": "Режим работы",
+                "info": [
+                    {
+                        "key": "Понедельник-пятница: 8-30 - 18-00"
+                    },
+                    {
+                        "key": "Суббота: 8-30 - 18-00"
+                    },
+                    {
+                        "key": "Воскресение: выходной"
+                    }
+                ]
+            },
+            {
+                "caption": "Учредитель",
+                "info": [
+                    {
+                        "key": "Министерство общего и профессионального образования Свердловской области"
+                    },
+                    {
+                        "link": "minobraz.gov.ru"
+                    },
+                    {
+                        "key": "143407, Московская область, ул. Знаний д.5, корп.2, контактный телефон учредителя: +7(343)254-03-00, электронная почта учредителя: qwerty@yandex.ru"
+                    }
+                ]
+            },
+            {
+                "caption": "Как добраться",
+                "info": [
+                    {
+                        "key": "Троллейбус №13, №15, №21, скотовозка № 46"
+                    },
+                    {
+                        "key": "Трамвай №14"
+                    },
+                    {
+                        "key": "Возьмите такси"
+                    }
+                ]
+            }
+        ],
+        "subheader1_1":"Филиал школы",
+        "school_item": [
+            {
+                "caption": "ФИО руководителя",
+                "info": "Путин Владимир Владимирович"
+            },
+            {
+                "caption": "Адрес",
+                "info": "143407, Московская область, ул. Знаний д.5, корп.2"
+            },
+            {
+                "caption": "Адрес сайта",
+                "link": "http://minobraz.gov.ru"
+            },
+            {
+                "caption": "Электронная почта",
+                "link": "qwerty@yandex.ru"
+            },
+            {
+                "caption": "Реквизиты",
+                "info": "Р/с 0123456789"
+            }
+        ],
+        "subheader2":"Структура и органы управления образовательной организацией",
+        "subheader2_1": "Структурное подразделение номер 1",
+        "item":"Структурные подразделения учреждения",
+        "structure_item": [
+            {
+                "caption": "ФИО руководителя",
+                "info": "Путин Владимир Владимирович"
+            },
+            {
+                "caption": "Должность",
+                "info": "Преподаватель мудрости для женщин"
+            },
+            {
+                "caption": "Адрес",
+                "info": "143407, Московская область, ул. Знаний д.5, корп.2"
+            },
+            {
+                "caption": "Адрес сайта",
+                "link": "http://test.schoolmsk.ru"
+            },
+            {
+                "caption": "Электронная почта",
+                "info": "qwerty@yandex.ru"
+            }
+        ]
     }
 %}
 
 <h2 class="header">{{information.informationName}}</h2>
-<h3 id="name1" class="header">{{information.subheader1}}</h3>
-<span>Полное наименование</span>
-<p>Мау НТГО СОш №5</p>
+<div class="basic-informtaion center">
+    <h3 id="name1" class="header">{{information.subheader1}}</h3>
+    {% for item in information.info_item %}
+        <div class="info-item">
+            <span>{{item.caption}}</span>
+            {% for item in item.info %}
+                <p>{{item.key}}</p>
+                {% if item.link %}
+                    <a href="/">{{item.link}}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endfor %}
+    <h3 class="header subheader">{{information.subheader1_1}}</h3>
+    {% for item in information.school_item %}
+        <div class="info-item">
+            <span>{{item.caption}}</span>
+            <p>{{item.info}}</p>
+            {% if item.link %}
+                <a href="{{item.link}}">{{item.link}}</a>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+<div class="structure center">
+    <h3 id="name2" class="header">{{information.subheader2}}</h3>
+    <div class="sub">
+        <span>{{information.item}}</span><span class="grayline"></span>
+    </div>
+    <h3 class="header subheader">{{information.subheader2_1}}</h3>
+    {% for item in information.structure_item %}
+        <div class="info-item">
+            <span>{{item.caption}}</span>
+            <p>{{item.info}}</p>
+            {% if item.link %}
+                <a href="{{item.link}}">{{item.link}}</a>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>

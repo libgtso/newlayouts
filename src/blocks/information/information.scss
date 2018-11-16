@@ -1,8 +1,58 @@
 .information {
+  position: relative;
+  flex: 0 1 80%;
+  display: flex;
+  flex-direction: column;
   h2.header {
     padding-bottom: 24px;
   }
   h3.header {
-    padding: 32px 160px 24px 0;
+    padding: 32px 0 24px 0;
+  }
+  h3.header.subheader {
+    color: $links-hover-color;
+  }
+  .basic-informtaion,
+  .structure {
+    span {
+      color: #a5afb0;
+    }
+    .line {
+      width: 100%;
+      background: #000;
+    }
+    .info-item {
+      margin-bottom: 24px;
+      span {
+        color: #a5afb0;
+        margin-bottom: 16px;
+      }
+      p {
+        color: #2b2b2b;
+      }
+      a {
+        border-bottom: $border-dotted-links;
+      }
+    }
+    .sub {
+      display: flex;
+      width: 94%;
+      span {
+        display: inline-flex;
+        margin-right: 16px;
+        flex: 1 0;
+      }
+      .grayline {
+        height: 2px;
+        background: $navigation-line-between-items-bg;
+        align-self: center;
+        flex: 2 1;
+      }
+    }
+  }
+  .center {
+    &:before {
+      left: 0;
+    }
   }
 }
