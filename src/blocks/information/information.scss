@@ -53,8 +53,10 @@
   }
   .documents {
     .documents-item {
+      display: flex;
+      flex-direction: column;
       .download {
-        margin-top: 32px;
+        margin-top: 24px;
         display: inline-flex;
         align-items: center;
         .icon {
@@ -75,6 +77,9 @@
           span {
             color: $button-text-hover;
           }
+        }
+        &:last-child {
+          margin-bottom: 24px;
         }
       }
     }
