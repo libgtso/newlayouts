@@ -125,6 +125,16 @@
     min-width: 640px;
   }
 
+  .container.page-item {
+    .page-content {
+      .content {
+        width: 90%;
+        flex: 0 1 90%;
+        margin: 0 4%;
+      }
+    }
+  }
+
   header {
     .content {
       margin: 0 4%;
