@@ -142,28 +142,63 @@
             }
         ],
         "subheader2":"Структура и органы управления образовательной организацией",
-        "subheader2_1": "Структурное подразделение номер 1",
-        "item":"Структурные подразделения учреждения",
-        "structure_item": [
+        "unit_block":"Структурные подразделения учреждения",
+        "unit_item": [
             {
-                "caption": "ФИО руководителя",
-                "info": "Путин Владимир Владимирович"
-            },
+                "subheader2_1": "Структурное подразделение номер 1",
+                "unit_info": [
+                    {
+                        "caption": "ФИО руководителя",
+                        "info": "Путин Владимир Владимирович"
+                    },
+                    {
+                        "caption": "Должность",
+                        "info": "Преподаватель мудрости для женщин"
+                    },
+                    {
+                        "caption": "Адрес",
+                        "info": "143407, Московская область, ул. Знаний д.5, корп.2"
+                    },
+                    {
+                        "caption": "Адрес сайта",
+                        "link": "http://test.schoolmsk.ru"
+                    },
+                    {
+                        "caption": "Электронная почта",
+                        "info": "qwerty@yandex.ru"
+                    }
+                ]
+            }
+        ],
+        "governing_block":"Органы управления учреждением",
+        "governing_item": [
             {
-                "caption": "Должность",
-                "info": "Преподаватель мудрости для женщин"
-            },
+                "subheader2_1": "Главный орган управления учреждением",
+                "governing_info": [
+                    {
+                        "caption": "ФИО руководителя органа управления",
+                        "info": "Путин Владимир Владимирович"
+                    },
+                    {
+                        "caption": "Должность",
+                        "info": "Преподаватель мудрости для женщин"
+                    },
+                    {
+                        "caption": "Дополнительная информация",
+                        "info": "Здесь указана некая дополнительная информация"
+                    }
+                ]
+            }
+        ],
+        "subheader3":"Документы",
+        "documents": [
             {
-                "caption": "Адрес",
-                "info": "143407, Московская область, ул. Знаний д.5, корп.2"
-            },
-            {
-                "caption": "Адрес сайта",
-                "link": "http://test.schoolmsk.ru"
-            },
-            {
-                "caption": "Электронная почта",
-                "info": "qwerty@yandex.ru"
+                "subheader3_1": "Устав",
+                "data": [
+                    {
+                        "docs":"Устав учреждения.doc"
+                    }
+                ]
             }
         ]
     }
@@ -197,16 +232,57 @@
 <div class="structure center">
     <h3 id="name2" class="header">{{information.subheader2}}</h3>
     <div class="sub">
-        <span>{{information.item}}</span><span class="grayline"></span>
+        <span class="name">{{information.unit_block}}</span><span class="grayline"></span>
     </div>
-    <h3 class="header subheader">{{information.subheader2_1}}</h3>
-    {% for item in information.structure_item %}
-        <div class="info-item">
-            <span>{{item.caption}}</span>
-            <p>{{item.info}}</p>
-            {% if item.link %}
-                <a href="{{item.link}}">{{item.link}}</a>
-            {% endif %}
+    {% for item in information.unit_item %}
+        <div class="units-item">
+            <h3 class="header subheader">{{item.subheader2_1}}</h3>
+            {% for item in item.unit_info %}
+                <div class="info-item">
+                    <span>{{item.caption}}</span>
+                    <p>{{item.info}}</p>
+                    {% if item.link %}
+                        <a href="{{item.link}}">{{item.link}}</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
         </div>
     {% endfor %}
+    <div class="sub">
+        <span class="name">{{information.governing_block}}</span><span class="grayline"></span>
+    </div>
+    {% for item in information.governing_item %}
+        <div class="governing-item">
+            <h3 class="header subheader">{{item.subheader2_1}}</h3>
+            {% for item in item.governing_info %}
+                <div class="info-item">
+                    <span>{{item.caption}}</span>
+                    <p>{{item.info}}</p>
+                    {% if item.link %}
+                        <a href="{{item.link}}">{{item.link}}</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</div>
+<div class="documents center">
+    <h3 id="name3" class="header">{{information.subheader3}}</h3>
+    <div class="documents-item">
+        {% for item in information.documents %}
+            <div class="sub">
+                <span class="name">{{item.subheader3_1}}</span><span class="grayline"></span>
+            </div>
+            {% for item in item.data %}
+                <a class="download" href="/{{item.docs}}">
+                    <div class="icon">
+                        <img src=""/>
+                    </div>
+                    <span>
+                        {{item.docs}}
+                    </span>
+                </a>
+            {% endfor %}
+        {% endfor %}
+    </div>
 </div>
