@@ -215,6 +215,7 @@ function showAgreement() {
   });
 }
 
+//TODO ДОПИЛИТЬ СКРИПТ СКРЫВАЮЩИЙ
 function indexPage() {
   // обрезать название рубрик по ширине
   var captions = $(".show-button .text-container p");
@@ -229,47 +230,20 @@ function indexPage() {
     newscaption.each(function() {
       $clamp(this, { clamp: 3 });
     });
+    checkClamp(newscaption);
   }
   function checkClamp(item) {
     $(document).on("click", ".sh-btn", function(e) {
       if (item.closest(".sh-hidden")) {
-        for (var i = 0; i < item.length; i++) {
-          $clamp($(item)[i], { clamp: "1000px" });
-        }
+        $clamp($(e.target).prevAll("p")[0], { clamp: "1000px" });
+      }
+    });
+    $(document).on("click", ".cls-btn", function(e) {
+      if (item.closest(".sh-block")) {
+        $clamp($(e.target).prevAll("p")[0], { clamp: 3 });
       }
     });
   }
-}
-
-function sectionPage() {
-  var pubs = $(".section-pubs .pub-container");
-  if (pubs.length) {
-    pubs.each(function() {
-      var caption = $(".caption", $(this)),
-        annotation = $(".annotation", $(this));
-      checkClamp($(this));
-      if (caption.height() > 92 || annotation.height() > 96) {
-        $(this).addClass("sh-hidden hideable");
-      } else {
-        $(this).removeClass("sh-hidden hideable");
-      }
-    });
-
-    pubs.on("click", ".sh-btn", function() {
-      checkClamp($(this).closest(".sh-block"));
-    });
-  }
-
-  // function checkClamp(item) {
-  //   // этот скрипт срабатывает раньше чем стандартный для sh-block, поэтому тут ноборот проверка
-  //   if (item.is(".sh-hidden")) {
-  //     $clamp($(".caption", item)[0], { clamp: "1000px" });
-  //     $clamp($(".annotation", item)[0], { clamp: "1000px" });
-  //   } else {
-  //     $clamp($(".caption", item)[0], { clamp: 3 });
-  //     $clamp($(".annotation", item)[0], { clamp: 3 });
-  //   }
-  // }
 }
 
 function loadingEvents() {
@@ -295,5 +269,5 @@ function loadingEvents() {
 }
 
 function fancybox() {
-  $("a.item").fancybox({ titleShow: false });
+  $("a.item").fancybox();
 }

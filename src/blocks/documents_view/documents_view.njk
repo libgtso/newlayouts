@@ -1,0 +1,18 @@
+{% for item in licence %}
+    {% if item.unit %}
+    <div class="sub">
+        <span class="name">{{item.unit}}</span><span class="grayline"></span>
+    </div>
+    {% endif %}
+    {% for item in item.arr %}
+        <h3 class="header subheader">{{item.subheader2_1}}</h3>
+        {% for item in item.data %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,68 @@
+{% set title = "Новости" %}
+
+{% set allnews = "Все новости" %}
+
+{%
+    set news_item = [
+
+        {
+            "date": "Сегодня",
+            "header": "Ета превлю заголовка",
+            "preview": "При выборе элементов фильтра и нажатия кнопки Submit, должны отсылаться данные в POST и обновляться элемент, который отвечает за список товаров.",
+            "link": "Подробнее",
+            "src": "./images/no-img-prev.png",
+            "counter": "666",
+            "class":"news-img no-image"
+        },
+        {
+            "date": "Вчера",
+            "header": "Ета превлю заголовка",
+            "preview": "Маленький рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни",
+            "link": "Подробнее",
+            "src": "./images/black.jpg",
+            "class": "news-img"
+        },
+        {
+            "date": "Вчера",
+            "header": "Ета превлю заголовка",
+            "preview": "Маленький рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни",
+            "link": "Подробнее",
+            "src": "./images/black.jpg",
+            "class": "news-img"
+        },
+        {
+            "date": "Вчера",
+            "header": "Ета превлю заголовка",
+            "preview": "Маленький рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни рост и карликовость Федора связана с тем, что он пил, курил, мало ел овощей и вообще дрыщ по жизни",
+            "link": "Подробнее",
+            "src": "./images/black.jpg",
+            "class": "news-img"
+        }
+    ]
+%}
+
+<section class="news center">
+    <h2 class="header">{{title}}</h2>
+    <div class="news-block">
+        {% for item in news_item %}
+            <div class="news-item">
+                <div class="news-caption">
+                    <span>{{item.date}}</span>
+                    <h3>{{item.header}}</h3>
+                    <img class="{% if item.class %}{{item.class}}{% endif %}" src="{{item.src}}">
+                    {% if item.counter %}
+                    <div class="counter">x {{item.counter}}</div>
+                    {% endif %}
+                </div>
+                <div class="news-preview">
+                    <div class="text-container">
+                        <p>{{item.preview}}</p>
+                    </div>
+                    <span>
+                        <a href="/news-page.html">{{item.link}}</a>
+                    </span>
+                </div>
+            </div>
+        {% endfor %}
+    </div>        
+</section>
