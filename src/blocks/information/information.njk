@@ -196,13 +196,16 @@
                 "subheader3_1": "Устав",
                 "data": [
                     {
-                        "docs":"Устав учреждения.doc"
+                        "docs":"Устав учреждения.doc",
+                        "class": "doc"
                     },
                      {
-                        "docs":"Устав учреждения.doc"
+                        "docs":"Устав учреждения.pdf",
+                        "class": "pdf"
                     },
                      {
-                        "docs":"Устав учреждения.doc"
+                        "docs":"Устав учреждения.docx",
+                        "class": "docx"
                     }
                 ]
             }
@@ -218,10 +221,16 @@
                     "subheader2_1": "Лицезния",
                     "data": [
                         {
-                        "docs":"Устав учреждения.doc"
+                            "docs":"Устав учреждения.doc",
+                            "class": "doc"
                         },
                         {
-                            "docs":"Устав учреждения.doc"
+                            "docs":"Устав учреждения.pdf",
+                            "class": "pdf"
+                        },
+                        {
+                            "docs":"Устав учреждения.docx",
+                            "class": "docx"
                         }
                     ]
                 }
@@ -233,10 +242,16 @@
                     "subheader2_1": "Приложение к лицензии",
                     "data": [
                         {
-                        "docs":"Устав учреждения.doc"
+                            "docs":"Устав учреждения.doc",
+                            "class": "doc"
                         },
                         {
-                            "docs":"Устав учреждения.doc"
+                            "docs":"Устав учреждения.pdf",
+                            "class": "pdf"
+                        },
+                        {
+                            "docs":"Устав учреждения.docx",
+                            "class": "docx"
                         }
                     ]
                 }
@@ -256,13 +271,16 @@
 {% 
     set data1 = [
         {
-            "docs": "План номер 1.doc"
+            "docs": "План номер 1.doc",
+            "class": "doc"
         },
         {
-            "docs": "План номер 2.doc"
+            "docs": "План номер 2.pdf",
+            "class": "pdf"
         },
         {
-            "docs": "План номер 3.doc"
+            "docs": "План номер 3.docx",
+            "class": "docx"
         }
     ]
 %}
@@ -338,9 +356,7 @@
             </div>
             {% for item in item.data %}
                 <a class="download" href="/{{item.docs}}">
-                    <div class="icon">
-                        <img src=""/>
-                    </div>
+                    <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
                     <span>
                         {{item.docs}}
                     </span>
@@ -359,7 +375,6 @@
         {% for item in data %}
             <a class="download" href="/{{item.docs}}">
                 <div class="icon">
-                    <img src=""/>
                 </div>
                 <span>
                     {{item.docs}}
@@ -373,9 +388,7 @@
         </div>
     {% for item in data1 %}
         <a class="download" href="/{{item.docs}}">
-            <div class="icon">
-                <img src=""/>
-            </div>
+            <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
             <span>
                 {{item.docs}}
             </span>
@@ -459,7 +472,6 @@
             {% for item in item.data %}        
                 <a class="download" href="/{{item.docs}}">
                     <div class="icon">
-                        <img src=""/>
                     </div>
                     <span>
                         {{item.docs}}
@@ -474,9 +486,7 @@
     </div>
     {% for item in data1 %}
         <a class="download" href="/{{item.docs}}">
-            <div class="icon">
-                <img src=""/>
-            </div>
+            <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
             <span>
                 {{item.docs}}
             </span>
@@ -521,7 +531,6 @@
             {% for item in item.data %}        
                 <a class="download" href="/{{item.docs}}">
                     <div class="icon">
-                        <img src=""/>
                     </div>
                     <span>
                         {{item.docs}}
@@ -536,9 +545,7 @@
         </div>
         {% for item in data1 %}
             <a class="download" href="/{{item.docs}}">
-                <div class="icon">
-                    <img src=""/>
-                </div>
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
                 <span>
                     {{item.docs}}
                 </span>
@@ -551,9 +558,7 @@
         </div>
         {% for item in data1 %}
             <a class="download" href="/{{item.docs}}">
-                <div class="icon">
-                    <img src=""/>
-                </div>
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
                 <span>
                     {{item.docs}}
                 </span>
@@ -566,9 +571,7 @@
         </div>
         {% for item in data1 %}
             <a class="download" href="/{{item.docs}}">
-                <div class="icon">
-                    <img src=""/>
-                </div>
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
                 <span>
                     {{item.docs}}
                 </span>
@@ -578,4 +581,53 @@
 </div>
 <div class="education center">
     <h3 id="name4" class="header">Образование</h3>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Уровни образования</span><span class="grayline"></span>
+        </div>
+        <ul>
+            <li>Среднее профессиональное образование</li>
+        </ul>
+    </div>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Формы обучения</span><span class="grayline"></span>
+        </div>
+        <ul>
+            <li>Среднее профессиональное образование</li>
+            <li>Среднее профессиональное образование</li>
+        </ul>
+    </div>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Образовательная программа</span><span class="grayline"></span>
+        </div>
+        <div class="education-item sub-item">
+            <div class="sub">
+                <span class="name">Название образовательной программы</span>
+            </div>
+            <p>Некое название образовательной программы</p>
+            <a class="deeper" href="./">Смотреть подробнее</a>
+        </div>
+        <div class="education-item sub-item">
+            <div class="sub">
+                <span class="name">Полное название образовательной программы</span>
+            </div>
+            <p>Некое полное название образовательной программы</p>
+        </div>
+    </div>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Учебный план</span><span class="grayline"></span>
+        </div>
+        <p>Наш мир полон тайн, которые кажутся неразрешимыми. Загадка Розуэлла, тайна убийства Кеннеди, гигантские надписи в пустыне Наска, что на самом деле случилось с группой Дятлова, куда делся экипаж «Марии Селесты» в Бермудском треугольнике и многие другие вопросы остаются без окончательного ответа и расшифровки.</p>
+        {% for item in data1 %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div>
 </div>

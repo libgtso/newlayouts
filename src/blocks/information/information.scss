@@ -15,7 +15,8 @@
   }
   .basic-informtaion,
   .structure,
-  .documents {
+  .documents,
+  .education {
     span {
       color: #a5afb0;
     }
@@ -39,9 +40,11 @@
     .sub {
       display: flex;
       width: 94%;
+      margin-bottom: 24px;
       .name {
         display: inline-flex;
         margin-right: 16px;
+        line-height: 16px;
       }
       .grayline {
         height: 2px;
@@ -56,35 +59,72 @@
     .documents-item {
       display: flex;
       flex-direction: column;
-      .download {
-        margin-top: 24px;
-        display: inline-flex;
-        align-items: center;
-        .icon {
-          width: 48px;
-          height: 48px;
-          border: $bordercolor;
-          border-radius: 50%;
-          margin-right: 16px;
-        }
-        span {
-          color: $links-color;
-          border-bottom: $border-dotted-links;
-        }
-        &:hover {
-          .icon {
-            border: 2px solid $button-text-hover;
+    }
+  }
+
+  .download {
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    .icon {
+      width: 48px;
+      height: 48px;
+      border: $bordercolor;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+    .icon.doc {
+      background: url("../images/doc.png") no-repeat 50% 50%;
+    }
+    .icon.pdf {
+      background: url("../images/pdf.png") no-repeat 50% 50%;
+    }
+    .icon.docx {
+      background: url("../images/docx.png") no-repeat 50% 50%;
+    }
+    span {
+      color: $links-color;
+      border-bottom: $border-dotted-links;
+    }
+    &:hover {
+      .icon {
+        border: 2px solid $button-text-hover;
+      }
+      span {
+        color: $button-text-hover;
+      }
+    }
+    &:last-child {
+      margin-bottom: 24px;
+    }
+  }
+
+  .education {
+    .education-item {
+      margin-bottom: 16px;
+      flex-direction: column;
+      display: flex;
+      ul {
+        li {
+          position: relative;
+          padding-left: 16px;
+          &:before {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #a6b0b2;
+            content: "";
+            top: 13px;
+            left: 0;
           }
-          span {
-            color: $button-text-hover;
-          }
-        }
-        &:last-child {
-          margin-bottom: 24px;
         }
       }
-      .no-docs {
-        margin: 24px 0;
+      .sub-item {
+        margin-bottom: 16px;
+        .sub {
+          margin-bottom: 8px;
+        }
       }
     }
   }
@@ -92,5 +132,11 @@
     &:before {
       left: 8%;
     }
+  }
+  .deeper {
+    border-bottom: $border-dotted-links;
+    display: flex;
+    flex: 0 0 16%;
+    width: 16%;
   }
 }

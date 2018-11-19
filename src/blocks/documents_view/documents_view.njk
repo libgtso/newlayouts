@@ -8,9 +8,7 @@
         <h3 class="header subheader">{{item.subheader2_1}}</h3>
         {% for item in item.data %}
             <a class="download" href="/{{item.docs}}">
-                <div class="icon">
-                    <img src=""/>
-                </div>
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
                 <span>
                     {{item.docs}}
                 </span>
