@@ -245,6 +245,28 @@
     ]
 %}
 
+{% 
+    set data = [
+        {
+            "docs": "Сведения об аккредитации.doc"
+        }
+    ]
+%}
+
+{% 
+    set data1 = [
+        {
+            "docs": "План номер 1.doc"
+        },
+        {
+            "docs": "План номер 2.doc"
+        },
+        {
+            "docs": "План номер 3.doc"
+        }
+    ]
+%}
+
 <h2 class="header">{{information.informationName}}</h2>
 <div class="basic-informtaion center">
     <h3 id="name1" class="header">{{information.subheader1}}</h3>
@@ -329,4 +351,231 @@
     <div class="documents-item">
         {% include '../documents_view/documents_view.njk' %}
     </div>
+    <div class="documents-item">
+        <div class="sub">
+            <span class="name">Свидетельство о государственной аккредитации</span><span class="grayline"></span>
+        </div>
+        <p class="no-docs">Аккредитация отсутствует</p>
+        {% for item in data %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon">
+                    <img src=""/>
+                </div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="documents-item">
+        <div class="sub">
+            <span class="name">План финансово-хозяйственной деятельности образовательной организации</span><span class="grayline"></span>
+        </div>
+    {% for item in data1 %}
+        <a class="download" href="/{{item.docs}}">
+            <div class="icon">
+                <img src=""/>
+            </div>
+            <span>
+                {{item.docs}}
+            </span>
+        </a>
+    {% endfor %}
+    </div>
+    <div class="documents-item">
+         <div class="sub">
+            <span class="name">Локальные нормативные акты</span><span class="grayline"></span>
+        </div>
+        {%
+            set localActs = [
+                {
+                    "subheader2_1": "Правила приема обучающихся",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Режим занятий обучающихся",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Формы, перодичность и порядок текущего контроля успеваемости и промежуточной аттестации обучающихся",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Порядок и основания перевода, отчисления и восстановления обучающихся",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Порядок оформления, возникновения, приостановления и прекращения отношений между образовательной организацией и обучающимися и (или) родителями (законными представителями) несовершеннолетних",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Правила внутреннего распорядка обучающихся",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Правила внутреннего трудового распорядка",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                },
+                {
+                    "subheader2_1": "Коллективный договор",
+                    "data": [
+                        {
+                            "docs": "Документ 1.doc"
+                        }
+                    ]
+                }
+            ]
+        %}
+        {% for item in localActs %}
+            <h3 class="header subheader">{{item.subheader2_1}}</h3>
+            {% for item in item.data %}        
+                <a class="download" href="/{{item.docs}}">
+                    <div class="icon">
+                        <img src=""/>
+                    </div>
+                    <span>
+                        {{item.docs}}
+                    </span>
+                </a>
+            {% endfor %}
+        {% endfor %}
+     </div>
+     <div class="documents-item">
+        <div class="sub">
+        <span class="name">Отчет о результататх самообследования</span><span class="grayline"></span>
+    </div>
+    {% for item in data1 %}
+        <a class="download" href="/{{item.docs}}">
+            <div class="icon">
+                <img src=""/>
+            </div>
+            <span>
+                {{item.docs}}
+            </span>
+        </a>
+    {% endfor %}
+    </div>
+    <div class="documents-item">
+        <div class="sub">
+            <span class="name">Платные услуги</span><span class="grayline"></span>
+        </div>
+     {%
+        set localActs = [
+            {
+                "subheader2_1": "Документ о порядке оказания платных образовательных услуг",
+                "data": [
+                    {
+                        "docs": "Документ 1.doc"
+                    }
+                ]
+            },
+            {
+                "subheader2_1": "Образец договора об оказании платных образовательных услуг",
+                "data": [
+                    {
+                        "docs": "Документ 1.doc"
+                    }
+                ]
+            },
+            {
+                "subheader2_1": "Документ об утверждении стоимости обучения по каждой образовательной программе",
+                "data": [
+                    {
+                        "docs": "Документ 1.doc"
+                    }
+                ]
+            }
+        ]
+    %}
+
+    {% for item in localActs %}
+            <h3 class="header subheader">{{item.subheader2_1}}</h3>
+            {% for item in item.data %}        
+                <a class="download" href="/{{item.docs}}">
+                    <div class="icon">
+                        <img src=""/>
+                    </div>
+                    <span>
+                        {{item.docs}}
+                    </span>
+                </a>
+            {% endfor %}
+        {% endfor %}
+     </div>
+     <div class="documents-item">
+        <div class="sub">
+            <span class="name">Документ об установлении размера платы, взимаемой с родителей (законных представителей)</span><span class="grayline"></span>
+        </div>
+        {% for item in data1 %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon">
+                    <img src=""/>
+                </div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="documents-item">
+        <div class="sub">
+            <span class="name">Предписания органов, осуществляющих государственный контроль (надзор) в сфере образования, отчеты об исполнении таких предписаний (при наличии)</span><span class="grayline"></span>
+        </div>
+        {% for item in data1 %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon">
+                    <img src=""/>
+                </div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="documents-item">
+        <div class="sub">
+            <span class="name">Дополнительные документы</span><span class="grayline"></span>
+        </div>
+        {% for item in data1 %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon">
+                    <img src=""/>
+                </div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div>
+</div>
+<div class="education center">
+    <h3 id="name4" class="header">Образование</h3>
 </div>
