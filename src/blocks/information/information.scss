@@ -63,6 +63,7 @@
   }
 
   .download {
+    align-self: flex-start;
     margin-top: 24px;
     display: inline-flex;
     align-items: center;
@@ -108,6 +109,7 @@
         li {
           position: relative;
           padding-left: 16px;
+          margin-bottom: 16px;
           &:before {
             position: absolute;
             width: 6px;
@@ -135,8 +137,6 @@
   }
   .deeper {
     border-bottom: $border-dotted-links;
-    display: flex;
-    flex: 0 0 16%;
-    width: 16%;
+    align-self: flex-start;
   }
 }

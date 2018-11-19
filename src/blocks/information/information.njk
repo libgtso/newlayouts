@@ -630,4 +630,47 @@
             </a>
         {% endfor %}
     </div>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Аннотации к рабочим программам</span><span class="grayline"></span>
+        </div>
+        <ul>
+            <li>
+                <p>Алгебра</p>
+                <a class="deeper" href="./">Смотреть подробнее</a>
+            </li>            
+            <li>
+                <p>Зельеварение</p>
+                <a class="deeper" href="./">Смотреть подробнее</a>
+            </li>
+        </ul>
+    </div>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Календарный учебный график</span><span class="grayline"></span>
+        </div>
+        <p>Некое полное название образовательной программы</p>
+        {% for item in data1 %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div>
+    <div class="education-item">
+        <div class="sub">
+            <span class="name">Методические и иные документы, разработанные ОО</span><span class="grayline"></span>
+        </div>
+        <p>Некое полное название образовательной программы</p>
+        {% for item in data1 %}
+            <a class="download" href="/{{item.docs}}">
+                <div class="icon {% if item.class %}{{item.class}}{% endif %}"></div>
+                <span>
+                    {{item.docs}}
+                </span>
+            </a>
+        {% endfor %}
+    </div> 
 </div>
