@@ -16,7 +16,10 @@
   .basic-informtaion,
   .structure,
   .documents,
-  .education {
+  .education,
+  .education-standarts,
+  .employees {
+    margin-top: 40px;
     span {
       color: #a5afb0;
     }
@@ -100,6 +103,26 @@
     }
   }
 
+  .education-standarts {
+    ul {
+      li {
+        position: relative;
+        padding-left: 16px;
+        margin-bottom: 16px;
+        &:before {
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #a6b0b2;
+          content: "";
+          top: 13px;
+          left: 0;
+        }
+      }
+    }
+  }
+
   .education {
     .education-item {
       margin-bottom: 16px;
@@ -139,9 +162,36 @@
       }
     }
   }
+
+  .employees {
+    display: flex;
+    flex-direction: column;
+    .employees-cards {
+      .card-item {
+        .card-name {
+          display: flex;
+          flex-direction: row;
+          .photo {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            overflow: hidden;
+            justify-content: center;
+            display: flex;
+            img {
+              max-width: 70px;
+              max-height: 70px;
+              width: auto;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
   .center {
     &:before {
-      left: 8%;
+      left: 6%;
     }
   }
   .deeper {

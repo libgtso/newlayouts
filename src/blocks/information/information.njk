@@ -720,3 +720,45 @@
         </ul>
     </div>
 </div>
+<div class="education-standarts center">
+    <h3 id="name5" class="header">Образовательные стандарты</h3>
+    <div class="sub">
+        <span class="name">Дополнительные ссылки на образовательные стандарты</span><span class="grayline"></span>
+    </div>
+    <ul>
+        <li>
+            <p>ФГОС среднего профессионального образования по специальности 23.02.06 Техническая эксплуатация подвижного состава железных дорог утвержден Приказом Министерства образования и науки Российской Федерации от « 22» апреля 2014 г. № 388.</p>
+            <a class="deeper" href="./">Смотреть подробнее</a>
+        </li>
+        <li>
+            <p>ФГОС среднего профессионального образования по специальности 23.02.06 Техническая эксплуатация подвижного состава железных дорог утвержден Приказом Министерства образования и науки Российской Федерации от « 22» апреля 2014 г. № 388.</p>
+            <a class="deeper" href="./">Смотреть подробнее</a>
+        </li>
+    </ul>
+</div>
+<div class="employees center">
+    <h3 id="name6" class="header">РУКОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ</h3>
+    <div class="sub">
+        <span class="name">Администрация</span><span class="grayline"></span>
+    </div>
+    {%
+        set cards = [
+            {
+                "img": "./images/arni.jpg",
+                "name": "Черныйнегр Арнольд Австриевич"
+            }
+        ]
+    %}
+    <div class="employees-cards">
+        {% for item in cards %}
+            <div class="card-item">
+                <div class="card-name">
+                    <div class="photo">
+                        <img src="{{item.img}}"/>
+                    </div>
+                    <p class="name">{{item.name}}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
