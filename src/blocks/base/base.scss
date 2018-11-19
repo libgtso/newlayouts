@@ -91,6 +91,7 @@ a {
   text-decoration: none;
   font-family: $text-font;
   &:hover {
+    color: $links-hover-color;
     text-decoration: none;
   }
 }

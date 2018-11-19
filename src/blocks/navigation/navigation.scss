@@ -8,10 +8,10 @@
 
   ul {
     padding-top: 16px;
-    display: flex;
-    flex-direction: row;
-    flex: 0 0 60%;
-    justify-content: space-around;
+    // display: flex;
+    // flex-direction: row;
+    // flex: 0 0 60%;
+    // justify-content: space-around;
     margin-bottom: 56px;
     flex-flow: row wrap;
     li {
@@ -70,12 +70,14 @@
 .aside {
   display: flex;
   background: none;
-  flex: 0 0 18%;
+  flex: 0 0 auto;
   nav.navigation {
     padding-top: 162px;
     background: none;
     align-content: flex-start;
     margin-left: 40px;
+    flex: 1 1 180px;
+    width: 180px;
 
     ul {
       display: flex !important;
