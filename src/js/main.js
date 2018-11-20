@@ -12,6 +12,7 @@ $(document).ready(function() {
   loadingEvents();
   showAgreement();
   fancybox();
+  buttonUp();
 });
 
 function hideMenuItems() {
@@ -21,7 +22,7 @@ function hideMenuItems() {
   //исключаем мобильное меню
   var container = $(".main-menu").not(burgerMenu);
   var hideContainer = $(".hidden-list");
-  if (!container.length || $("a", container).length <= limit + 1) return true;
+  if (!container.length || $("a", container).length <= limit + 1) return;
 
   init();
 
@@ -271,3 +272,27 @@ function loadingEvents() {
 function fancybox() {
   $("a.item").fancybox();
 }
+
+function buttonUp() {
+  var headerHeight = $("header").height();
+  var documentScroll = $(this).scrollTop();
+  if (documentScroll > headerHeight) {
+    $(".button-up").css("display", "block");
+  } else {
+    $(".button-up").css("display", "none");
+  }
+}
+
+$(document).on("scroll", function() {
+  buttonUp();
+});
+
+$(".button-up").on("click", function(e) {
+  e.preventDefault();
+  $("html, body").animate(
+    {
+      scrollTop: 0
+    },
+    500
+  );
+});
