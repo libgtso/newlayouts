@@ -42,19 +42,22 @@
     position: absolute;
     z-index: 103;
     background: #fff;
-    right: 5%;
-    left: 5%;
-    width: 90%;
+    right: 3%;
+    width: 280px;
     border-radius: 16px;
     box-shadow: 0px 1px 10px -1px $gray;
     top: -24px;
     .aside {
-      padding-left: 16px;
+      //padding-left: 16px;
       .navigation {
+        margin-top: 104px;
+        width: 240px;
         display: block;
         background: none;
         padding-top: 32px;
         position: relative;
+        padding-left: 0;
+        padding-top: 0;
         .sh-btn {
           display: none;
         }

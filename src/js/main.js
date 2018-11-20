@@ -277,15 +277,18 @@ function fancybox() {
 function buttonUp() {
   var headerHeight = $("header").height();
   var documentScroll = $(this).scrollTop();
+  var burgerMenu = $(".burger-right .menu-container .aside .navigation");
+  console.log(burgerMenu);
+  var fixedMenu = $(".aside .navigation").not(burgerMenu);
   if (documentScroll > headerHeight) {
     $(".button-up").css("display", "block");
-    $(".aside .navigation").css({
+    fixedMenu.css({
       marginTop: 0,
       top: 16
     });
   } else {
     $(".button-up").css("display", "none");
-    $(".aside .navigation").css({
+    fixedMenu.css({
       marginTop: 172,
       top: "auto"
     });
