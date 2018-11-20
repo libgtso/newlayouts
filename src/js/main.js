@@ -284,13 +284,15 @@ function buttonUp() {
     $(".button-up").css("display", "block");
     fixedMenu.css({
       marginTop: 0,
-      top: 16
+      top: 16,
+      position: "fixed"
     });
   } else {
     $(".button-up").css("display", "none");
     fixedMenu.css({
       marginTop: 172,
-      top: "auto"
+      top: "auto",
+      position: "absolute"
     });
   }
 }
