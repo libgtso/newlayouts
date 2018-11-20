@@ -41,7 +41,7 @@
     ]
 %}
 
-<section class="news center">
+<section class="news">
     <h2 class="header">{{title}}</h2>
     <div class="news-block">
         {% for item in news_item %}
@@ -64,5 +64,6 @@
                 </div>
             </div>
         {% endfor %}
-    </div>        
+    </div>     
+    {% include '../paginator/paginator.njk' %}
 </section>

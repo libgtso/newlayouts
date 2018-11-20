@@ -1,0 +1,46 @@
+.pagination {
+  height: 80px;
+  position: relative;
+  display: flex;
+  margin-bottom: 64px;
+  .owl-next,
+  .owl-prev {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: $button-bg;
+    border: $border-line;
+    cursor: pointer;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-top: 2px solid $checkmark-checked-bg;
+      border-left: 2px solid $checkmark-checked-bg;
+      top: 40%;
+    }
+    &:hover {
+      background: $button-bg-hover;
+      border: $border-style;
+    }
+    &:active {
+      background: $button-active-bg;
+    }
+  }
+  .owl-next {
+    right: 0;
+    &:before {
+      transform: rotate(135deg);
+      right: 40%;
+    }
+  }
+  .owl-prev {
+    left: 0;
+    &:before {
+      transform: rotate(-45deg);
+      left: 45%;
+    }
+  }
+}
