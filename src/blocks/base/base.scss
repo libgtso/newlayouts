@@ -5,6 +5,7 @@ body {
 
 .bg-wrapper {
   background: $test-bg;
+  position: relative;
 }
 
 $header-font: "Akrobat-semibold";
@@ -412,4 +413,16 @@ img {
       margin-top: 128px;
     }
   }
+}
+
+.button-up {
+  width: 64px;
+  height: 64px;
+  background: url("../images/up.png") no-repeat 50% 50%;
+  position: fixed;
+  bottom: 64px;
+  left: 10%;
+  display: none;
+  cursor: pointer;
+  z-index: 101;
 }
