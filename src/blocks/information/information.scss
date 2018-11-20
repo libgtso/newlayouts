@@ -167,17 +167,23 @@
     display: flex;
     flex-direction: column;
     .employees-cards {
+      display: flex;
+      flex-direction: row;
+      flex-flow: wrap;
       .card-item {
+        flex: 0 1 35%;
+        margin: 0 48px 48px 0;
         .card-name {
           display: flex;
           flex-direction: row;
           .photo {
+            margin-right: 16px;
             width: 64px;
             height: 64px;
             border-radius: 50%;
             overflow: hidden;
-            justify-content: center;
             display: flex;
+            justify-content: center;
             img {
               max-width: 70px;
               max-height: 70px;
@@ -185,6 +191,21 @@
               height: auto;
             }
           }
+          .name {
+            text-transform: uppercase;
+            font-family: $header-font;
+            color: $news-header-color;
+            font-size: 24px;
+            flex: 0 1;
+          }
+        }
+        .position,
+        .deeper {
+          margin-left: 80px;
+        }
+        .position {
+          height: 32px;
+          margin-bottom: 40px;
         }
       }
     }

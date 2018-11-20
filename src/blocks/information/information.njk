@@ -736,7 +736,7 @@
         </li>
     </ul>
 </div>
-<div class="employees center">
+<div class="employees">
     <h3 id="name6" class="header">РУКОДСТВО. ПЕДАГОГИЧЕСКИЙ (НАУЧНО-ПЕДАГОГИЧЕСКИЙ) СОСТАВ</h3>
     <div class="sub">
         <span class="name">Администрация</span><span class="grayline"></span>
@@ -745,7 +745,18 @@
         set cards = [
             {
                 "img": "./images/arni.jpg",
-                "name": "Черныйнегр Арнольд Австриевич"
+                "name": "Константинопольский Пантелеймон Константинович",
+                "position": "Физрук"
+            },
+            {
+                "img": "./images/arni.jpg",
+                "name": "Крыжовников Петр Евлампиевич",
+                "position": "Администратор тренировочного процесса"
+            },
+            {
+                "img": "./images/tsoi.jpg",
+                "name": "Цой Виктория Певцовна",
+                "position": "Администратор тренировочного процесса"
             }
         ]
     %}
@@ -758,6 +769,59 @@
                     </div>
                     <p class="name">{{item.name}}</p>
                 </div>
+                <p class="position">{{item.position}}</p>
+                <a class="deeper" href="./">Подробнее</a>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="sub">
+        <span class="name">Преподавательский состав</span><span class="grayline"></span>
+    </div>
+    {%
+        set cards = [
+            {
+                "img": "./images/arni.jpg",
+                "name": "Константинопольский Пантелеймон Константинович",
+                "position": "Физрук"
+            },
+            {
+                "img": "./images/arni.jpg",
+                "name": "Крыжовников Петр Евлампиевич",
+                "position": "Администратор тренировочного процесса"
+            },
+            {
+                "img": "./images/tsoi.jpg",
+                "name": "Цой Виктория Певцовна",
+                "position": "Администратор тренировочного процесса"
+            },
+            {
+                "img": "./images/arni.jpg",
+                "name": "Константинопольский Пантелеймон Константинович",
+                "position": "Физрук"
+            },
+            {
+                "img": "./images/arni.jpg",
+                "name": "Крыжовников Петр Евлампиевич",
+                "position": "Администратор тренировочного процесса"
+            },
+            {
+                "img": "./images/tsoi.jpg",
+                "name": "Цой Виктория Певцовна",
+                "position": "Администратор тренировочного процесса"
+            }
+        ]
+    %}
+    <div class="employees-cards">
+        {% for item in cards %}
+            <div class="card-item">
+                <div class="card-name">
+                    <div class="photo">
+                        <img src="{{item.img}}"/>
+                    </div>
+                    <p class="name">{{item.name}}</p>
+                </div>
+                <p class="position">{{item.position}}</p>
+                <a class="deeper" href="./">Подробнее</a>
             </div>
         {% endfor %}
     </div>
