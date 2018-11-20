@@ -71,6 +71,7 @@ $list-dots-bg: $white;
 $line-bg-between-buttons: $center-line-bg;
 $news-header-color: #3897c3;
 $main-menu-links-color: $white;
+$buttonUp: url("../images/space/up.png") no-repeat 50% 50%;
 
 @mixin container-bg {
   background: $page-bg;
