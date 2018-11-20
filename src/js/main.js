@@ -13,6 +13,7 @@ $(document).ready(function() {
   showAgreement();
   fancybox();
   buttonUp();
+  navMenuFixed();
 });
 
 function hideMenuItems() {
@@ -278,8 +279,16 @@ function buttonUp() {
   var documentScroll = $(this).scrollTop();
   if (documentScroll > headerHeight) {
     $(".button-up").css("display", "block");
+    $(".aside .navigation").css({
+      marginTop: 0,
+      top: 16
+    });
   } else {
     $(".button-up").css("display", "none");
+    $(".aside .navigation").css({
+      marginTop: 172,
+      top: "auto"
+    });
   }
 }
 
