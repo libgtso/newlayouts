@@ -418,7 +418,7 @@ img {
 .button-up {
   width: 64px;
   height: 64px;
-  background: url("../images/up.png") no-repeat 50% 50%;
+  background: $buttonUp;
   position: fixed;
   bottom: 64px;
   left: 10%;
