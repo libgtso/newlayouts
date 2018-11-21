@@ -1,36 +1,16 @@
 .pagination {
   height: 80px;
   position: relative;
-  display: flex;
+  display: block;
+  width: 100%;
   margin-bottom: 64px;
   .owl-next,
   .owl-prev {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: $button-bg;
-    border: $border-line;
-    cursor: pointer;
-    &:before {
-      content: "";
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      border-top: 2px solid $checkmark-checked-bg;
-      border-left: 2px solid $checkmark-checked-bg;
-      top: 40%;
-    }
-    &:hover {
-      background: $button-bg-hover;
-      border: $border-style;
-    }
-    &:active {
-      background: $button-active-bg;
-    }
+    @include pagination-prev-next;
   }
   .owl-next {
     right: 0;
+    align-self: flex-end;
     &:before {
       transform: rotate(135deg);
       right: 40%;
@@ -41,6 +21,27 @@
     &:before {
       transform: rotate(-45deg);
       left: 45%;
+    }
+  }
+  .pages {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    .page-item {
+      @include pagination;
+      p {
+        display: flex;
+        align-self: center;
+      }
+    }
+    .page-item.active {
+      background: $button-active-bg;
+    }
+    .page-item.prev {
+      @include pagination-double-arrow-prev;
+    }
+    .page-item.next {
+      @include pagination-double-arrow-next;
     }
   }
 }
