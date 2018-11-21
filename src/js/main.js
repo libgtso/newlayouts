@@ -13,7 +13,7 @@ $(document).ready(function() {
   showAgreement();
   fancybox();
   buttonUp();
-  navMenuFixed();
+  navFixedMenu();
 });
 
 function hideMenuItems() {
@@ -274,22 +274,43 @@ function fancybox() {
   $("a.item").fancybox();
 }
 
-//в эту функцию добавил сразу еще и боковое якорное меню
-//оно тоже должно ездить вместе с пользователем
 function buttonUp() {
   var headerHeight = $("header").height();
   var documentScroll = $(this).scrollTop();
-  var burgerMenu = $(".burger-right .menu-container .aside .navigation");
-  var fixedMenu = $(".aside .navigation").not(burgerMenu);
   if (documentScroll > headerHeight) {
     $(".button-up").css("display", "block");
+  } else {
+    $(".button-up").css("display", "none");
+  }
+}
+
+$(".button-up").on("click", function(e) {
+  e.preventDefault();
+  $("html, body").animate(
+    {
+      scrollTop: 0
+    },
+    500
+  );
+});
+
+function navFixedMenu() {
+  var headerHeight = $("header").height(),
+    burgerMenu = $(".burger-right .menu-container .aside .navigation"),
+    fixedMenu = $(".aside .navigation").not(burgerMenu),
+    containerHeight = $(".container .information").height(),
+    documentScroll = $(this).scrollTop();
+
+  if (
+    documentScroll > headerHeight + 180 &&
+    documentScroll < containerHeight - 60
+  ) {
     fixedMenu.css({
       marginTop: 0,
       top: 16,
       position: "fixed"
     });
   } else {
-    $(".button-up").css("display", "none");
     fixedMenu.css({
       marginTop: 172,
       top: "auto",
@@ -300,14 +321,5 @@ function buttonUp() {
 
 $(document).on("scroll", function() {
   buttonUp();
-});
-
-$(".button-up").on("click", function(e) {
-  e.preventDefault();
-  $("html, body").animate(
-    {
-      scrollTop: 0
-    },
-    500
-  );
+  navFixedMenu();
 });
