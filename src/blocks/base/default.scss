@@ -325,6 +325,9 @@ $buttonUp: url("../images/up.png") no-repeat 50% 50%;
   }
   &:active {
     background: $button-active-bg;
+    p {
+      color: #335466;
+    }
   }
 }
 @mixin pagination-prev-next {
@@ -348,9 +351,18 @@ $buttonUp: url("../images/up.png") no-repeat 50% 50%;
   &:hover {
     background: $button-bg-hover;
     border: $border-style;
+    &:before {
+      border-top: 2px solid $button-text-color-click;
+      border-left: 2px solid $button-text-color-click;
+    }
   }
   &:active {
-    background: $button-active-bg;
+    background: none;
+    border: 2px solid $white;
+    &:before {
+      border-top: 2px solid #335466;
+      border-left: 2px solid #335466;
+    }
   }
 }
 @mixin pagination-double-arrow-prev {
