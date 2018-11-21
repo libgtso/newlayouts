@@ -1,6 +1,7 @@
 .news {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   .content {
     display: flex;
     flex-direction: column;

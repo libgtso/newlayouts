@@ -310,3 +310,66 @@ $buttonUp: url("../images/up.png") no-repeat 50% 50%;
   background: none;
   border: $border-line;
 }
+@mixin pagination {
+  border: 2px solid $white;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 4px;
+  &:hover {
+    background: $button-bg-hover;
+  }
+  &:active {
+    background: $button-active-bg;
+  }
+}
+@mixin pagination-prev-next {
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: $button-bg;
+  border: $border-line;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid $checkmark-checked-bg;
+    border-left: 2px solid $checkmark-checked-bg;
+    top: 42%;
+  }
+  &:hover {
+    background: $button-bg-hover;
+    border: $border-style;
+  }
+  &:active {
+    background: $button-active-bg;
+  }
+}
+@mixin pagination-double-arrow-prev {
+  border: none;
+  background: url("../images/double-arrow.png") no-repeat 50% 50%;
+  &:hover {
+    background: url("../images/da-hover-revert.png") no-repeat 50% 50%;
+  }
+  &:active {
+    background: url("../images/da-click-revert.png") no-repeat 50% 50%;
+  }
+}
+@mixin pagination-double-arrow-next {
+  border: none;
+  background: url("../images/double-arrow-revert.png") no-repeat 50% 50%;
+  &:hover {
+    background: url("../images/da-hover.png") no-repeat 50% 50%;
+  }
+  &:active {
+    background: url("../images/da-click.png") no-repeat 50% 50%;
+  }
+}

@@ -1,0 +1,47 @@
+.pagination {
+  height: 80px;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 64px;
+  .owl-next,
+  .owl-prev {
+    @include pagination-prev-next;
+  }
+  .owl-next {
+    right: 0;
+    align-self: flex-end;
+    &:before {
+      transform: rotate(135deg);
+      right: 40%;
+    }
+  }
+  .owl-prev {
+    left: 0;
+    &:before {
+      transform: rotate(-45deg);
+      left: 45%;
+    }
+  }
+  .pages {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    .page-item {
+      @include pagination;
+      p {
+        display: flex;
+        align-self: center;
+      }
+    }
+    .page-item.active {
+      background: $button-active-bg;
+    }
+    .page-item.prev {
+      @include pagination-double-arrow-prev;
+    }
+    .page-item.next {
+      @include pagination-double-arrow-next;
+    }
+  }
+}
