@@ -98,6 +98,21 @@
         }
       }
     }
+    .aside.filter {
+      justify-content: center;
+      .filter {
+        margin: 56px 0 32px 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+          li {
+            display: flex;
+            justify-content: center;
+            margin-right: 0;
+          }
+        }
+      }
+    }
   }
   .cls-btn {
     display: block;
