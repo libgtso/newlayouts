@@ -19,7 +19,7 @@ $(document).ready(function() {
 function hideMenuItems() {
   //лимит показываемых элементов
   var limit = 6;
-  var burgerMenu = $(".burger-time .menu-container .main-menu");
+  var burgerMenu = $(".burger-menu .menu-container .main-menu");
   //исключаем мобильное меню
   var container = $(".main-menu").not(burgerMenu);
   var hideContainer = $(".hidden-list");
@@ -274,11 +274,12 @@ function fancybox() {
   $("a.item").fancybox();
 }
 
+//в эту функцию добавил сразу еще и боковое якорное меню
+//оно тоже должно ездить вместе с пользователем
 function buttonUp() {
   var headerHeight = $("header").height();
   var documentScroll = $(this).scrollTop();
   var burgerMenu = $(".burger-right .menu-container .aside .navigation");
-  console.log(burgerMenu);
   var fixedMenu = $(".aside .navigation").not(burgerMenu);
   if (documentScroll > headerHeight) {
     $(".button-up").css("display", "block");
