@@ -1,0 +1,40 @@
+{%
+    set pages = [
+        {
+            "numb": "1"
+        },
+        {
+            "class": "prev"
+        },
+        {
+            "numb": "7"
+        },
+        {
+            "numb": "8",
+            "class": "active"
+        },
+        {
+            "numb": "9"
+        },
+        {
+            "class": "next"
+        },
+        {
+            "numb": "976"
+        }
+    ]
+%}
+
+<div class="pagination">
+    <button class="owl-prev"></button>
+     <div class="pages">
+    {% for item in pages %}
+        <a class="page-item {% if item.class %}{{item.class}}{% endif %}" href="/">
+            {% if item.numb %}
+                <p>{{item.numb}}</p>
+            {% endif %}
+        </a>
+    {% endfor %}
+    </div>
+    <button class="owl-next"></button>
+</div>
