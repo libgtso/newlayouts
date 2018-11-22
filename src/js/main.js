@@ -14,6 +14,7 @@ $(document).ready(function() {
   fancybox();
   buttonUp();
   navFixedMenu();
+  openMap();
 });
 
 function hideMenuItems() {
@@ -133,38 +134,53 @@ function openSliderImage() {
   });
 }
 
-function mapsCustom() {
-  ymaps.ready(function() {
-    var myMap = new ymaps.Map(
-        "map",
-        {
-          center: [56.852071, 53.213458],
-          zoom: 17
-        },
-        {
-          searchControlProvider: "yandex#search"
-        }
-      ),
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      );
-    myPlacemarkWithContent = new ymaps.Placemark(
-      [56.852071, 53.213458],
-      {
-        hintContent: "Лихвинцева, 46"
-      },
-      {
-        iconLayout: "default#imageWithContent",
-        iconImageHref: "./images/icon.png",
-        // iconImageSize: [48, 70],
-        // iconImageOffset: [-24, -64],
-        // iconContentOffset: [15, 15],
-        iconContentLayout: MyIconContentLayout
-      }
-    );
+// function mapsCustom() {
+//   var address = $("#ymap-address").text();
+//   console.log(address);
+// }
 
-    myMap.geoObjects.add(myPlacemarkWithContent);
+function mapsCustom() {
+  var container = $("#map"),
+    address = $("#ymap-address").text(),
+    coords = $("#ymap-address").attr("data-coordinates");
+
+  if (
+    typeof ymaps == "undefined" ||
+    !container.length ||
+    (!address && !coords) ||
+    $.trim(container.html())
+  ) {
+    return;
+  }
+  ymaps.ready(function() {
+    if (!coords) {
+      initMap(coords.split(","), address);
+    } else {
+      address = address.split(";")[0];
+      ymaps.geocode(address).then(
+        function(res) {
+          var object = res.geoObjects.get(0);
+          if (object) {
+            coords = object.geometry.getCoordinates();
+            console.log(coords);
+            initMap(coords, address);
+          }
+        },
+        function(err) {
+          console.err(err);
+        }
+      );
+    }
   });
+
+  function initMap(coords, address) {
+    console.log(coords);
+    var ymap = new ymaps.Map("map", {
+      center: coords,
+      zoom: 15
+    });
+    ymap.balloon.open(coords, address);
+  }
 }
 
 //закроем попап по клику вне его
@@ -323,3 +339,9 @@ $(document).on("scroll", function() {
   buttonUp();
   navFixedMenu();
 });
+
+// function openMap() {
+//   $(document).on("click", "#map-arrow", function() {
+//     alert("Карта открылась. Нет? ну, бывает");
+//   });
+// }

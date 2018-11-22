@@ -5,7 +5,8 @@
         "data": [
             {
                 "address": "623530, Свердловская область, Богданович, ул.Школьная, 5д",
-                "class": "address"
+                "class": "address",
+                "id": "ymap-address"
             },
             {
                 "tel": "+7(12345)123-12-12",
@@ -40,10 +41,13 @@
 <section class="contacts">
     <h2 class="header">{{contacts.header}}</h2>
     <div class="content">
+        <div class="map-wrapper">
+            <a id="map-arrow" href="https://tech.yandex.ru/maps/keys/get/" target="_blank" title="Раскрыть карту в отдельной странице"></a>
             <div id="map"></div>
+        </div>
         <div class="contacts-info">
         {% for item in contacts.data %}
-            <p class="{% if item.class %}{{item.class}}{% endif %}">
+            <p class="{% if item.class %}{{item.class}}{% endif %}" {% if item.id %}id="{{item.id}}"{% endif %} data-coordinates="56.783697, 62.032776">
                 {% if item.address %}{{item.address}}{% endif %}
                 {% if item.tel %}<span>{{item.tel}}</span>{% endif %}
                 {% if item.email %}<span>{{item.email}}</span>{% endif %}
