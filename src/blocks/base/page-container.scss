@@ -150,6 +150,9 @@
       h3 {
         padding: 24px 0 56px 0;
       }
+      .pagination {
+        display: none;
+      }
       .aside {
         display: none;
       }
@@ -259,7 +262,7 @@
           margin-bottom: 24px;
         }
         p {
-          padding: 0;
+          padding: 0 !important;
         }
       }
       .groups {
@@ -306,9 +309,6 @@
     }
   }
 
-  p {
-    padding: 0 !important;
-  }
   .group {
     display: flex;
     flex-direction: column;

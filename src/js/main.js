@@ -307,7 +307,13 @@ function navFixedMenu() {
     burgerMenu = $(".burger-right .menu-container .aside .navigation"),
     fixedMenu = $(".aside .navigation").not(burgerMenu),
     containerHeight = $(".container .right-block").height(),
-    documentScroll = $(this).scrollTop();
+    burgerMenuButton = $(".burger-right .sh-btn"),
+    burgerWrapperforFixedMenu = $(
+      ".burger-right.sh-block .menu-container.navigation-menu"
+    );
+  documentScroll = $(this).scrollTop();
+
+  console.log(burgerWrapperforFixedMenu);
 
   if (
     documentScroll > headerHeight + 180 &&
@@ -318,11 +324,27 @@ function navFixedMenu() {
       top: 16,
       position: "fixed"
     });
+    burgerMenuButton.css({
+      position: "fixed",
+      top: "24%"
+    });
+    burgerWrapperforFixedMenu.css({
+      position: "fixed",
+      top: "24%"
+    });
   } else {
     fixedMenu.css({
       marginTop: 172,
       top: "auto",
       position: "absolute"
+    });
+    burgerMenuButton.css({
+      position: "absolute",
+      top: -24
+    });
+    burgerWrapperforFixedMenu.css({
+      position: "absolute",
+      top: -24
     });
   }
 }

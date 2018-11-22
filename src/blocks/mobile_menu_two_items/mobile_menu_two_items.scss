@@ -38,7 +38,9 @@
 }
 
 .burger-right.sh-block {
-  .menu-container {
+  .menu-container.navigation-menu {
+    height: 400px;
+    overflow-y: auto;
     position: absolute;
     z-index: 103;
     background: #fff;
