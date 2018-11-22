@@ -313,8 +313,6 @@ function navFixedMenu() {
     );
   documentScroll = $(this).scrollTop();
 
-  console.log(burgerWrapperforFixedMenu);
-
   if (
     documentScroll > headerHeight + 180 &&
     documentScroll < containerHeight - 540
