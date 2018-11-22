@@ -298,12 +298,12 @@ function navFixedMenu() {
   var headerHeight = $("header").height(),
     burgerMenu = $(".burger-right .menu-container .aside .navigation"),
     fixedMenu = $(".aside .navigation").not(burgerMenu),
-    containerHeight = $(".container .information").height(),
+    containerHeight = $(".container .right-block").height(),
     documentScroll = $(this).scrollTop();
 
   if (
     documentScroll > headerHeight + 180 &&
-    documentScroll < containerHeight - 60
+    documentScroll < containerHeight - 540
   ) {
     fixedMenu.css({
       marginTop: 0,

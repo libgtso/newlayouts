@@ -70,11 +70,11 @@
   nav.navigation {
     margin-top: 172px;
     background: none;
-    width: 180px;
+    width: 240px;
     position: absolute;
     display: block;
-    height: 320px;
-    overflow-y: auto;
+    // height: 320px;
+    // overflow-y: auto;
     padding-left: 40px;
 
     ul {
@@ -83,8 +83,10 @@
       flex: 0 0 100%;
       justify-content: flex-start;
       li {
-        padding-bottom: 24px;
+        padding-bottom: 8px;
         position: relative;
+        font-size: 12px;
+        line-height: 10px !important;
         &:before {
           position: absolute;
           content: "";

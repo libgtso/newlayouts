@@ -18,6 +18,7 @@
       border-radius: 50%;
       overflow: hidden;
       border: $map-border;
+      pointer-events: none;
     }
 
     .contacts-info {
