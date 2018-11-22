@@ -13,13 +13,13 @@ $(document).ready(function() {
   showAgreement();
   fancybox();
   buttonUp();
-  navMenuFixed();
+  navFixedMenu();
 });
 
 function hideMenuItems() {
   //лимит показываемых элементов
   var limit = 6;
-  var burgerMenu = $(".burger-time .menu-container .main-menu");
+  var burgerMenu = $(".burger-menu .menu-container .main-menu");
   //исключаем мобильное меню
   var container = $(".main-menu").not(burgerMenu);
   var hideContainer = $(".hidden-list");
@@ -134,37 +134,45 @@ function openSliderImage() {
 }
 
 function mapsCustom() {
-  ymaps.ready(function() {
-    var myMap = new ymaps.Map(
-        "map",
-        {
-          center: [56.852071, 53.213458],
-          zoom: 17
-        },
-        {
-          searchControlProvider: "yandex#search"
-        }
-      ),
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      );
-    myPlacemarkWithContent = new ymaps.Placemark(
-      [56.852071, 53.213458],
-      {
-        hintContent: "Лихвинцева, 46"
-      },
-      {
-        iconLayout: "default#imageWithContent",
-        iconImageHref: "./images/icon.png",
-        // iconImageSize: [48, 70],
-        // iconImageOffset: [-24, -64],
-        // iconContentOffset: [15, 15],
-        iconContentLayout: MyIconContentLayout
-      }
-    );
+  var container = $("#map"),
+    address = $("#ymap-address").text(),
+    coords = $("#ymap-address").attr("data-coordinates");
 
-    myMap.geoObjects.add(myPlacemarkWithContent);
+  if (
+    typeof ymaps == "undefined" ||
+    !container.length ||
+    (!address && !coords) ||
+    $.trim(container.html())
+  ) {
+    return;
+  }
+  ymaps.ready(function() {
+    if (coords) {
+      initMap(coords.split(","), address);
+    } else {
+      address = address.split(";")[0];
+      ymaps.geocode(address).then(
+        function(res) {
+          var object = res.geoObjects.get(0);
+          if (object) {
+            coords = object.geometry.getCoordinates();
+            initMap(coords, address);
+          }
+        },
+        function(err) {
+          console.err(err);
+        }
+      );
+    }
   });
+
+  function initMap(coords, address) {
+    var ymap = new ymaps.Map("map", {
+      center: coords,
+      zoom: 15
+    });
+    ymap.balloon.open(coords, address);
+  }
 }
 
 //закроем попап по клику вне его
@@ -277,29 +285,12 @@ function fancybox() {
 function buttonUp() {
   var headerHeight = $("header").height();
   var documentScroll = $(this).scrollTop();
-  var burgerMenu = $(".burger-right .menu-container .aside .navigation");
-  console.log(burgerMenu);
-  var fixedMenu = $(".aside .navigation").not(burgerMenu);
   if (documentScroll > headerHeight) {
     $(".button-up").css("display", "block");
-    fixedMenu.css({
-      marginTop: 0,
-      top: 16,
-      position: "fixed"
-    });
   } else {
     $(".button-up").css("display", "none");
-    fixedMenu.css({
-      marginTop: 172,
-      top: "auto",
-      position: "absolute"
-    });
   }
 }
-
-$(document).on("scroll", function() {
-  buttonUp();
-});
 
 $(".button-up").on("click", function(e) {
   e.preventDefault();
@@ -309,4 +300,56 @@ $(".button-up").on("click", function(e) {
     },
     500
   );
+});
+
+function navFixedMenu() {
+  var headerHeight = $("header").height(),
+    burgerMenu = $(".burger-right .menu-container .aside .navigation"),
+    fixedMenu = $(".aside .navigation").not(burgerMenu),
+    containerHeight = $(".container .right-block").height(),
+    burgerMenuButton = $(".burger-right .sh-btn"),
+    burgerWrapperforFixedMenu = $(
+      ".burger-right.sh-block .menu-container.navigation-menu"
+    );
+  documentScroll = $(this).scrollTop();
+
+  console.log(burgerWrapperforFixedMenu);
+
+  if (
+    documentScroll > headerHeight + 180 &&
+    documentScroll < containerHeight - 540
+  ) {
+    fixedMenu.css({
+      marginTop: 0,
+      top: 16,
+      position: "fixed"
+    });
+    burgerMenuButton.css({
+      position: "fixed",
+      top: "24%"
+    });
+    burgerWrapperforFixedMenu.css({
+      position: "fixed",
+      top: "24%"
+    });
+  } else {
+    fixedMenu.css({
+      marginTop: 172,
+      top: "auto",
+      position: "absolute"
+    });
+    burgerMenuButton.css({
+      position: "absolute",
+      top: -24
+    });
+    burgerWrapperforFixedMenu.css({
+      position: "absolute",
+      top: -24
+    });
+  }
+}
+
+$(document).on("scroll", function() {
+  buttonUp();
+  navFixedMenu();
 });

@@ -13,7 +13,7 @@ $text-font: "OpenSans Regular";
 $second-text-font: "OpenSans Semibold";
 
 .content {
-  max-width: 1232px;
+  max-width: 1208px;
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -420,8 +420,8 @@ img {
   height: 64px;
   background: $buttonUp;
   position: fixed;
-  bottom: 64px;
-  left: 10%;
+  bottom: 24px;
+  left: 5%;
   display: none;
   cursor: pointer;
   z-index: 101;

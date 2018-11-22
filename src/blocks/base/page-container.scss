@@ -29,7 +29,7 @@
       }
     }
     .aside {
-      margin-right: 64px;
+      margin-right: 120px;
       flex: 0 0 180px;
     }
 
@@ -103,7 +103,7 @@
       //max-width: 1020px;
       flex: 0 1 auto;
       .aside {
-        margin-right: 16px;
+        margin-right: 32px;
         flex: 0 0 24%;
       }
 
@@ -149,6 +149,9 @@
       flex: none;
       h3 {
         padding: 24px 0 56px 0;
+      }
+      .pagination {
+        display: none;
       }
       .aside {
         display: none;
@@ -259,7 +262,7 @@
           margin-bottom: 24px;
         }
         p {
-          padding: 0;
+          padding: 0 !important;
         }
       }
       .groups {
@@ -306,9 +309,6 @@
     }
   }
 
-  p {
-    padding: 0 !important;
-  }
   .group {
     display: flex;
     flex-direction: column;
