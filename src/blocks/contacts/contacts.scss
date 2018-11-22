@@ -11,6 +11,21 @@
     max-width: 896px;
     flex-direction: row;
 
+    .map-wrapper {
+      position: relative;
+      #map-arrow {
+        position: absolute;
+        right: 16%;
+        z-index: 100;
+        cursor: pointer;
+        display: block;
+        width: 71px;
+        height: 74px;
+        border: none;
+        background: url("../images/formap.png") no-repeat;
+      }
+    }
+
     #map {
       display: flex;
       width: 454px;
@@ -18,6 +33,7 @@
       border-radius: 50%;
       overflow: hidden;
       border: $map-border;
+      pointer-events: none;
     }
 
     .contacts-info {

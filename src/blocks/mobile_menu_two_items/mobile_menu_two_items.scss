@@ -1,4 +1,4 @@
-.burger-time.burger-left.sh-block.sh-hidden {
+.burger-menu.burger-left.sh-block.sh-hidden {
   .sh-btn {
     display: flex;
     top: -28px;
@@ -6,7 +6,7 @@
   }
 }
 
-.burger-time.burger-left.sh-block {
+.burger-menu.burger-left.sh-block {
   position: relative;
   .cls-btn {
     left: 48px;
@@ -38,7 +38,9 @@
 }
 
 .burger-right.sh-block {
-  .menu-container {
+  .menu-container.navigation-menu {
+    height: 400px;
+    overflow-y: auto;
     position: absolute;
     z-index: 103;
     background: #fff;
@@ -94,6 +96,21 @@
               height: 0;
               background: none;
             }
+          }
+        }
+      }
+    }
+    .aside.filter {
+      justify-content: center;
+      .filter {
+        margin: 56px 0 32px 0;
+        ul {
+          display: flex;
+          flex-direction: column;
+          li {
+            display: flex;
+            justify-content: center;
+            margin-right: 0;
           }
         }
       }

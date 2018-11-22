@@ -1,8 +1,8 @@
-.burger-time {
+.burger-menu {
   position: relative;
 }
 
-.burger-time.sh-block.sh-hidden {
+.burger-menu.sh-block.sh-hidden {
   .menu-container {
     transition: max-height 1s ease-in-out, padding-top 0.5s;
     max-height: 0;
@@ -49,7 +49,7 @@
   }
 }
 
-.burger-time.sh-block {
+.burger-menu.sh-block {
   .sh-btn {
     display: none;
   }
