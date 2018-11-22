@@ -14,7 +14,6 @@ $(document).ready(function() {
   fancybox();
   buttonUp();
   navFixedMenu();
-  openMap();
 });
 
 function hideMenuItems() {
@@ -134,11 +133,6 @@ function openSliderImage() {
   });
 }
 
-// function mapsCustom() {
-//   var address = $("#ymap-address").text();
-//   console.log(address);
-// }
-
 function mapsCustom() {
   var container = $("#map"),
     address = $("#ymap-address").text(),
@@ -153,7 +147,7 @@ function mapsCustom() {
     return;
   }
   ymaps.ready(function() {
-    if (!coords) {
+    if (coords) {
       initMap(coords.split(","), address);
     } else {
       address = address.split(";")[0];
@@ -162,7 +156,6 @@ function mapsCustom() {
           var object = res.geoObjects.get(0);
           if (object) {
             coords = object.geometry.getCoordinates();
-            console.log(coords);
             initMap(coords, address);
           }
         },
@@ -174,7 +167,6 @@ function mapsCustom() {
   });
 
   function initMap(coords, address) {
-    console.log(coords);
     var ymap = new ymaps.Map("map", {
       center: coords,
       zoom: 15
@@ -339,9 +331,3 @@ $(document).on("scroll", function() {
   buttonUp();
   navFixedMenu();
 });
-
-// function openMap() {
-//   $(document).on("click", "#map-arrow", function() {
-//     alert("Карта открылась. Нет? ну, бывает");
-//   });
-// }
