@@ -2,7 +2,9 @@
 <div class="text-container section item">
     <h3 {% if item.href %}id="{{item.href}}"{% endif %} class="text-caption show-text">{{item.name}}</h3>
     {% if item.date %}
-        <span class="date">{{item.date}}</span>
+        <div class="sub">
+                <span class="name">{{item.date}}</span><span class="grayline"></span>
+            </div>
     {% endif %}
     {% if item.src %}
         {% include '../imageView/imageView.njk' %}

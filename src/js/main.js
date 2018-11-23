@@ -58,6 +58,7 @@ function closePopup() {
   });
 }
 
+//слайдер в шапке
 function mainslider() {
   $(".mainslider").owlCarousel({
     loop: true,
@@ -70,6 +71,7 @@ function mainslider() {
   });
 }
 
+//слайдер чего-то полезного на главной странице ниже
 function usefullslider() {
   $(".usefullslider").owlCarousel({
     loop: false,
@@ -83,6 +85,7 @@ function usefullslider() {
   });
 }
 
+//добавление класса для показа кнопки, если высота текста превышает заданную
 function showButton() {
   var heightText = 132;
   var text = $(".sh-block.sh-hidden p");
@@ -96,6 +99,7 @@ function showButton() {
   }
 }
 
+//подгружаем комментарии по клику на значок комментариев на странице группы
 function loadComments() {
   $(document).on("click", ".comments .counter-item", function(e) {
     e.preventDefault();
@@ -111,6 +115,7 @@ function loadComments() {
   });
 }
 
+//открытие картинок в головном слайдере по клику на expand-img
 function openSliderImage() {
   $(document).on("click", ".open-img", function(e) {
     e.preventDefault();
@@ -133,6 +138,7 @@ function openSliderImage() {
   });
 }
 
+//карты
 function mapsCustom() {
   var container = $("#map"),
     address = $("#ymap-address").text(),
@@ -188,6 +194,7 @@ function closeDiv() {
   });
 }
 
+//показываем картинки там, где есть expand-img (немного отличается от показа картинок слайдера)
 function showPic() {
   $(document).on("click", ".open-img", function(e) {
     var container = $(".popup", $(e.target).closest(".item"));
@@ -204,6 +211,7 @@ function showPic() {
   });
 }
 
+//показываем соглашение в обращении граждан
 function showAgreement() {
   $(document).on("click", ".sh-agree", function(e) {
     e.preventDefault();
@@ -225,7 +233,6 @@ function showAgreement() {
   });
 }
 
-//TODO ДОПИЛИТЬ СКРИПТ СКРЫВАЮЩИЙ
 function indexPage() {
   // обрезать название рубрик по ширине
   var captions = $(".show-button .text-container p");
@@ -256,6 +263,7 @@ function indexPage() {
   }
 }
 
+//подгружаем события в календаре событий
 function loadingEvents() {
   $(document).on("click", ".cell .numb.event", function(e) {
     e.preventDefault();
@@ -278,10 +286,12 @@ function loadingEvents() {
   });
 }
 
+//фансибокс для фотоальбомов
 function fancybox() {
   $("a.item").fancybox();
 }
 
+//скрипт для кнопки вверх
 function buttonUp() {
   var headerHeight = $("header").height();
   var documentScroll = $(this).scrollTop();
@@ -302,6 +312,7 @@ $(".button-up").on("click", function(e) {
   );
 });
 
+//фиксированное якорное меню слева
 function navFixedMenu() {
   var headerHeight = $("header").height(),
     burgerMenu = $(".burger-right .menu-container .aside .navigation"),
@@ -312,8 +323,6 @@ function navFixedMenu() {
       ".burger-right.sh-block .menu-container.navigation-menu"
     );
   documentScroll = $(this).scrollTop();
-
-  console.log(burgerWrapperforFixedMenu);
 
   if (
     documentScroll > headerHeight + 180 &&

@@ -13,17 +13,22 @@
         color: $signature;
       }
       .text-container {
-        .date {
-          position: relative;
-          &:before {
-            position: absolute;
-            content: "";
-            background: $news-date-color;
-            width: 60%;
+        .sub {
+          display: flex;
+          width: 80%;
+          margin-bottom: 24px;
+          .name {
+            display: inline-flex;
+            margin-right: 16px;
+            line-height: 16px;
+            padding: 0 24px 0 200px;
+          }
+          .grayline {
             height: 2px;
-            top: 50%;
-            right: 0;
-            margin-right: 160px;
+            background: $navigation-line-between-items-bg;
+            align-self: center;
+            display: inline-flex;
+            flex: 1 1 auto;
           }
         }
       }
@@ -126,6 +131,11 @@
         .text-container {
           span {
             padding: 0;
+          }
+          .sub {
+            .name {
+              padding: 0 24px 0 0 !important;
+            }
           }
         }
       }
@@ -283,7 +293,7 @@
           }
         }
         span {
-          padding: 0;
+          padding: 0 !important;
         }
       }
     }
