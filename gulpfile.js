@@ -12,7 +12,12 @@ var gulp = require("gulp"),
 
 var path = {
   src: {
-    templates: "src/blocks"
+    templates: "src/blocks",
+    html: "src/pages/*.*html",
+    njk: "src/blocks/**/*.njk",
+    scss: "src/style/main.scss",
+    js: "src/js/*.js",
+    img: "./images/*.png"
   }
 };
 
@@ -48,7 +53,7 @@ gulp.task(
   wrapPipe(function(success, error) {
     return (
       gulp
-        .src("src/style/main.scss")
+        .src(path.src.scss)
         .pipe(sourcemaps.init())
         .pipe(browserSync.reload({ stream: true }))
         .pipe(sass().on("error", error))
@@ -63,7 +68,7 @@ gulp.task(
 gulp.task("scripts", function() {
   return (
     gulp
-      .src("src/js/*.js")
+      .src(path.src.js)
       .pipe(sourcemaps.init())
       //.pipe(uglify())
       .pipe(sourcemaps.write())
@@ -74,7 +79,7 @@ gulp.task("scripts", function() {
 gulp.task("html", function() {
   return (
     gulp
-      .src("src/pages/*.html")
+      .src(path.src.html)
       .pipe(
         nunjucks({
           searchPaths: [path.src.templates]
@@ -86,7 +91,7 @@ gulp.task("html", function() {
 });
 
 gulp.task("img", function() {
-  return gulp.src("./images/*.png").pipe(
+  return gulp.src(path.src.img).pipe(
     imagemin({
       interlaced: true,
       progressive: true,
@@ -113,12 +118,12 @@ gulp.task(
   "watch",
   ["browser-sync", "sass", "scripts", "img", "html"],
   function() {
-    gulp.watch("src/**/*.scss", ["sass"]);
+    gulp.watch(path.src.scss, ["sass"]);
     gulp.watch("./*.html", browserSync.reload);
-    gulp.watch("src/js/*.js", function(event, cb) {
+    gulp.watch(path.src.js, function(event, cb) {
       gulp.start("scripts", browserSync.reload);
     });
-    gulp.watch("src/blocks/**/*.njk", function(event, cb) {
+    gulp.watch(path.src.njk, function(event, cb) {
       gulp.start("html", browserSync.reload);
     });
   }
